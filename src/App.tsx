@@ -26,9 +26,10 @@ const {
 // --- Components ---
 
 type GameState = 'start' | 'playing' | 'result';
+type Verb = typeof VERBS_LIST[0];
 
 interface Question {
-  verb: typeof VERBS_LIST[0];
+  verb: Verb;
   subject: typeof SUBJECTS[0];
   tense: typeof TENSES[0];
   correctAnswer: string;
@@ -54,6 +55,7 @@ export default function App() {
   const [hintLevel, setHintLevel] = useState(0);
   const [purchasedHintLevel, setPurchasedHintLevel] = useState(0);
   const [score, setScore] = useState(0);
+  const [missedVerbIds, setMissedVerbIds] = useState<string[]>([]);
   const [attempts, setAttempts] = useState(0);
   const [allFirstTry, setAllFirstTry] = useState(true);
   const [streak, setStreak] = useState<{ count: number; lastDate: string | null }>({ count: 0, lastDate: null });
@@ -112,6 +114,12 @@ export default function App() {
   };
 
   const levelInfo = useMemo(() => getLevelInfo(totalXp), [totalXp]);
+  const missedVerbs = useMemo(
+    () => missedVerbIds
+      .map(id => VERBS_LIST.find(v => v.id === id))
+      .filter((verb): verb is Verb => Boolean(verb)),
+    [missedVerbIds]
+  );
 
   useEffect(() => {
     const savedStreak = localStorage.getItem('french_verb_streak');
@@ -228,7 +236,7 @@ export default function App() {
       const verb = availableVerbs[Math.floor(Math.random() * availableVerbs.length)];
       const tenseId = selectedTenses[Math.floor(Math.random() * selectedTenses.length)];
       const subject = SUBJECTS[Math.floor(Math.random() * SUBJECTS.length)];
-      
+
       const tense = TENSES.find(t => t.id === tenseId)!;
       const subIdx = SUBJECTS.findIndex(s => s.id === subject.id);
       const correctAnswer = (verb as any).conjugations[tenseId].french[subIdx];
@@ -246,6 +254,50 @@ export default function App() {
     setInitialQuestionCount(newQuestions.length);
     setCurrentIndex(0);
     setScore(0);
+    setMissedVerbIds([]);
+    setAttempts(0);
+    setAllFirstTry(true);
+    setSessionXp(0);
+    setLevelAtStart(levelInfo.level);
+    setGameState('playing');
+    setFeedback(null);
+    setHintLevel(0);
+    setPurchasedHintLevel(0);
+    setUserAnswer('');
+    setSessionStartTime(Date.now());
+  };
+
+  const generateMistakeQuiz = () => {
+    if (missedVerbIds.length === 0 || selectedTenses.length === 0) return;
+
+    const availableVerbs = VERBS_LIST.filter(v => missedVerbIds.includes(v.id));
+    if (availableVerbs.length === 0) return;
+
+    const newQuestions: Question[] = [];
+    for (let i = 0; i < questionCount; i++) {
+      const verb = availableVerbs[Math.floor(Math.random() * availableVerbs.length)];
+      const tenseId = selectedTenses[Math.floor(Math.random() * selectedTenses.length)];
+      const subject = SUBJECTS[Math.floor(Math.random() * SUBJECTS.length)];
+
+      const tense = TENSES.find(t => t.id === tenseId)!;
+      const subIdx = SUBJECTS.findIndex(s => s.id === subject.id);
+      const correctAnswer = (verb as any).conjugations[tenseId].french[subIdx];
+      const dutchQuestion = (verb as any).conjugations[tenseId].dutch[subIdx];
+
+      newQuestions.push({
+        verb,
+        subject,
+        tense,
+        correctAnswer,
+        dutchQuestion,
+      });
+    }
+
+    setQuestions(newQuestions);
+    setInitialQuestionCount(newQuestions.length);
+    setCurrentIndex(0);
+    setScore(0);
+    setMissedVerbIds([]);
     setAttempts(0);
     setAllFirstTry(true);
     setSessionXp(0);
@@ -374,6 +426,7 @@ export default function App() {
       });
     } else {
       setAllFirstTry(false);
+      setMissedVerbIds(prev => prev.includes(currentQuestion.verb.id) ? prev : [...prev, currentQuestion.verb.id]);
       setStats(prev => ({ ...prev, currentCorrectStreak: 0 }));
       const newAttempts = attempts + 1;
       setAttempts(newAttempts);
@@ -938,6 +991,37 @@ export default function App() {
                   </motion.div>
                 )}
               </div>
+
+              {missedVerbs.length > 0 && (
+                <div className="glass-card rounded-[2.5rem] p-8 text-left space-y-6">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div>
+                      <h3 className="font-serif text-2xl font-medium text-theme-text">Nog even oefenen</h3>
+                      <p className="text-sm text-theme-text-muted font-medium mt-1">
+                        Deze werkwoorden gingen fout tijdens deze ronde.
+                      </p>
+                    </div>
+                    <button
+                      onClick={generateMistakeQuiz}
+                      className="neo-button inline-flex items-center justify-center gap-3 px-8 py-4 bg-accent-600 text-white rounded-full font-bold shadow-xl shadow-accent-200 hover:bg-accent-700 active:scale-95 transition-all"
+                    >
+                      <RefreshCcw className="w-4 h-4" />
+                      Oefen deze opnieuw
+                    </button>
+                  </div>
+                  <div className="flex flex-wrap gap-3">
+                    {missedVerbs.map(verb => (
+                      <div
+                        key={verb.id}
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-theme-subtle border border-theme-border text-sm font-bold text-theme-text"
+                      >
+                        <span className="text-brand-600">{verb.infinitive}</span>
+                        <span className="text-theme-text-muted font-medium">({verb.translation})</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div className="glass-card rounded-[2.5rem] overflow-hidden">
                 <div className="bg-theme-bg/80 backdrop-blur-md px-8 py-6 text-left flex justify-between items-center border-b border-theme-border">
