@@ -841,6 +841,16 @@ export default function App() {
                     )}
                   </div>
 
+                  {feedback?.canTryAgain && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 6 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="px-5 py-3 rounded-2xl text-center text-sm font-bold bg-accent-50 text-accent-700 border border-accent-100"
+                    >
+                      {feedback.message}
+                    </motion.div>
+                  )}
+
                   {!feedback || feedback.canTryAgain ? (
                     <button
                       type="submit"
