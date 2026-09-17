@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+import React, { useState, useEffect, useRef, useMemo, useId } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   XCircle, RefreshCcw, Trophy, ChevronRight, Check, 
@@ -27,6 +27,7 @@ const {
 
 type GameState = 'start' | 'playing' | 'result';
 type Verb = typeof VERBS_LIST[0];
+const REGULAR_CATEGORY_IDS = new Set(['reg-er', 'reg-ir', 'reg-re']);
 
 interface Question {
   verb: Verb;
@@ -36,6 +37,82 @@ interface Question {
   dutchQuestion: string;
   userAnswer?: string;
   isCorrect?: boolean;
+}
+
+function getRegularInfinitiveTranslation(verb: Verb) {
+  if (!REGULAR_CATEGORY_IDS.has(verb.categoryId)) return null;
+  if (!('infinitiveTranslation' in verb) || typeof verb.infinitiveTranslation !== 'string') {
+    return null;
+  }
+  return verb.infinitiveTranslation;
+}
+
+function InfinitiveInfoButton({
+  infinitive,
+  translation,
+}: {
+  infinitive: string;
+  translation: string;
+}) {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isTouchOpen, setIsTouchOpen] = useState(false);
+  const [isKeyboardFocused, setIsKeyboardFocused] = useState(false);
+  const tooltipId = useId();
+  const isOpen = isHovered || isTouchOpen || isKeyboardFocused;
+
+  const stopInfoInteraction = (event: React.SyntheticEvent) => {
+    event.stopPropagation();
+  };
+
+  return (
+    <span
+      className="relative inline-flex items-center"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <button
+        type="button"
+        aria-label={`Nederlandse vertaling van ${infinitive}`}
+        aria-describedby={isOpen ? tooltipId : undefined}
+        aria-expanded={isOpen}
+        onClick={stopInfoInteraction}
+        onPointerUp={(event) => {
+          stopInfoInteraction(event);
+          if (event.pointerType !== 'mouse') {
+            setIsTouchOpen((isCurrentlyOpen) => !isCurrentlyOpen);
+          }
+        }}
+        onFocus={(event) => {
+          if (event.currentTarget.matches(':focus-visible')) {
+            setIsKeyboardFocused(true);
+          }
+        }}
+        onBlur={() => {
+          setIsKeyboardFocused(false);
+          setIsTouchOpen(false);
+        }}
+        onKeyDown={(event) => {
+          if (event.key === 'Escape') {
+            event.stopPropagation();
+            setIsKeyboardFocused(false);
+            setIsTouchOpen(false);
+          }
+        }}
+        className="ml-1 inline-flex h-5 w-5 items-center justify-center rounded-full border border-theme-border-strong bg-theme-surface/80 text-[11px] font-bold not-italic leading-none text-theme-text-muted transition-colors hover:border-brand-300 hover:text-brand-500 focus-visible:border-brand-400 focus-visible:text-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300/60"
+      >
+        ⓘ
+      </button>
+      {isOpen && (
+        <span
+          id={tooltipId}
+          role="tooltip"
+          className="absolute left-1/2 top-full z-50 mt-2 -translate-x-1/2 whitespace-nowrap rounded-xl border border-theme-border bg-theme-surface px-3 py-2 font-sans text-xs font-bold not-italic text-theme-text shadow-lg"
+        >
+          {translation}
+        </span>
+      )}
+    </span>
+  );
 }
 
 export default function App() {
@@ -822,7 +899,15 @@ export default function App() {
                           <div className="px-6 py-4 bg-theme-surface text-brand-700 rounded-3xl text-sm font-bold border border-brand-100 shadow-sm flex flex-col gap-3">
                             <div className="flex flex-col gap-1">
                               <span className="text-[9px] uppercase tracking-[0.2em] text-brand-400 font-bold">Le Verbe</span>
-                              <span className="text-xl italic font-serif">{questions[currentIndex].verb.infinitive}</span>
+                              <span className="inline-flex items-center justify-center gap-1 text-xl italic font-serif">
+                                {questions[currentIndex].verb.infinitive}
+                                {getRegularInfinitiveTranslation(questions[currentIndex].verb) ? (
+                                  <InfinitiveInfoButton
+                                    infinitive={questions[currentIndex].verb.infinitive}
+                                    translation={getRegularInfinitiveTranslation(questions[currentIndex].verb)!}
+                                  />
+                                ) : null}
+                              </span>
                             </div>
                             
                             {hintLevel >= 2 && (
