@@ -129,8 +129,6 @@ export default function App() {
   const [levelAtStart, setLevelAtStart] = useState(1);
   const [userAnswer, setUserAnswer] = useState('');
   const [feedback, setFeedback] = useState<{ isCorrect: boolean; message: string; canTryAgain?: boolean } | null>(null);
-  const [hintLevel, setHintLevel] = useState(0);
-  const [purchasedHintLevel, setPurchasedHintLevel] = useState(0);
   const [score, setScore] = useState(0);
   const [missedVerbIds, setMissedVerbIds] = useState<string[]>([]);
   const [attempts, setAttempts] = useState(0);
@@ -338,8 +336,6 @@ export default function App() {
     setLevelAtStart(levelInfo.level);
     setGameState('playing');
     setFeedback(null);
-    setHintLevel(0);
-    setPurchasedHintLevel(0);
     setUserAnswer('');
     setSessionStartTime(Date.now());
   };
@@ -381,44 +377,8 @@ export default function App() {
     setLevelAtStart(levelInfo.level);
     setGameState('playing');
     setFeedback(null);
-    setHintLevel(0);
-    setPurchasedHintLevel(0);
     setUserAnswer('');
     setSessionStartTime(Date.now());
-  };
-
-  const handleHintClick = () => {
-    if (hintLevel === 0) {
-      // First hint: Translation (-25 XP)
-      if (purchasedHintLevel >= 1) {
-        setHintLevel(1);
-      } else if (totalXp >= 25) {
-        addXp(-25);
-        setHintLevel(1);
-        setPurchasedHintLevel(1);
-      }
-    } else if (hintLevel === 1) {
-      // Second hint: Tense (-50 XP)
-      if (purchasedHintLevel >= 2) {
-        setHintLevel(2);
-      } else if (totalXp >= 50) {
-        addXp(-50);
-        setHintLevel(2);
-        setPurchasedHintLevel(2);
-      }
-    } else if (hintLevel === 2) {
-      // Third hint: Correct Answer (-75 XP)
-      if (purchasedHintLevel >= 3) {
-        setHintLevel(3);
-      } else if (totalXp >= 75) {
-        addXp(-75);
-        setHintLevel(3);
-        setPurchasedHintLevel(3);
-      }
-    } else {
-      // Reset
-      setHintLevel(0);
-    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -528,8 +488,6 @@ export default function App() {
       setCurrentIndex((i) => i + 1);
       setUserAnswer('');
       setFeedback(null);
-      setHintLevel(0);
-      setPurchasedHintLevel(0);
       setAttempts(0);
     } else {
       updateStreak();
@@ -856,86 +814,17 @@ export default function App() {
                     </h2>
                   </div>
 
-                  <div className="flex flex-col items-center gap-4">
-                    <div className="flex flex-col items-center gap-2">
-                      <button
-                        type="button"
-                        onClick={handleHintClick}
-                        disabled={(hintLevel === 0 && purchasedHintLevel < 1 && totalXp < 25) || (hintLevel === 1 && purchasedHintLevel < 2 && totalXp < 50) || (hintLevel === 2 && purchasedHintLevel < 3 && totalXp < 75)}
-                        className={`text-[10px] font-bold uppercase tracking-widest transition-colors flex items-center gap-2 px-4 py-2 rounded-full border ${
-                          hintLevel === 0 
-                            ? 'text-theme-text-muted border-transparent hover:text-brand-500' 
-                            : 'text-brand-600 border-brand-100 bg-brand-50'
-                        } disabled:opacity-30 disabled:cursor-not-allowed`}
-                      >
-                        <Sparkles className="w-3 h-3" />
-                        {hintLevel === 0 
-                          ? `Indice 1: Traduction ${purchasedHintLevel >= 1 ? '(Gratuit)' : '(-25 XP)'}` 
-                          : hintLevel === 1 
-                            ? `Indice 2: Temps ${purchasedHintLevel >= 2 ? '(Gratuit)' : '(-50 XP)'}` 
-                            : hintLevel === 2
-                              ? `Indice 3: Réponse ${purchasedHintLevel >= 3 ? '(Gratuit)' : '(-75 XP)'}`
-                              : 'Masquer les indices'}
-                      </button>
-                      {(hintLevel === 0 && purchasedHintLevel < 1 && totalXp < 25) && (
-                        <span className="text-[8px] text-accent-400 font-bold uppercase tracking-widest">Pas assez d'XP !</span>
-                      )}
-                      {(hintLevel === 1 && purchasedHintLevel < 2 && totalXp < 50) && (
-                        <span className="text-[8px] text-accent-400 font-bold uppercase tracking-widest">Pas assez d'XP pour le 2ème indice !</span>
-                      )}
-                      {(hintLevel === 2 && purchasedHintLevel < 3 && totalXp < 75) && (
-                        <span className="text-[8px] text-accent-400 font-bold uppercase tracking-widest">Pas assez d'XP pour la réponse !</span>
-                      )}
+                  {getRegularInfinitiveTranslation(questions[currentIndex].verb) ? (
+                    <div className="inline-flex items-center justify-center rounded-2xl border border-brand-100 bg-theme-surface px-5 py-3 text-brand-700 shadow-sm">
+                      <span className="inline-flex items-center justify-center gap-1 text-lg italic font-serif">
+                        {questions[currentIndex].verb.infinitive}
+                        <InfinitiveInfoButton
+                          infinitive={questions[currentIndex].verb.infinitive}
+                          translation={getRegularInfinitiveTranslation(questions[currentIndex].verb)!}
+                        />
+                      </span>
                     </div>
-
-                    <AnimatePresence>
-                      {hintLevel >= 1 && (
-                        <motion.div
-                          initial={{ opacity: 0, scale: 0.95 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          exit={{ opacity: 0, scale: 0.95 }}
-                          className="w-full max-w-xs space-y-3"
-                        >
-                          <div className="px-6 py-4 bg-theme-surface text-brand-700 rounded-3xl text-sm font-bold border border-brand-100 shadow-sm flex flex-col gap-3">
-                            <div className="flex flex-col gap-1">
-                              <span className="text-[9px] uppercase tracking-[0.2em] text-brand-400 font-bold">Le Verbe</span>
-                              <span className="inline-flex items-center justify-center gap-1 text-xl italic font-serif">
-                                {questions[currentIndex].verb.infinitive}
-                                {getRegularInfinitiveTranslation(questions[currentIndex].verb) ? (
-                                  <InfinitiveInfoButton
-                                    infinitive={questions[currentIndex].verb.infinitive}
-                                    translation={getRegularInfinitiveTranslation(questions[currentIndex].verb)!}
-                                  />
-                                ) : null}
-                              </span>
-                            </div>
-                            
-                            {hintLevel >= 2 && (
-                                <motion.div 
-                                  initial={{ opacity: 0, height: 0 }}
-                                  animate={{ opacity: 1, height: 'auto' }}
-                                  className="pt-3 border-t border-brand-50 flex flex-col gap-1"
-                                >
-                                  <span className="text-[9px] uppercase tracking-[0.2em] text-brand-400 font-bold">Le Temps</span>
-                                  <span className="text-lg text-theme-text-secondary">{questions[currentIndex].tense.label}</span>
-                                </motion.div>
-                            )}
-
-                            {hintLevel >= 3 && (
-                              <motion.div 
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: 'auto' }}
-                                className="pt-3 border-t border-brand-50 flex flex-col gap-1"
-                              >
-                                <span className="text-[9px] uppercase tracking-[0.2em] text-brand-400 font-bold">La Réponse</span>
-                                <span className="text-xl text-brand-600 font-bold">{questions[currentIndex].correctAnswer}</span>
-                              </motion.div>
-                            )}
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
+                  ) : null}
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
