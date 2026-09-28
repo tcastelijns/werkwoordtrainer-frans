@@ -6,9 +6,9 @@
 import React, { useState, useEffect, useRef, useMemo, useId } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
-  XCircle, RefreshCcw, Trophy, ChevronRight, Check, 
+  XCircle, RefreshCcw, Trophy, ChevronDown, ChevronRight, Check,
   ArrowLeft, Flame, Star, Sparkles, Award, BookOpen, 
-  Lock, Sun, Moon
+  Info, Lock, Search, Sun, Moon
 } from 'lucide-react';
 
 import verbData from './data/verbs.json';
@@ -47,13 +47,7 @@ function getRegularInfinitiveTranslation(verb: Verb) {
   return verb.infinitiveTranslation;
 }
 
-function InfinitiveInfoButton({
-  infinitive,
-  translation,
-}: {
-  infinitive: string;
-  translation: string;
-}) {
+function InfinitiveInfoButton({ infinitive }: { infinitive: string }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isTouchOpen, setIsTouchOpen] = useState(false);
   const [isKeyboardFocused, setIsKeyboardFocused] = useState(false);
@@ -72,7 +66,7 @@ function InfinitiveInfoButton({
     >
       <button
         type="button"
-        aria-label={`Nederlandse vertaling van ${infinitive}`}
+        aria-label="Toon het Franse werkwoord"
         aria-describedby={isOpen ? tooltipId : undefined}
         aria-expanded={isOpen}
         onClick={stopInfoInteraction}
@@ -98,9 +92,9 @@ function InfinitiveInfoButton({
             setIsTouchOpen(false);
           }
         }}
-        className="ml-1 inline-flex h-5 w-5 items-center justify-center rounded-full border border-theme-border-strong bg-theme-surface/80 text-[11px] font-bold not-italic leading-none text-theme-text-muted transition-colors hover:border-brand-300 hover:text-brand-500 focus-visible:border-brand-400 focus-visible:text-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300/60"
+        className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-theme-border-strong bg-theme-surface text-theme-text-muted transition-colors hover:border-brand-300 hover:text-brand-500 focus-visible:border-brand-400 focus-visible:text-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300/60"
       >
-        ⓘ
+        <Info className="h-4 w-4" aria-hidden="true" />
       </button>
       {isOpen && (
         <span
@@ -108,7 +102,7 @@ function InfinitiveInfoButton({
           role="tooltip"
           className="absolute left-1/2 top-full z-50 mt-2 -translate-x-1/2 whitespace-nowrap rounded-xl border border-theme-border bg-theme-surface px-3 py-2 font-sans text-xs font-bold not-italic text-theme-text shadow-lg"
         >
-          {translation}
+          {infinitive}
         </span>
       )}
     </span>
@@ -117,9 +111,11 @@ function InfinitiveInfoButton({
 
 export default function App() {
   const [gameState, setGameState] = useState<GameState>('start');
-  const [selectedGroupIds, setSelectedGroupIds] = useState<string[]>([]);
+  const [selectedRegularIds, setSelectedRegularIds] = useState<string[]>([]);
   const [selectedIrregularIds, setSelectedIrregularIds] = useState<string[]>([]);
   const [selectedTenses, setSelectedTenses] = useState<string[]>([]);
+  const [expandedRegularGroupId, setExpandedRegularGroupId] = useState<string | null>(null);
+  const [regularErSearch, setRegularErSearch] = useState('');
   const [questionCount, setQuestionCount] = useState(10);
   
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -277,8 +273,8 @@ export default function App() {
     localStorage.setItem('french_verb_streak', JSON.stringify(newData));
   };
 
-  const toggleGroup = (id: string) => {
-    setSelectedGroupIds(prev => prev.includes(id) ? prev.filter(g => g !== id) : [...prev, id]);
+  const toggleRegular = (id: string) => {
+    setSelectedRegularIds(prev => prev.includes(id) ? prev.filter(v => v !== id) : [...prev, id]);
   };
 
   const toggleIrregular = (id: string) => {
@@ -289,18 +285,18 @@ export default function App() {
     setSelectedTenses(prev => prev.includes(id) ? prev.filter(t => t !== id) : [...prev, id]);
   };
 
-  const selectAllGroups = () => setSelectedGroupIds(VERB_GROUPS.filter(g => g.id !== 'irregular').map(g => g.id));
-  const deselectAllGroups = () => setSelectedGroupIds([]);
+  const selectAllRegulars = () => setSelectedRegularIds(VERBS_LIST.filter(v => v.categoryId !== 'irregular').map(v => v.id));
+  const deselectAllRegulars = () => setSelectedRegularIds([]);
   const selectAllIrregulars = () => setSelectedIrregularIds(VERBS_LIST.filter(v => v.categoryId === 'irregular').map(v => v.id));
   const deselectAllIrregulars = () => setSelectedIrregularIds([]);
   const selectAllTenses = () => setSelectedTenses(TENSES.map(t => t.id));
   const deselectAllTenses = () => setSelectedTenses([]);
 
   const generateQuiz = () => {
-    if ((selectedGroupIds.length === 0 && selectedIrregularIds.length === 0) || selectedTenses.length === 0) return;
+    if ((selectedRegularIds.length === 0 && selectedIrregularIds.length === 0) || selectedTenses.length === 0) return;
 
     const availableVerbs = [
-      ...VERBS_LIST.filter(v => selectedGroupIds.includes(v.categoryId)),
+      ...VERBS_LIST.filter(v => selectedRegularIds.includes(v.id)),
       ...VERBS_LIST.filter(v => selectedIrregularIds.includes(v.id))
     ];
     
@@ -645,32 +641,99 @@ export default function App() {
                       <div className="flex justify-between items-end border-b border-brand-100 pb-4">
                         <h3 className="font-serif text-2xl font-medium text-theme-text">Réguliers</h3>
                         <div className="flex gap-3">
-                          <button onClick={selectAllGroups} className="text-[10px] uppercase tracking-wider text-accent-600 font-bold hover:text-accent-700 transition-colors">Tout</button>
-                          <button onClick={deselectAllGroups} className="text-[10px] uppercase tracking-wider text-theme-text-muted font-bold hover:text-theme-text-secondary transition-colors">Aucun</button>
+                          <button onClick={selectAllRegulars} className="text-[10px] uppercase tracking-wider text-accent-600 font-bold hover:text-accent-700 transition-colors">Tout</button>
+                          <button onClick={deselectAllRegulars} className="text-[10px] uppercase tracking-wider text-theme-text-muted font-bold hover:text-theme-text-secondary transition-colors">Aucun</button>
                         </div>
                       </div>
-                      <div className="space-y-3">
-                        {VERB_GROUPS.filter(g => g.id !== 'irregular').map(group => (
-                          <button
-                            key={group.id}
-                            onClick={() => toggleGroup(group.id)}
-                            className={`flex items-center gap-4 w-full px-5 py-4 rounded-2xl text-base font-medium transition-all text-left group ${
-                              selectedGroupIds.includes(group.id) 
-                                ? 'bg-brand-500 text-white shadow-lg shadow-brand-200' 
-                                : 'bg-theme-surface text-theme-text-secondary border border-theme-border hover:border-brand-200 hover:bg-theme-subtle/50'
-                            }`}
-                          >
-                            <div className={`w-6 h-6 rounded-lg flex items-center justify-center transition-colors ${selectedGroupIds.includes(group.id) ? 'bg-white/20' : 'bg-theme-subtle group-hover:bg-brand-100'}`}>
-                              {selectedGroupIds.includes(group.id) ? <Check className="w-4 h-4" /> : null}
+                      <div className="space-y-2">
+                        {VERB_GROUPS.filter(g => g.id !== 'irregular').map(group => {
+                          const groupVerbs = VERBS_LIST.filter(v => v.categoryId === group.id);
+                          const selectedInGroup = groupVerbs.filter(v => selectedRegularIds.includes(v.id)).length;
+                          const isExpanded = expandedRegularGroupId === group.id;
+                          const panelId = `regular-group-${group.id}`;
+                          const searchTerm = group.id === 'reg-er' ? regularErSearch.trim().toLocaleLowerCase('fr') : '';
+                          const visibleGroupVerbs = searchTerm
+                            ? groupVerbs.filter(verb =>
+                                verb.infinitive.toLocaleLowerCase('fr').includes(searchTerm)
+                                || verb.translation.toLocaleLowerCase('nl').includes(searchTerm)
+                              )
+                            : groupVerbs;
+
+                          return (
+                            <div key={group.id} className="overflow-hidden rounded-xl border border-theme-border bg-theme-surface">
+                              <button
+                                type="button"
+                                aria-expanded={isExpanded}
+                                aria-controls={panelId}
+                                onClick={() => setExpandedRegularGroupId(isExpanded ? null : group.id)}
+                                className="flex w-full items-center gap-3 px-4 py-3 text-left text-theme-text-secondary transition-colors hover:bg-theme-subtle/50 hover:text-theme-text"
+                              >
+                                <ChevronDown className={`h-4 w-4 shrink-0 text-brand-500 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+                                <span className="min-w-0 flex-1 truncate text-sm font-bold">{group.label}</span>
+                                <span className="shrink-0 text-xs font-medium text-theme-text-muted">
+                                  {selectedInGroup > 0 ? `${selectedInGroup} / ` : ''}{groupVerbs.length}
+                                </span>
+                              </button>
+
+                              <AnimatePresence initial={false}>
+                                {isExpanded && (
+                                  <motion.div
+                                    id={panelId}
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: 'auto', opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    transition={{ duration: 0.2 }}
+                                    className="overflow-hidden"
+                                  >
+                                    {group.id === 'reg-er' && (
+                                      <div className="flex justify-end border-t border-theme-border px-3 pt-3">
+                                        <label className="relative block w-full sm:max-w-56">
+                                          <span className="sr-only">Zoek een werkwoord op -er</span>
+                                          <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-theme-text-muted" />
+                                          <input
+                                            type="search"
+                                            value={regularErSearch}
+                                            onChange={(event) => setRegularErSearch(event.target.value)}
+                                            placeholder="Zoek werkwoord..."
+                                            className="h-9 w-full rounded-lg border border-theme-border bg-theme-subtle/50 pl-9 pr-3 text-sm text-theme-text outline-none transition-colors placeholder:text-theme-text-muted focus:border-brand-400 focus:bg-theme-surface"
+                                          />
+                                        </label>
+                                      </div>
+                                    )}
+                                    <div className={`${group.id === 'reg-er' ? '' : 'border-t'} grid max-h-[300px] grid-cols-2 gap-2 overflow-y-auto border-theme-border p-3 custom-scrollbar`}>
+                                      {visibleGroupVerbs.map(verb => (
+                                        <button
+                                          key={verb.id}
+                                          onClick={() => toggleRegular(verb.id)}
+                                          className={`flex min-w-0 items-center gap-3 rounded-lg border px-3 py-2.5 text-left transition-all ${
+                                            selectedRegularIds.includes(verb.id)
+                                              ? 'border-transparent bg-brand-500 text-white shadow-md shadow-brand-200'
+                                              : 'border-theme-border bg-theme-surface text-theme-text-secondary hover:border-brand-100 hover:bg-theme-subtle/30'
+                                          }`}
+                                        >
+                                          <div className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-md transition-colors ${selectedRegularIds.includes(verb.id) ? 'bg-white/20' : 'bg-theme-subtle'}`}>
+                                            {selectedRegularIds.includes(verb.id) ? <Check className="h-3 w-3" /> : null}
+                                          </div>
+                                          <div className="min-w-0 flex-1">
+                                            <div className="truncate text-sm font-bold">{verb.infinitive}</div>
+                                            <div className={`truncate text-[10px] italic ${selectedRegularIds.includes(verb.id) ? 'text-brand-100' : 'text-theme-text-muted'}`}>
+                                              {verb.translation}
+                                            </div>
+                                          </div>
+                                        </button>
+                                      ))}
+                                      {visibleGroupVerbs.length === 0 && (
+                                        <p className="col-span-2 py-6 text-center text-sm text-theme-text-muted">
+                                          Geen werkwoorden gevonden.
+                                        </p>
+                                      )}
+                                    </div>
+                                  </motion.div>
+                                )}
+                              </AnimatePresence>
                             </div>
-                            <div className="flex-1">
-                              <div className="font-bold text-base">{group.label}</div>
-                              <div className={`text-xs italic ${selectedGroupIds.includes(group.id) ? 'text-brand-100' : 'text-theme-text-muted'}`}>
-                                bijv. {VERBS_LIST.filter(v => v.categoryId === group.id).slice(0, 3).map(v => v.infinitive).join(', ')}...
-                              </div>
-                            </div>
-                          </button>
-                        ))}
+                          );
+                        })}
                       </div>
                     </div>
 
@@ -761,13 +824,13 @@ export default function App() {
                 <div className="flex flex-col items-center gap-6">
                   <button
                     onClick={generateQuiz}
-                    disabled={(selectedGroupIds.length === 0 && selectedIrregularIds.length === 0) || selectedTenses.length === 0}
+                    disabled={(selectedRegularIds.length === 0 && selectedIrregularIds.length === 0) || selectedTenses.length === 0}
                     className="neo-button group relative inline-flex items-center gap-4 px-16 py-6 bg-accent-600 text-white rounded-full font-bold text-lg shadow-2xl shadow-accent-200 hover:bg-accent-700 disabled:opacity-30 disabled:grayscale disabled:cursor-not-allowed"
                   >
                     Commencer le quiz
                     <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                   </button>
-                  {((selectedGroupIds.length === 0 && selectedIrregularIds.length === 0) || selectedTenses.length === 0) && (
+                  {((selectedRegularIds.length === 0 && selectedIrregularIds.length === 0) || selectedTenses.length === 0) && (
                     <p className="text-xs text-brand-700 font-bold uppercase tracking-tighter bg-brand-100 px-4 py-2 rounded-full">Kies minimaal één werkwoord en één tijd.</p>
                   )}
                 </div>
@@ -815,15 +878,7 @@ export default function App() {
                   </div>
 
                   {getRegularInfinitiveTranslation(questions[currentIndex].verb) ? (
-                    <div className="inline-flex items-center justify-center rounded-2xl border border-brand-100 bg-theme-surface px-5 py-3 text-brand-700 shadow-sm">
-                      <span className="inline-flex items-center justify-center gap-1 text-lg italic font-serif">
-                        {questions[currentIndex].verb.infinitive}
-                        <InfinitiveInfoButton
-                          infinitive={questions[currentIndex].verb.infinitive}
-                          translation={getRegularInfinitiveTranslation(questions[currentIndex].verb)!}
-                        />
-                      </span>
-                    </div>
+                    <InfinitiveInfoButton infinitive={questions[currentIndex].verb.infinitive} />
                   ) : null}
                 </div>
 

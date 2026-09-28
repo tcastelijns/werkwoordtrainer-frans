@@ -83,131 +83,131 @@
   ],
   "verbsList": [
     {
-      "id": "danser",
-      "infinitive": "danser",
-      "translation": "dansen",
-      "infinitiveTranslation": "dansen",
+      "id": "aider",
+      "infinitive": "aider",
+      "translation": "helpen",
+      "infinitiveTranslation": "helpen",
       "group": "er",
       "categoryId": "reg-er",
       "conjugations": {
         "présent": {
           "french": [
-            "je danse",
-            "tu danses",
-            "il danse",
-            "elle danse",
-            "on danse",
-            "nous dansons",
-            "vous dansez",
-            "ils dansent",
-            "elles dansent"
+            "j'aide",
+            "tu aides",
+            "il aide",
+            "elle aide",
+            "on aide",
+            "nous aidons",
+            "vous aidez",
+            "ils aident",
+            "elles aident"
           ],
           "dutch": [
-            "ik dans",
-            "jij danst",
-            "hij danst",
-            "zij danst",
-            "men danst",
-            "wij dansen",
-            "jullie dansen/u danst",
-            "zij (m) dansen",
-            "zij (v) dansen"
+            "ik help",
+            "jij helpt",
+            "hij helpt",
+            "zij helpt",
+            "men helpt",
+            "wij helpen",
+            "jullie helpen/u helpt",
+            "zij (m) helpen",
+            "zij (v) helpen"
           ]
         },
         "passé composé": {
           "french": [
-            "j'ai dansé",
-            "tu as dansé",
-            "il a dansé",
-            "elle a dansé",
-            "on a dansé",
-            "nous avons dansé",
-            "vous avez dansé",
-            "ils ont dansé",
-            "elles ont dansé"
+            "j'ai aidé",
+            "tu as aidé",
+            "il a aidé",
+            "elle a aidé",
+            "on a aidé",
+            "nous avons aidé",
+            "vous avez aidé",
+            "ils ont aidé",
+            "elles ont aidé"
           ],
           "dutch": [
-            "ik heb gedanst",
-            "jij hebt gedanst",
-            "hij heeft gedanst",
-            "zij heeft gedanst",
-            "men heeft gedanst",
-            "wij hebben gedanst",
-            "jullie hebben gedanst/u heeft gedanst",
-            "zij (m) hebben gedanst",
-            "zij (v) hebben gedanst"
+            "ik heb geholpen",
+            "jij hebt geholpen",
+            "hij heeft geholpen",
+            "zij heeft geholpen",
+            "men heeft geholpen",
+            "wij hebben geholpen",
+            "jullie hebben/u heeft geholpen",
+            "zij (m) hebben geholpen",
+            "zij (v) hebben geholpen"
           ]
         },
         "imparfait": {
           "french": [
-            "je dansais",
-            "tu dansais",
-            "il dansait",
-            "elle dansait",
-            "on dansait",
-            "nous dansions",
-            "vous dansiez",
-            "ils dansaient",
-            "elles dansaient"
+            "j'aidais",
+            "tu aidais",
+            "il aidait",
+            "elle aidait",
+            "on aidait",
+            "nous aidions",
+            "vous aidiez",
+            "ils aidaient",
+            "elles aidaient"
           ],
           "dutch": [
-            "ik danste",
-            "jij danste",
-            "hij danste",
-            "zij danste",
-            "men danste",
-            "wij dansten",
-            "jullie dansten/u danste",
-            "zij (m) dansten",
-            "zij (v) dansten"
+            "ik hielp",
+            "jij hielp",
+            "hij hielp",
+            "zij hielp",
+            "men hielp",
+            "wij hielpen",
+            "jullie hielpen/u hielp",
+            "zij (m) hielpen",
+            "zij (v) hielpen"
           ]
         },
         "futur": {
           "french": [
-            "je danserai",
-            "tu danseras",
-            "il dansera",
-            "elle dansera",
-            "on dansera",
-            "nous danserons",
-            "vous danserez",
-            "ils danseront",
-            "elles danseront"
+            "j'aiderai",
+            "tu aideras",
+            "il aidera",
+            "elle aidera",
+            "on aidera",
+            "nous aiderons",
+            "vous aiderez",
+            "ils aideront",
+            "elles aideront"
           ],
           "dutch": [
-            "ik zal dansen",
-            "jij zal dansen",
-            "hij zal dansen",
-            "zij zal dansen",
-            "men zal dansen",
-            "wij zullen dansen",
-            "jullie zullen dansen/u zult dansen",
-            "zij (m) zullen dansen",
-            "zij (v) zullen dansen"
+            "ik zal helpen",
+            "jij zal helpen",
+            "hij zal helpen",
+            "zij zal helpen",
+            "men zal helpen",
+            "wij zullen helpen",
+            "jullie zullen/u zult helpen",
+            "zij (m) zullen helpen",
+            "zij (v) zullen helpen"
           ]
         },
         "futur du passé": {
           "french": [
-            "je danserais",
-            "tu danserais",
-            "il danserait",
-            "elle danserait",
-            "on danserait",
-            "nous danserions",
-            "vous danseriez",
-            "ils danseraient",
-            "elles danseraient"
+            "j'aiderais",
+            "tu aiderais",
+            "il aiderait",
+            "elle aiderait",
+            "on aiderait",
+            "nous aiderions",
+            "vous aideriez",
+            "ils aideraient",
+            "elles aideraient"
           ],
           "dutch": [
-            "ik zou dansen",
-            "jij zou dansen",
-            "hij zou dansen",
-            "zij zou dansen",
-            "men zou dansen",
-            "wij zouden dansen",
-            "jullie zouden dansen/u zou dansen",
-            "zij (m) zouden dansen",
-            "zij (v) zouden dansen"
+            "ik zou helpen",
+            "jij zou helpen",
+            "hij zou helpen",
+            "zij zou helpen",
+            "men zou helpen",
+            "wij zouden helpen",
+            "jullie zouden/u zou helpen",
+            "zij (m) zouden helpen",
+            "zij (v) zouden helpen"
           ]
         }
       }
@@ -263,7 +263,7 @@
             "zij heeft gehouden van",
             "men heeft gehouden van",
             "wij hebben gehouden van",
-            "jullie hebben gehouden van/u heeft gehouden van",
+            "jullie hebben/u heeft gehouden van",
             "zij (m) hebben gehouden van",
             "zij (v) hebben gehouden van"
           ]
@@ -311,7 +311,7 @@
             "zij zal houden van",
             "men zal houden van",
             "wij zullen houden van",
-            "jullie zullen houden van/u zult houden van",
+            "jullie zullen/u zult houden van",
             "zij (m) zullen houden van",
             "zij (v) zullen houden van"
           ]
@@ -335,7 +335,7 @@
             "zij zou houden van",
             "men zou houden van",
             "wij zouden houden van",
-            "jullie zouden houden van/u zou houden van",
+            "jullie zouden/u zou houden van",
             "zij (m) zouden houden van",
             "zij (v) zouden houden van"
           ]
@@ -343,391 +343,1041 @@
       }
     },
     {
-      "id": "regarder",
-      "infinitive": "regarder",
-      "translation": "kijken",
-      "infinitiveTranslation": "kijken",
+      "id": "arriver",
+      "infinitive": "arriver",
+      "translation": "aankomen",
+      "infinitiveTranslation": "aankomen",
       "group": "er",
       "categoryId": "reg-er",
       "conjugations": {
         "présent": {
           "french": [
-            "je regarde",
-            "tu regardes",
-            "il regarde",
-            "elle regarde",
-            "on regarde",
-            "nous regardons",
-            "vous regardez",
-            "ils regardent",
-            "elles regardent"
+            "j'arrive",
+            "tu arrives",
+            "il arrive",
+            "elle arrive",
+            "on arrive",
+            "nous arrivons",
+            "vous arrivez",
+            "ils arrivent",
+            "elles arrivent"
           ],
           "dutch": [
-            "ik kijk",
-            "jij kijkt",
-            "hij kijkt",
-            "zij kijkt",
-            "men kijkt",
-            "wij kijken",
-            "jullie kijken/u kijkt",
-            "zij (m) kijken",
-            "zij (v) kijken"
+            "ik kom aan",
+            "jij komt aan",
+            "hij komt aan",
+            "zij komt aan",
+            "men komt aan",
+            "wij komen aan",
+            "jullie komen aan/u komt aan",
+            "zij (m) komen aan",
+            "zij (v) komen aan"
           ]
         },
         "passé composé": {
           "french": [
-            "j'ai regardé",
-            "tu as regardé",
-            "il a regardé",
-            "elle a regardé",
-            "on a regardé",
-            "nous avons regardé",
-            "vous avez regardé",
-            "ils ont regardé",
-            "elles ont regardé"
+            "je suis arrivé",
+            "tu es arrivé",
+            "il est arrivé",
+            "elle est arrivé",
+            "on est arrivé",
+            "nous sommes arrivé",
+            "vous êtes arrivé",
+            "ils sont arrivé",
+            "elles sont arrivé"
           ],
           "dutch": [
-            "ik heb gekeken",
-            "jij hebt gekeken",
-            "hij heeft gekeken",
-            "zij heeft gekeken",
-            "men heeft gekeken",
-            "wij hebben gekeken",
-            "jullie hebben gekeken/u heeft gekeken",
-            "zij (m) hebben gekeken",
-            "zij (v) hebben gekeken"
+            "ik ben aangekomen",
+            "jij bent aangekomen",
+            "hij is aangekomen",
+            "zij is aangekomen",
+            "men is aangekomen",
+            "wij zijn aangekomen",
+            "jullie zijn/u bent aangekomen",
+            "zij (m) zijn aangekomen",
+            "zij (v) zijn aangekomen"
           ]
         },
         "imparfait": {
           "french": [
-            "je regardais",
-            "tu regardais",
-            "il regardait",
-            "elle regardait",
-            "on regardait",
-            "nous regardions",
-            "vous regardiez",
-            "ils regardaient",
-            "elles regardaient"
+            "j'arrivais",
+            "tu arrivais",
+            "il arrivait",
+            "elle arrivait",
+            "on arrivait",
+            "nous arrivions",
+            "vous arriviez",
+            "ils arrivaient",
+            "elles arrivaient"
           ],
           "dutch": [
-            "ik keek",
-            "jij keek",
-            "hij keek",
-            "zij keek",
-            "men keek",
-            "wij keken",
-            "jullie keken/u keek",
-            "zij (m) keken",
-            "zij (v) keken"
+            "ik kwam aan",
+            "jij kwam aan",
+            "hij kwam aan",
+            "zij kwam aan",
+            "men kwam aan",
+            "wij kwamen aan",
+            "jullie kwamen aan/u kwam aan",
+            "zij (m) kwamen aan",
+            "zij (v) kwamen aan"
           ]
         },
         "futur": {
           "french": [
-            "je regarderai",
-            "tu regarderas",
-            "il regardera",
-            "elle regardera",
-            "on regardera",
-            "nous regarderons",
-            "vous regarderez",
-            "ils regarderont",
-            "elles regarderont"
+            "j'arriverai",
+            "tu arriveras",
+            "il arrivera",
+            "elle arrivera",
+            "on arrivera",
+            "nous arriverons",
+            "vous arriverez",
+            "ils arriveront",
+            "elles arriveront"
           ],
           "dutch": [
-            "ik zal kijken",
-            "jij zal kijken",
-            "hij zal kijken",
-            "zij zal kijken",
-            "men zal kijken",
-            "wij zullen kijken",
-            "jullie zullen kijken/u zult kijken",
-            "zij (m) zullen kijken",
-            "zij (v) zullen kijken"
+            "ik zal aankomen",
+            "jij zal aankomen",
+            "hij zal aankomen",
+            "zij zal aankomen",
+            "men zal aankomen",
+            "wij zullen aankomen",
+            "jullie zullen/u zult aankomen",
+            "zij (m) zullen aankomen",
+            "zij (v) zullen aankomen"
           ]
         },
         "futur du passé": {
           "french": [
-            "je regarderais",
-            "tu regarderais",
-            "il regarderait",
-            "elle regarderait",
-            "on regarderait",
-            "nous regarderions",
-            "vous regarderiez",
-            "ils regarderaient",
-            "elles regarderaient"
+            "j'arriverais",
+            "tu arriverais",
+            "il arriverait",
+            "elle arriverait",
+            "on arriverait",
+            "nous arriverions",
+            "vous arriveriez",
+            "ils arriveraient",
+            "elles arriveraient"
           ],
           "dutch": [
-            "ik zou kijken",
-            "jij zou kijken",
-            "hij zou kijken",
-            "zij zou kijken",
-            "men zou kijken",
-            "wij zouden kijken",
-            "jullie zouden kijken/u zou kijken",
-            "zij (m) zouden kijken",
-            "zij (v) zouden kijken"
+            "ik zou aankomen",
+            "jij zou aankomen",
+            "hij zou aankomen",
+            "zij zou aankomen",
+            "men zou aankomen",
+            "wij zouden aankomen",
+            "jullie zouden/u zou aankomen",
+            "zij (m) zouden aankomen",
+            "zij (v) zouden aankomen"
           ]
         }
       }
     },
     {
-      "id": "parler",
-      "infinitive": "parler",
-      "translation": "spreken",
-      "infinitiveTranslation": "spreken / praten",
+      "id": "arrêter",
+      "infinitive": "arrêter",
+      "translation": "stoppen",
+      "infinitiveTranslation": "stoppen",
       "group": "er",
       "categoryId": "reg-er",
       "conjugations": {
         "présent": {
           "french": [
-            "je parle",
-            "tu parles",
-            "il parle",
-            "elle parle",
-            "on parle",
-            "nous parlons",
-            "vous parlez",
-            "ils parlent",
-            "elles parlent"
+            "j'arrête",
+            "tu arrêtes",
+            "il arrête",
+            "elle arrête",
+            "on arrête",
+            "nous arrêtons",
+            "vous arrêtez",
+            "ils arrêtent",
+            "elles arrêtent"
           ],
           "dutch": [
-            "ik spreek",
-            "jij spreekt",
-            "hij spreekt",
-            "zij spreekt",
-            "men spreekt",
-            "wij spreken",
-            "jullie spreken/u spreekt",
-            "zij (m) spreken",
-            "zij (v) spreken"
+            "ik stop",
+            "jij stopt",
+            "hij stopt",
+            "zij stopt",
+            "men stopt",
+            "wij stoppen",
+            "jullie stoppen/u stopt",
+            "zij (m) stoppen",
+            "zij (v) stoppen"
           ]
         },
         "passé composé": {
           "french": [
-            "j'ai parlé",
-            "tu as parlé",
-            "il a parlé",
-            "elle a parlé",
-            "on a parlé",
-            "nous avons parlé",
-            "vous avez parlé",
-            "ils ont parlé",
-            "elles ont parlé"
+            "j'ai arrêté",
+            "tu as arrêté",
+            "il a arrêté",
+            "elle a arrêté",
+            "on a arrêté",
+            "nous avons arrêté",
+            "vous avez arrêté",
+            "ils ont arrêté",
+            "elles ont arrêté"
           ],
           "dutch": [
-            "ik heb gesproken",
-            "jij hebt gesproken",
-            "hij heeft gesproken",
-            "zij heeft gesproken",
-            "men heeft gesproken",
-            "wij hebben gesproken",
-            "jullie hebben gesproken/u heeft gesproken",
-            "zij (m) hebben gesproken",
-            "zij (v) hebben gesproken"
+            "ik heb gestopt",
+            "jij hebt gestopt",
+            "hij heeft gestopt",
+            "zij heeft gestopt",
+            "men heeft gestopt",
+            "wij hebben gestopt",
+            "jullie hebben/u heeft gestopt",
+            "zij (m) hebben gestopt",
+            "zij (v) hebben gestopt"
           ]
         },
         "imparfait": {
           "french": [
-            "je parlais",
-            "tu parlais",
-            "il parlait",
-            "elle parlait",
-            "on parlait",
-            "nous parlions",
-            "vous parliez",
-            "ils parlaient",
-            "elles parlaient"
+            "j'arrêtais",
+            "tu arrêtais",
+            "il arrêtait",
+            "elle arrêtait",
+            "on arrêtait",
+            "nous arrêtions",
+            "vous arrêtiez",
+            "ils arrêtaient",
+            "elles arrêtaient"
           ],
           "dutch": [
-            "ik sprak",
-            "jij sprak",
-            "hij sprak",
-            "zij sprak",
-            "men sprak",
-            "wij spraken",
-            "jullie spraken/u sprak",
-            "zij (m) spraken",
-            "zij (v) spraken"
+            "ik stopte",
+            "jij stopte",
+            "hij stopte",
+            "zij stopte",
+            "men stopte",
+            "wij stopten",
+            "jullie stopten/u stopte",
+            "zij (m) stopten",
+            "zij (v) stopten"
           ]
         },
         "futur": {
           "french": [
-            "je parlerai",
-            "tu parleras",
-            "il parlera",
-            "elle parlera",
-            "on parlera",
-            "nous parlerons",
-            "vous parlerez",
-            "ils parleront",
-            "elles parleront"
+            "j'arrêterai",
+            "tu arrêteras",
+            "il arrêtera",
+            "elle arrêtera",
+            "on arrêtera",
+            "nous arrêterons",
+            "vous arrêterez",
+            "ils arrêteront",
+            "elles arrêteront"
           ],
           "dutch": [
-            "ik zal spreken",
-            "jij zal spreken",
-            "hij zal spreken",
-            "zij zal spreken",
-            "men zal spreken",
-            "wij zullen spreken",
-            "jullie zullen spreken/u zult spreken",
-            "zij (m) zullen spreken",
-            "zij (v) zullen spreken"
+            "ik zal stoppen",
+            "jij zal stoppen",
+            "hij zal stoppen",
+            "zij zal stoppen",
+            "men zal stoppen",
+            "wij zullen stoppen",
+            "jullie zullen/u zult stoppen",
+            "zij (m) zullen stoppen",
+            "zij (v) zullen stoppen"
           ]
         },
         "futur du passé": {
           "french": [
-            "je parlerais",
-            "tu parlerais",
-            "il parlerait",
-            "elle parlerait",
-            "on parlerait",
-            "nous parlerions",
-            "vous parleriez",
-            "ils parleraient",
-            "elles parleraient"
+            "j'arrêterais",
+            "tu arrêterais",
+            "il arrêterait",
+            "elle arrêterait",
+            "on arrêterait",
+            "nous arrêterions",
+            "vous arrêteriez",
+            "ils arrêteraient",
+            "elles arrêteraient"
           ],
           "dutch": [
-            "ik zou spreken",
-            "jij zou spreken",
-            "hij zou spreken",
-            "zij zou spreken",
-            "men zou spreken",
-            "wij zouden spreken",
-            "jullie zouden spreken/u zou spreken",
-            "zij (m) zouden spreken",
-            "zij (v) zouden spreken"
+            "ik zou stoppen",
+            "jij zou stoppen",
+            "hij zou stoppen",
+            "zij zou stoppen",
+            "men zou stoppen",
+            "wij zouden stoppen",
+            "jullie zouden/u zou stoppen",
+            "zij (m) zouden stoppen",
+            "zij (v) zouden stoppen"
           ]
         }
       }
     },
     {
-      "id": "écouter",
-      "infinitive": "écouter",
-      "translation": "luisteren",
-      "infinitiveTranslation": "luisteren",
+      "id": "chanter",
+      "infinitive": "chanter",
+      "translation": "zingen",
+      "infinitiveTranslation": "zingen",
       "group": "er",
       "categoryId": "reg-er",
       "conjugations": {
         "présent": {
           "french": [
-            "j'écoute",
-            "tu écoutes",
-            "il écoute",
-            "elle écoute",
-            "on écoute",
-            "nous écoutons",
-            "vous écoutez",
-            "ils écoutent",
-            "elles écoutent"
+            "je chante",
+            "tu chantes",
+            "il chante",
+            "elle chante",
+            "on chante",
+            "nous chantons",
+            "vous chantez",
+            "ils chantent",
+            "elles chantent"
           ],
           "dutch": [
-            "ik luister",
-            "jij luistert",
-            "hij luistert",
-            "zij luistert",
-            "men luistert",
-            "wij luisteren",
-            "jullie luisteren/u luistert",
-            "zij (m) luisteren",
-            "zij (v) luisteren"
+            "ik zing",
+            "jij zingt",
+            "hij zingt",
+            "zij zingt",
+            "men zingt",
+            "wij zingen",
+            "jullie zingen/u zingt",
+            "zij (m) zingen",
+            "zij (v) zingen"
           ]
         },
         "passé composé": {
           "french": [
-            "j'ai écouté",
-            "tu as écouté",
-            "il a écouté",
-            "elle a écouté",
-            "on a écouté",
-            "nous avons écouté",
-            "vous avez écouté",
-            "ils ont écouté",
-            "elles ont écouté"
+            "j'ai chanté",
+            "tu as chanté",
+            "il a chanté",
+            "elle a chanté",
+            "on a chanté",
+            "nous avons chanté",
+            "vous avez chanté",
+            "ils ont chanté",
+            "elles ont chanté"
           ],
           "dutch": [
-            "ik heb geluisterd",
-            "jij hebt geluisterd",
-            "hij heeft geluisterd",
-            "zij heeft geluisterd",
-            "men heeft geluisterd",
-            "wij hebben geluisterd",
-            "jullie hebben geluisterd/u heeft geluisterd",
-            "zij (m) hebben geluisterd",
-            "zij (v) hebben geluisterd"
+            "ik heb gezongen",
+            "jij hebt gezongen",
+            "hij heeft gezongen",
+            "zij heeft gezongen",
+            "men heeft gezongen",
+            "wij hebben gezongen",
+            "jullie hebben/u heeft gezongen",
+            "zij (m) hebben gezongen",
+            "zij (v) hebben gezongen"
           ]
         },
         "imparfait": {
           "french": [
-            "j'écoutais",
-            "tu écoutais",
-            "il écoutait",
-            "elle écoutait",
-            "on écoutait",
-            "nous écoutions",
-            "vous écoutiez",
-            "ils écoutaient",
-            "elles écoutaient"
+            "je chantais",
+            "tu chantais",
+            "il chantait",
+            "elle chantait",
+            "on chantait",
+            "nous chantions",
+            "vous chantiez",
+            "ils chantaient",
+            "elles chantaient"
           ],
           "dutch": [
-            "ik luisterde",
-            "jij luisterde",
-            "hij luisterde",
-            "zij luisterde",
-            "men luisterde",
-            "wij luisterden",
-            "jullie luisterden/u luisterde",
-            "zij (m) luisterden",
-            "zij (v) luisterden"
+            "ik zong",
+            "jij zong",
+            "hij zong",
+            "zij zong",
+            "men zong",
+            "wij zongen",
+            "jullie zongen/u zong",
+            "zij (m) zongen",
+            "zij (v) zongen"
           ]
         },
         "futur": {
           "french": [
-            "je écouterai",
-            "tu écouteras",
-            "il écoutera",
-            "elle écoutera",
-            "on écoutera",
-            "nous écouterons",
-            "vous écouterez",
-            "ils écouteront",
-            "elles écouteront"
+            "je chanterai",
+            "tu chanteras",
+            "il chantera",
+            "elle chantera",
+            "on chantera",
+            "nous chanterons",
+            "vous chanterez",
+            "ils chanteront",
+            "elles chanteront"
           ],
           "dutch": [
-            "ik zal luisteren",
-            "jij zal luisteren",
-            "hij zal luisteren",
-            "zij zal luisteren",
-            "men zal luisteren",
-            "wij zullen luisteren",
-            "jullie zullen luisteren/u zult luisteren",
-            "zij (m) zullen luisteren",
-            "zij (v) zullen luisteren"
+            "ik zal zingen",
+            "jij zal zingen",
+            "hij zal zingen",
+            "zij zal zingen",
+            "men zal zingen",
+            "wij zullen zingen",
+            "jullie zullen/u zult zingen",
+            "zij (m) zullen zingen",
+            "zij (v) zullen zingen"
           ]
         },
         "futur du passé": {
           "french": [
-            "je écouterais",
-            "tu écouterais",
-            "il écouterait",
-            "elle écouterait",
-            "on écouterait",
-            "nous écouterions",
-            "vous écouteriez",
-            "ils écouteraient",
-            "elles écouteraient"
+            "je chanterais",
+            "tu chanterais",
+            "il chanterait",
+            "elle chanterait",
+            "on chanterait",
+            "nous chanterions",
+            "vous chanteriez",
+            "ils chanteraient",
+            "elles chanteraient"
           ],
           "dutch": [
-            "ik zou luisteren",
-            "jij zou luisteren",
-            "hij zou luisteren",
-            "zij zou luisteren",
-            "men zou luisteren",
-            "wij zouden luisteren",
-            "jullie zouden luisteren/u zou luisteren",
-            "zij (m) zouden luisteren",
-            "zij (v) zouden luisteren"
+            "ik zou zingen",
+            "jij zou zingen",
+            "hij zou zingen",
+            "zij zou zingen",
+            "men zou zingen",
+            "wij zouden zingen",
+            "jullie zouden/u zou zingen",
+            "zij (m) zouden zingen",
+            "zij (v) zouden zingen"
+          ]
+        }
+      }
+    },
+    {
+      "id": "chercher",
+      "infinitive": "chercher",
+      "translation": "zoeken",
+      "infinitiveTranslation": "zoeken",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je cherche",
+            "tu cherches",
+            "il cherche",
+            "elle cherche",
+            "on cherche",
+            "nous cherchons",
+            "vous cherchez",
+            "ils cherchent",
+            "elles cherchent"
+          ],
+          "dutch": [
+            "ik zoek",
+            "jij zoekt",
+            "hij zoekt",
+            "zij zoekt",
+            "men zoekt",
+            "wij zoeken",
+            "jullie zoeken/u zoekt",
+            "zij (m) zoeken",
+            "zij (v) zoeken"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai cherché",
+            "tu as cherché",
+            "il a cherché",
+            "elle a cherché",
+            "on a cherché",
+            "nous avons cherché",
+            "vous avez cherché",
+            "ils ont cherché",
+            "elles ont cherché"
+          ],
+          "dutch": [
+            "ik heb gezocht",
+            "jij hebt gezocht",
+            "hij heeft gezocht",
+            "zij heeft gezocht",
+            "men heeft gezocht",
+            "wij hebben gezocht",
+            "jullie hebben/u heeft gezocht",
+            "zij (m) hebben gezocht",
+            "zij (v) hebben gezocht"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je cherchais",
+            "tu cherchais",
+            "il cherchait",
+            "elle cherchait",
+            "on cherchait",
+            "nous cherchions",
+            "vous cherchiez",
+            "ils cherchaient",
+            "elles cherchaient"
+          ],
+          "dutch": [
+            "ik zocht",
+            "jij zocht",
+            "hij zocht",
+            "zij zocht",
+            "men zocht",
+            "wij zochten",
+            "jullie zochten/u zocht",
+            "zij (m) zochten",
+            "zij (v) zochten"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je chercherai",
+            "tu chercheras",
+            "il cherchera",
+            "elle cherchera",
+            "on cherchera",
+            "nous chercherons",
+            "vous chercherez",
+            "ils chercheront",
+            "elles chercheront"
+          ],
+          "dutch": [
+            "ik zal zoeken",
+            "jij zal zoeken",
+            "hij zal zoeken",
+            "zij zal zoeken",
+            "men zal zoeken",
+            "wij zullen zoeken",
+            "jullie zullen/u zult zoeken",
+            "zij (m) zullen zoeken",
+            "zij (v) zullen zoeken"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je chercherais",
+            "tu chercherais",
+            "il chercherait",
+            "elle chercherait",
+            "on chercherait",
+            "nous chercherions",
+            "vous chercheriez",
+            "ils chercheraient",
+            "elles chercheraient"
+          ],
+          "dutch": [
+            "ik zou zoeken",
+            "jij zou zoeken",
+            "hij zou zoeken",
+            "zij zou zoeken",
+            "men zou zoeken",
+            "wij zouden zoeken",
+            "jullie zouden/u zou zoeken",
+            "zij (m) zouden zoeken",
+            "zij (v) zouden zoeken"
+          ]
+        }
+      }
+    },
+    {
+      "id": "commencer",
+      "infinitive": "commencer",
+      "translation": "beginnen",
+      "infinitiveTranslation": "beginnen",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je commence",
+            "tu commences",
+            "il commence",
+            "elle commence",
+            "on commence",
+            "nous commençons",
+            "vous commencez",
+            "ils commencent",
+            "elles commencent"
+          ],
+          "dutch": [
+            "ik begin",
+            "jij begint",
+            "hij begint",
+            "zij begint",
+            "men begint",
+            "wij beginnen",
+            "jullie beginnen/u begint",
+            "zij (m) beginnen",
+            "zij (v) beginnen"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai commencé",
+            "tu as commencé",
+            "il a commencé",
+            "elle a commencé",
+            "on a commencé",
+            "nous avons commencé",
+            "vous avez commencé",
+            "ils ont commencé",
+            "elles ont commencé"
+          ],
+          "dutch": [
+            "ik ben begonnen",
+            "jij bent begonnen",
+            "hij is begonnen",
+            "zij is begonnen",
+            "men is begonnen",
+            "wij zijn begonnen",
+            "jullie zijn/u bent begonnen",
+            "zij (m) zijn begonnen",
+            "zij (v) zijn begonnen"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je commençais",
+            "tu commençais",
+            "il commençait",
+            "elle commençait",
+            "on commençait",
+            "nous commencions",
+            "vous commenciez",
+            "ils commençaient",
+            "elles commençaient"
+          ],
+          "dutch": [
+            "ik begon",
+            "jij begon",
+            "hij begon",
+            "zij begon",
+            "men begon",
+            "wij begonnen",
+            "jullie begonnen/u begon",
+            "zij (m) begonnen",
+            "zij (v) begonnen"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je commencerai",
+            "tu commenceras",
+            "il commencera",
+            "elle commencera",
+            "on commencera",
+            "nous commencerons",
+            "vous commencerez",
+            "ils commenceront",
+            "elles commenceront"
+          ],
+          "dutch": [
+            "ik zal beginnen",
+            "jij zal beginnen",
+            "hij zal beginnen",
+            "zij zal beginnen",
+            "men zal beginnen",
+            "wij zullen beginnen",
+            "jullie zullen/u zult beginnen",
+            "zij (m) zullen beginnen",
+            "zij (v) zullen beginnen"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je commencerais",
+            "tu commencerais",
+            "il commencerait",
+            "elle commencerait",
+            "on commencerait",
+            "nous commencerions",
+            "vous commenceriez",
+            "ils commenceraient",
+            "elles commenceraient"
+          ],
+          "dutch": [
+            "ik zou beginnen",
+            "jij zou beginnen",
+            "hij zou beginnen",
+            "zij zou beginnen",
+            "men zou beginnen",
+            "wij zouden beginnen",
+            "jullie zouden/u zou beginnen",
+            "zij (m) zouden beginnen",
+            "zij (v) zouden beginnen"
+          ]
+        }
+      }
+    },
+    {
+      "id": "continuer",
+      "infinitive": "continuer",
+      "translation": "doorgaan",
+      "infinitiveTranslation": "doorgaan",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je continue",
+            "tu continues",
+            "il continue",
+            "elle continue",
+            "on continue",
+            "nous continuons",
+            "vous continuez",
+            "ils continuent",
+            "elles continuent"
+          ],
+          "dutch": [
+            "ik ga door",
+            "jij gaat door",
+            "hij gaat door",
+            "zij gaat door",
+            "men gaat door",
+            "wij gaan door",
+            "jullie gaan door/u gaat door",
+            "zij (m) gaan door",
+            "zij (v) gaan door"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai continué",
+            "tu as continué",
+            "il a continué",
+            "elle a continué",
+            "on a continué",
+            "nous avons continué",
+            "vous avez continué",
+            "ils ont continué",
+            "elles ont continué"
+          ],
+          "dutch": [
+            "ik ben doorgegaan",
+            "jij bent doorgegaan",
+            "hij is doorgegaan",
+            "zij is doorgegaan",
+            "men is doorgegaan",
+            "wij zijn doorgegaan",
+            "jullie zijn/u bent doorgegaan",
+            "zij (m) zijn doorgegaan",
+            "zij (v) zijn doorgegaan"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je continuais",
+            "tu continuais",
+            "il continuait",
+            "elle continuait",
+            "on continuait",
+            "nous continuions",
+            "vous continuiez",
+            "ils continuaient",
+            "elles continuaient"
+          ],
+          "dutch": [
+            "ik ging door",
+            "jij ging door",
+            "hij ging door",
+            "zij ging door",
+            "men ging door",
+            "wij gingen door",
+            "jullie gingen door/u ging door",
+            "zij (m) gingen door",
+            "zij (v) gingen door"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je continuerai",
+            "tu continueras",
+            "il continuera",
+            "elle continuera",
+            "on continuera",
+            "nous continuerons",
+            "vous continuerez",
+            "ils continueront",
+            "elles continueront"
+          ],
+          "dutch": [
+            "ik zal doorgaan",
+            "jij zal doorgaan",
+            "hij zal doorgaan",
+            "zij zal doorgaan",
+            "men zal doorgaan",
+            "wij zullen doorgaan",
+            "jullie zullen/u zult doorgaan",
+            "zij (m) zullen doorgaan",
+            "zij (v) zullen doorgaan"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je continuerais",
+            "tu continuerais",
+            "il continuerait",
+            "elle continuerait",
+            "on continuerait",
+            "nous continuerions",
+            "vous continueriez",
+            "ils continueraient",
+            "elles continueraient"
+          ],
+          "dutch": [
+            "ik zou doorgaan",
+            "jij zou doorgaan",
+            "hij zou doorgaan",
+            "zij zou doorgaan",
+            "men zou doorgaan",
+            "wij zouden doorgaan",
+            "jullie zouden/u zou doorgaan",
+            "zij (m) zouden doorgaan",
+            "zij (v) zouden doorgaan"
+          ]
+        }
+      }
+    },
+    {
+      "id": "danser",
+      "infinitive": "danser",
+      "translation": "dansen",
+      "infinitiveTranslation": "dansen",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je danse",
+            "tu danses",
+            "il danse",
+            "elle danse",
+            "on danse",
+            "nous dansons",
+            "vous dansez",
+            "ils dansent",
+            "elles dansent"
+          ],
+          "dutch": [
+            "ik dans",
+            "jij danst",
+            "hij danst",
+            "zij danst",
+            "men danst",
+            "wij dansen",
+            "jullie dansen/u danst",
+            "zij (m) dansen",
+            "zij (v) dansen"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai dansé",
+            "tu as dansé",
+            "il a dansé",
+            "elle a dansé",
+            "on a dansé",
+            "nous avons dansé",
+            "vous avez dansé",
+            "ils ont dansé",
+            "elles ont dansé"
+          ],
+          "dutch": [
+            "ik heb gedanst",
+            "jij hebt gedanst",
+            "hij heeft gedanst",
+            "zij heeft gedanst",
+            "men heeft gedanst",
+            "wij hebben gedanst",
+            "jullie hebben/u heeft gedanst",
+            "zij (m) hebben gedanst",
+            "zij (v) hebben gedanst"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je dansais",
+            "tu dansais",
+            "il dansait",
+            "elle dansait",
+            "on dansait",
+            "nous dansions",
+            "vous dansiez",
+            "ils dansaient",
+            "elles dansaient"
+          ],
+          "dutch": [
+            "ik danste",
+            "jij danste",
+            "hij danste",
+            "zij danste",
+            "men danste",
+            "wij dansten",
+            "jullie dansten/u danste",
+            "zij (m) dansten",
+            "zij (v) dansten"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je danserai",
+            "tu danseras",
+            "il dansera",
+            "elle dansera",
+            "on dansera",
+            "nous danserons",
+            "vous danserez",
+            "ils danseront",
+            "elles danseront"
+          ],
+          "dutch": [
+            "ik zal dansen",
+            "jij zal dansen",
+            "hij zal dansen",
+            "zij zal dansen",
+            "men zal dansen",
+            "wij zullen dansen",
+            "jullie zullen/u zult dansen",
+            "zij (m) zullen dansen",
+            "zij (v) zullen dansen"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je danserais",
+            "tu danserais",
+            "il danserait",
+            "elle danserait",
+            "on danserait",
+            "nous danserions",
+            "vous danseriez",
+            "ils danseraient",
+            "elles danseraient"
+          ],
+          "dutch": [
+            "ik zou dansen",
+            "jij zou dansen",
+            "hij zou dansen",
+            "zij zou dansen",
+            "men zou dansen",
+            "wij zouden dansen",
+            "jullie zouden/u zou dansen",
+            "zij (m) zouden dansen",
+            "zij (v) zouden dansen"
+          ]
+        }
+      }
+    },
+    {
+      "id": "demander",
+      "infinitive": "demander",
+      "translation": "vragen",
+      "infinitiveTranslation": "vragen",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je demande",
+            "tu demandes",
+            "il demande",
+            "elle demande",
+            "on demande",
+            "nous demandons",
+            "vous demandez",
+            "ils demandent",
+            "elles demandent"
+          ],
+          "dutch": [
+            "ik vraag",
+            "jij vraagt",
+            "hij vraagt",
+            "zij vraagt",
+            "men vraagt",
+            "wij vragen",
+            "jullie vragen/u vraagt",
+            "zij (m) vragen",
+            "zij (v) vragen"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai demandé",
+            "tu as demandé",
+            "il a demandé",
+            "elle a demandé",
+            "on a demandé",
+            "nous avons demandé",
+            "vous avez demandé",
+            "ils ont demandé",
+            "elles ont demandé"
+          ],
+          "dutch": [
+            "ik heb gevraagd",
+            "jij hebt gevraagd",
+            "hij heeft gevraagd",
+            "zij heeft gevraagd",
+            "men heeft gevraagd",
+            "wij hebben gevraagd",
+            "jullie hebben/u heeft gevraagd",
+            "zij (m) hebben gevraagd",
+            "zij (v) hebben gevraagd"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je demandais",
+            "tu demandais",
+            "il demandait",
+            "elle demandait",
+            "on demandait",
+            "nous demandions",
+            "vous demandiez",
+            "ils demandaient",
+            "elles demandaient"
+          ],
+          "dutch": [
+            "ik vroeg",
+            "jij vroeg",
+            "hij vroeg",
+            "zij vroeg",
+            "men vroeg",
+            "wij vroegen",
+            "jullie vroegen/u vroeg",
+            "zij (m) vroegen",
+            "zij (v) vroegen"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je demanderai",
+            "tu demanderas",
+            "il demandera",
+            "elle demandera",
+            "on demandera",
+            "nous demanderons",
+            "vous demanderez",
+            "ils demanderont",
+            "elles demanderont"
+          ],
+          "dutch": [
+            "ik zal vragen",
+            "jij zal vragen",
+            "hij zal vragen",
+            "zij zal vragen",
+            "men zal vragen",
+            "wij zullen vragen",
+            "jullie zullen/u zult vragen",
+            "zij (m) zullen vragen",
+            "zij (v) zullen vragen"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je demanderais",
+            "tu demanderais",
+            "il demanderait",
+            "elle demanderait",
+            "on demanderait",
+            "nous demanderions",
+            "vous demanderiez",
+            "ils demanderaient",
+            "elles demanderaient"
+          ],
+          "dutch": [
+            "ik zou vragen",
+            "jij zou vragen",
+            "hij zou vragen",
+            "zij zou vragen",
+            "men zou vragen",
+            "wij zouden vragen",
+            "jullie zouden/u zou vragen",
+            "zij (m) zouden vragen",
+            "zij (v) zouden vragen"
           ]
         }
       }
@@ -783,7 +1433,7 @@
             "zij heeft gegeven",
             "men heeft gegeven",
             "wij hebben gegeven",
-            "jullie hebben gegeven/u heeft gegeven",
+            "jullie hebben/u heeft gegeven",
             "zij (m) hebben gegeven",
             "zij (v) hebben gegeven"
           ]
@@ -831,7 +1481,7 @@
             "zij zal geven",
             "men zal geven",
             "wij zullen geven",
-            "jullie zullen geven/u zult geven",
+            "jullie zullen/u zult geven",
             "zij (m) zullen geven",
             "zij (v) zullen geven"
           ]
@@ -855,9 +1505,3519 @@
             "zij zou geven",
             "men zou geven",
             "wij zouden geven",
-            "jullie zouden geven/u zou geven",
+            "jullie zouden/u zou geven",
             "zij (m) zouden geven",
             "zij (v) zouden geven"
+          ]
+        }
+      }
+    },
+    {
+      "id": "écouter",
+      "infinitive": "écouter",
+      "translation": "luisteren",
+      "infinitiveTranslation": "luisteren",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "j'écoute",
+            "tu écoutes",
+            "il écoute",
+            "elle écoute",
+            "on écoute",
+            "nous écoutons",
+            "vous écoutez",
+            "ils écoutent",
+            "elles écoutent"
+          ],
+          "dutch": [
+            "ik luister",
+            "jij luistert",
+            "hij luistert",
+            "zij luistert",
+            "men luistert",
+            "wij luisteren",
+            "jullie luisteren/u luistert",
+            "zij (m) luisteren",
+            "zij (v) luisteren"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai écouté",
+            "tu as écouté",
+            "il a écouté",
+            "elle a écouté",
+            "on a écouté",
+            "nous avons écouté",
+            "vous avez écouté",
+            "ils ont écouté",
+            "elles ont écouté"
+          ],
+          "dutch": [
+            "ik heb geluisterd",
+            "jij hebt geluisterd",
+            "hij heeft geluisterd",
+            "zij heeft geluisterd",
+            "men heeft geluisterd",
+            "wij hebben geluisterd",
+            "jullie hebben/u heeft geluisterd",
+            "zij (m) hebben geluisterd",
+            "zij (v) hebben geluisterd"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "j'écoutais",
+            "tu écoutais",
+            "il écoutait",
+            "elle écoutait",
+            "on écoutait",
+            "nous écoutions",
+            "vous écoutiez",
+            "ils écoutaient",
+            "elles écoutaient"
+          ],
+          "dutch": [
+            "ik luisterde",
+            "jij luisterde",
+            "hij luisterde",
+            "zij luisterde",
+            "men luisterde",
+            "wij luisterden",
+            "jullie luisterden/u luisterde",
+            "zij (m) luisterden",
+            "zij (v) luisterden"
+          ]
+        },
+        "futur": {
+          "french": [
+            "j'écouterai",
+            "tu écouteras",
+            "il écoutera",
+            "elle écoutera",
+            "on écoutera",
+            "nous écouterons",
+            "vous écouterez",
+            "ils écouteront",
+            "elles écouteront"
+          ],
+          "dutch": [
+            "ik zal luisteren",
+            "jij zal luisteren",
+            "hij zal luisteren",
+            "zij zal luisteren",
+            "men zal luisteren",
+            "wij zullen luisteren",
+            "jullie zullen/u zult luisteren",
+            "zij (m) zullen luisteren",
+            "zij (v) zullen luisteren"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "j'écouterais",
+            "tu écouterais",
+            "il écouterait",
+            "elle écouterait",
+            "on écouterait",
+            "nous écouterions",
+            "vous écouteriez",
+            "ils écouteraient",
+            "elles écouteraient"
+          ],
+          "dutch": [
+            "ik zou luisteren",
+            "jij zou luisteren",
+            "hij zou luisteren",
+            "zij zou luisteren",
+            "men zou luisteren",
+            "wij zouden luisteren",
+            "jullie zouden/u zou luisteren",
+            "zij (m) zouden luisteren",
+            "zij (v) zouden luisteren"
+          ]
+        }
+      }
+    },
+    {
+      "id": "entrer",
+      "infinitive": "entrer",
+      "translation": "binnengaan",
+      "infinitiveTranslation": "binnengaan",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "j'entre",
+            "tu entres",
+            "il entre",
+            "elle entre",
+            "on entre",
+            "nous entrons",
+            "vous entrez",
+            "ils entrent",
+            "elles entrent"
+          ],
+          "dutch": [
+            "ik ga naar binnen",
+            "jij gaat naar binnen",
+            "hij gaat naar binnen",
+            "zij gaat naar binnen",
+            "men gaat naar binnen",
+            "wij gaan naar binnen",
+            "jullie gaan naar binnen/u gaat naar binnen",
+            "zij (m) gaan naar binnen",
+            "zij (v) gaan naar binnen"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "je suis entré",
+            "tu es entré",
+            "il est entré",
+            "elle est entré",
+            "on est entré",
+            "nous sommes entré",
+            "vous êtes entré",
+            "ils sont entré",
+            "elles sont entré"
+          ],
+          "dutch": [
+            "ik ben naar binnen gegaan",
+            "jij bent naar binnen gegaan",
+            "hij is naar binnen gegaan",
+            "zij is naar binnen gegaan",
+            "men is naar binnen gegaan",
+            "wij zijn naar binnen gegaan",
+            "jullie zijn/u bent naar binnen gegaan",
+            "zij (m) zijn naar binnen gegaan",
+            "zij (v) zijn naar binnen gegaan"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "j'entrais",
+            "tu entrais",
+            "il entrait",
+            "elle entrait",
+            "on entrait",
+            "nous entrions",
+            "vous entriez",
+            "ils entraient",
+            "elles entraient"
+          ],
+          "dutch": [
+            "ik ging naar binnen",
+            "jij ging naar binnen",
+            "hij ging naar binnen",
+            "zij ging naar binnen",
+            "men ging naar binnen",
+            "wij gingen naar binnen",
+            "jullie gingen naar binnen/u ging naar binnen",
+            "zij (m) gingen naar binnen",
+            "zij (v) gingen naar binnen"
+          ]
+        },
+        "futur": {
+          "french": [
+            "j'entrerai",
+            "tu entreras",
+            "il entrera",
+            "elle entrera",
+            "on entrera",
+            "nous entrerons",
+            "vous entrerez",
+            "ils entreront",
+            "elles entreront"
+          ],
+          "dutch": [
+            "ik zal binnengaan",
+            "jij zal binnengaan",
+            "hij zal binnengaan",
+            "zij zal binnengaan",
+            "men zal binnengaan",
+            "wij zullen binnengaan",
+            "jullie zullen/u zult binnengaan",
+            "zij (m) zullen binnengaan",
+            "zij (v) zullen binnengaan"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "j'entrerais",
+            "tu entrerais",
+            "il entrerait",
+            "elle entrerait",
+            "on entrerait",
+            "nous entrerions",
+            "vous entreriez",
+            "ils entreraient",
+            "elles entreraient"
+          ],
+          "dutch": [
+            "ik zou binnengaan",
+            "jij zou binnengaan",
+            "hij zou binnengaan",
+            "zij zou binnengaan",
+            "men zou binnengaan",
+            "wij zouden binnengaan",
+            "jullie zouden/u zou binnengaan",
+            "zij (m) zouden binnengaan",
+            "zij (v) zouden binnengaan"
+          ]
+        }
+      }
+    },
+    {
+      "id": "fermer",
+      "infinitive": "fermer",
+      "translation": "sluiten",
+      "infinitiveTranslation": "sluiten",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je ferme",
+            "tu fermes",
+            "il ferme",
+            "elle ferme",
+            "on ferme",
+            "nous fermons",
+            "vous fermez",
+            "ils ferment",
+            "elles ferment"
+          ],
+          "dutch": [
+            "ik sluit",
+            "jij sluit",
+            "hij sluit",
+            "zij sluit",
+            "men sluit",
+            "wij sluiten",
+            "jullie sluiten/u sluit",
+            "zij (m) sluiten",
+            "zij (v) sluiten"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai fermé",
+            "tu as fermé",
+            "il a fermé",
+            "elle a fermé",
+            "on a fermé",
+            "nous avons fermé",
+            "vous avez fermé",
+            "ils ont fermé",
+            "elles ont fermé"
+          ],
+          "dutch": [
+            "ik heb gesloten",
+            "jij hebt gesloten",
+            "hij heeft gesloten",
+            "zij heeft gesloten",
+            "men heeft gesloten",
+            "wij hebben gesloten",
+            "jullie hebben/u heeft gesloten",
+            "zij (m) hebben gesloten",
+            "zij (v) hebben gesloten"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je fermais",
+            "tu fermais",
+            "il fermait",
+            "elle fermait",
+            "on fermait",
+            "nous fermions",
+            "vous fermiez",
+            "ils fermaient",
+            "elles fermaient"
+          ],
+          "dutch": [
+            "ik sloot",
+            "jij sloot",
+            "hij sloot",
+            "zij sloot",
+            "men sloot",
+            "wij sloten",
+            "jullie sloten/u sloot",
+            "zij (m) sloten",
+            "zij (v) sloten"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je fermerai",
+            "tu fermeras",
+            "il fermera",
+            "elle fermera",
+            "on fermera",
+            "nous fermerons",
+            "vous fermerez",
+            "ils fermeront",
+            "elles fermeront"
+          ],
+          "dutch": [
+            "ik zal sluiten",
+            "jij zal sluiten",
+            "hij zal sluiten",
+            "zij zal sluiten",
+            "men zal sluiten",
+            "wij zullen sluiten",
+            "jullie zullen/u zult sluiten",
+            "zij (m) zullen sluiten",
+            "zij (v) zullen sluiten"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je fermerais",
+            "tu fermerais",
+            "il fermerait",
+            "elle fermerait",
+            "on fermerait",
+            "nous fermerions",
+            "vous fermeriez",
+            "ils fermeraient",
+            "elles fermeraient"
+          ],
+          "dutch": [
+            "ik zou sluiten",
+            "jij zou sluiten",
+            "hij zou sluiten",
+            "zij zou sluiten",
+            "men zou sluiten",
+            "wij zouden sluiten",
+            "jullie zouden/u zou sluiten",
+            "zij (m) zouden sluiten",
+            "zij (v) zouden sluiten"
+          ]
+        }
+      }
+    },
+    {
+      "id": "habiter",
+      "infinitive": "habiter",
+      "translation": "wonen",
+      "infinitiveTranslation": "wonen",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "j'habite",
+            "tu habites",
+            "il habite",
+            "elle habite",
+            "on habite",
+            "nous habitons",
+            "vous habitez",
+            "ils habitent",
+            "elles habitent"
+          ],
+          "dutch": [
+            "ik woon",
+            "jij woont",
+            "hij woont",
+            "zij woont",
+            "men woont",
+            "wij wonen",
+            "jullie wonen/u woont",
+            "zij (m) wonen",
+            "zij (v) wonen"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai habité",
+            "tu as habité",
+            "il a habité",
+            "elle a habité",
+            "on a habité",
+            "nous avons habité",
+            "vous avez habité",
+            "ils ont habité",
+            "elles ont habité"
+          ],
+          "dutch": [
+            "ik heb gewoond",
+            "jij hebt gewoond",
+            "hij heeft gewoond",
+            "zij heeft gewoond",
+            "men heeft gewoond",
+            "wij hebben gewoond",
+            "jullie hebben/u heeft gewoond",
+            "zij (m) hebben gewoond",
+            "zij (v) hebben gewoond"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "j'habitais",
+            "tu habitais",
+            "il habitait",
+            "elle habitait",
+            "on habitait",
+            "nous habitions",
+            "vous habitiez",
+            "ils habitaient",
+            "elles habitaient"
+          ],
+          "dutch": [
+            "ik woonde",
+            "jij woonde",
+            "hij woonde",
+            "zij woonde",
+            "men woonde",
+            "wij woonden",
+            "jullie woonden/u woonde",
+            "zij (m) woonden",
+            "zij (v) woonden"
+          ]
+        },
+        "futur": {
+          "french": [
+            "j'habiterai",
+            "tu habiteras",
+            "il habitera",
+            "elle habitera",
+            "on habitera",
+            "nous habiterons",
+            "vous habiterez",
+            "ils habiteront",
+            "elles habiteront"
+          ],
+          "dutch": [
+            "ik zal wonen",
+            "jij zal wonen",
+            "hij zal wonen",
+            "zij zal wonen",
+            "men zal wonen",
+            "wij zullen wonen",
+            "jullie zullen/u zult wonen",
+            "zij (m) zullen wonen",
+            "zij (v) zullen wonen"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "j'habiterais",
+            "tu habiterais",
+            "il habiterait",
+            "elle habiterait",
+            "on habiterait",
+            "nous habiterions",
+            "vous habiteriez",
+            "ils habiteraient",
+            "elles habiteraient"
+          ],
+          "dutch": [
+            "ik zou wonen",
+            "jij zou wonen",
+            "hij zou wonen",
+            "zij zou wonen",
+            "men zou wonen",
+            "wij zouden wonen",
+            "jullie zouden/u zou wonen",
+            "zij (m) zouden wonen",
+            "zij (v) zouden wonen"
+          ]
+        }
+      }
+    },
+    {
+      "id": "jouer",
+      "infinitive": "jouer",
+      "translation": "spelen",
+      "infinitiveTranslation": "spelen",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je joue",
+            "tu joues",
+            "il joue",
+            "elle joue",
+            "on joue",
+            "nous jouons",
+            "vous jouez",
+            "ils jouent",
+            "elles jouent"
+          ],
+          "dutch": [
+            "ik speel",
+            "jij speelt",
+            "hij speelt",
+            "zij speelt",
+            "men speelt",
+            "wij spelen",
+            "jullie spelen/u speelt",
+            "zij (m) spelen",
+            "zij (v) spelen"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai joué",
+            "tu as joué",
+            "il a joué",
+            "elle a joué",
+            "on a joué",
+            "nous avons joué",
+            "vous avez joué",
+            "ils ont joué",
+            "elles ont joué"
+          ],
+          "dutch": [
+            "ik heb gespeeld",
+            "jij hebt gespeeld",
+            "hij heeft gespeeld",
+            "zij heeft gespeeld",
+            "men heeft gespeeld",
+            "wij hebben gespeeld",
+            "jullie hebben/u heeft gespeeld",
+            "zij (m) hebben gespeeld",
+            "zij (v) hebben gespeeld"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je jouais",
+            "tu jouais",
+            "il jouait",
+            "elle jouait",
+            "on jouait",
+            "nous jouions",
+            "vous jouiez",
+            "ils jouaient",
+            "elles jouaient"
+          ],
+          "dutch": [
+            "ik speelde",
+            "jij speelde",
+            "hij speelde",
+            "zij speelde",
+            "men speelde",
+            "wij speelden",
+            "jullie speelden/u speelde",
+            "zij (m) speelden",
+            "zij (v) speelden"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je jouerai",
+            "tu joueras",
+            "il jouera",
+            "elle jouera",
+            "on jouera",
+            "nous jouerons",
+            "vous jouerez",
+            "ils joueront",
+            "elles joueront"
+          ],
+          "dutch": [
+            "ik zal spelen",
+            "jij zal spelen",
+            "hij zal spelen",
+            "zij zal spelen",
+            "men zal spelen",
+            "wij zullen spelen",
+            "jullie zullen/u zult spelen",
+            "zij (m) zullen spelen",
+            "zij (v) zullen spelen"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je jouerais",
+            "tu jouerais",
+            "il jouerait",
+            "elle jouerait",
+            "on jouerait",
+            "nous jouerions",
+            "vous joueriez",
+            "ils joueraient",
+            "elles joueraient"
+          ],
+          "dutch": [
+            "ik zou spelen",
+            "jij zou spelen",
+            "hij zou spelen",
+            "zij zou spelen",
+            "men zou spelen",
+            "wij zouden spelen",
+            "jullie zouden/u zou spelen",
+            "zij (m) zouden spelen",
+            "zij (v) zouden spelen"
+          ]
+        }
+      }
+    },
+    {
+      "id": "marcher",
+      "infinitive": "marcher",
+      "translation": "lopen",
+      "infinitiveTranslation": "lopen",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je marche",
+            "tu marches",
+            "il marche",
+            "elle marche",
+            "on marche",
+            "nous marchons",
+            "vous marchez",
+            "ils marchent",
+            "elles marchent"
+          ],
+          "dutch": [
+            "ik loop",
+            "jij loopt",
+            "hij loopt",
+            "zij loopt",
+            "men loopt",
+            "wij lopen",
+            "jullie lopen/u loopt",
+            "zij (m) lopen",
+            "zij (v) lopen"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai marché",
+            "tu as marché",
+            "il a marché",
+            "elle a marché",
+            "on a marché",
+            "nous avons marché",
+            "vous avez marché",
+            "ils ont marché",
+            "elles ont marché"
+          ],
+          "dutch": [
+            "ik heb gelopen",
+            "jij hebt gelopen",
+            "hij heeft gelopen",
+            "zij heeft gelopen",
+            "men heeft gelopen",
+            "wij hebben gelopen",
+            "jullie hebben/u heeft gelopen",
+            "zij (m) hebben gelopen",
+            "zij (v) hebben gelopen"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je marchais",
+            "tu marchais",
+            "il marchait",
+            "elle marchait",
+            "on marchait",
+            "nous marchions",
+            "vous marchiez",
+            "ils marchaient",
+            "elles marchaient"
+          ],
+          "dutch": [
+            "ik liep",
+            "jij liep",
+            "hij liep",
+            "zij liep",
+            "men liep",
+            "wij liepen",
+            "jullie liepen/u liep",
+            "zij (m) liepen",
+            "zij (v) liepen"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je marcherai",
+            "tu marcheras",
+            "il marchera",
+            "elle marchera",
+            "on marchera",
+            "nous marcherons",
+            "vous marcherez",
+            "ils marcheront",
+            "elles marcheront"
+          ],
+          "dutch": [
+            "ik zal lopen",
+            "jij zal lopen",
+            "hij zal lopen",
+            "zij zal lopen",
+            "men zal lopen",
+            "wij zullen lopen",
+            "jullie zullen/u zult lopen",
+            "zij (m) zullen lopen",
+            "zij (v) zullen lopen"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je marcherais",
+            "tu marcherais",
+            "il marcherait",
+            "elle marcherait",
+            "on marcherait",
+            "nous marcherions",
+            "vous marcheriez",
+            "ils marcheraient",
+            "elles marcheraient"
+          ],
+          "dutch": [
+            "ik zou lopen",
+            "jij zou lopen",
+            "hij zou lopen",
+            "zij zou lopen",
+            "men zou lopen",
+            "wij zouden lopen",
+            "jullie zouden/u zou lopen",
+            "zij (m) zouden lopen",
+            "zij (v) zouden lopen"
+          ]
+        }
+      }
+    },
+    {
+      "id": "montrer",
+      "infinitive": "montrer",
+      "translation": "laten zien",
+      "infinitiveTranslation": "laten zien",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je montre",
+            "tu montres",
+            "il montre",
+            "elle montre",
+            "on montre",
+            "nous montrons",
+            "vous montrez",
+            "ils montrent",
+            "elles montrent"
+          ],
+          "dutch": [
+            "ik laat zien",
+            "jij laat zien",
+            "hij laat zien",
+            "zij laat zien",
+            "men laat zien",
+            "wij laten zien",
+            "jullie laten zien/u laat zien",
+            "zij (m) laten zien",
+            "zij (v) laten zien"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai montré",
+            "tu as montré",
+            "il a montré",
+            "elle a montré",
+            "on a montré",
+            "nous avons montré",
+            "vous avez montré",
+            "ils ont montré",
+            "elles ont montré"
+          ],
+          "dutch": [
+            "ik heb laten zien",
+            "jij hebt laten zien",
+            "hij heeft laten zien",
+            "zij heeft laten zien",
+            "men heeft laten zien",
+            "wij hebben laten zien",
+            "jullie hebben/u heeft laten zien",
+            "zij (m) hebben laten zien",
+            "zij (v) hebben laten zien"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je montrais",
+            "tu montrais",
+            "il montrait",
+            "elle montrait",
+            "on montrait",
+            "nous montrions",
+            "vous montriez",
+            "ils montraient",
+            "elles montraient"
+          ],
+          "dutch": [
+            "ik liet zien",
+            "jij liet zien",
+            "hij liet zien",
+            "zij liet zien",
+            "men liet zien",
+            "wij lieten zien",
+            "jullie lieten zien/u liet zien",
+            "zij (m) lieten zien",
+            "zij (v) lieten zien"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je montrerai",
+            "tu montreras",
+            "il montrera",
+            "elle montrera",
+            "on montrera",
+            "nous montrerons",
+            "vous montrerez",
+            "ils montreront",
+            "elles montreront"
+          ],
+          "dutch": [
+            "ik zal laten zien",
+            "jij zal laten zien",
+            "hij zal laten zien",
+            "zij zal laten zien",
+            "men zal laten zien",
+            "wij zullen laten zien",
+            "jullie zullen/u zult laten zien",
+            "zij (m) zullen laten zien",
+            "zij (v) zullen laten zien"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je montrerais",
+            "tu montrerais",
+            "il montrerait",
+            "elle montrerait",
+            "on montrerait",
+            "nous montrerions",
+            "vous montreriez",
+            "ils montreraient",
+            "elles montreraient"
+          ],
+          "dutch": [
+            "ik zou laten zien",
+            "jij zou laten zien",
+            "hij zou laten zien",
+            "zij zou laten zien",
+            "men zou laten zien",
+            "wij zouden laten zien",
+            "jullie zouden/u zou laten zien",
+            "zij (m) zouden laten zien",
+            "zij (v) zouden laten zien"
+          ]
+        }
+      }
+    },
+    {
+      "id": "oublier",
+      "infinitive": "oublier",
+      "translation": "vergeten",
+      "infinitiveTranslation": "vergeten",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "j'oublie",
+            "tu oublies",
+            "il oublie",
+            "elle oublie",
+            "on oublie",
+            "nous oublions",
+            "vous oubliez",
+            "ils oublient",
+            "elles oublient"
+          ],
+          "dutch": [
+            "ik vergeet",
+            "jij vergeet",
+            "hij vergeet",
+            "zij vergeet",
+            "men vergeet",
+            "wij vergeten",
+            "jullie vergeten/u vergeet",
+            "zij (m) vergeten",
+            "zij (v) vergeten"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai oublié",
+            "tu as oublié",
+            "il a oublié",
+            "elle a oublié",
+            "on a oublié",
+            "nous avons oublié",
+            "vous avez oublié",
+            "ils ont oublié",
+            "elles ont oublié"
+          ],
+          "dutch": [
+            "ik heb vergeten",
+            "jij hebt vergeten",
+            "hij heeft vergeten",
+            "zij heeft vergeten",
+            "men heeft vergeten",
+            "wij hebben vergeten",
+            "jullie hebben/u heeft vergeten",
+            "zij (m) hebben vergeten",
+            "zij (v) hebben vergeten"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "j'oubliais",
+            "tu oubliais",
+            "il oubliait",
+            "elle oubliait",
+            "on oubliait",
+            "nous oubliions",
+            "vous oubliiez",
+            "ils oubliaient",
+            "elles oubliaient"
+          ],
+          "dutch": [
+            "ik vergat",
+            "jij vergat",
+            "hij vergat",
+            "zij vergat",
+            "men vergat",
+            "wij vergaten",
+            "jullie vergaten/u vergat",
+            "zij (m) vergaten",
+            "zij (v) vergaten"
+          ]
+        },
+        "futur": {
+          "french": [
+            "j'oublierai",
+            "tu oublieras",
+            "il oubliera",
+            "elle oubliera",
+            "on oubliera",
+            "nous oublierons",
+            "vous oublierez",
+            "ils oublieront",
+            "elles oublieront"
+          ],
+          "dutch": [
+            "ik zal vergeten",
+            "jij zal vergeten",
+            "hij zal vergeten",
+            "zij zal vergeten",
+            "men zal vergeten",
+            "wij zullen vergeten",
+            "jullie zullen/u zult vergeten",
+            "zij (m) zullen vergeten",
+            "zij (v) zullen vergeten"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "j'oublierais",
+            "tu oublierais",
+            "il oublierait",
+            "elle oublierait",
+            "on oublierait",
+            "nous oublierions",
+            "vous oublieriez",
+            "ils oublieraient",
+            "elles oublieraient"
+          ],
+          "dutch": [
+            "ik zou vergeten",
+            "jij zou vergeten",
+            "hij zou vergeten",
+            "zij zou vergeten",
+            "men zou vergeten",
+            "wij zouden vergeten",
+            "jullie zouden/u zou vergeten",
+            "zij (m) zouden vergeten",
+            "zij (v) zouden vergeten"
+          ]
+        }
+      }
+    },
+    {
+      "id": "parler",
+      "infinitive": "parler",
+      "translation": "spreken",
+      "infinitiveTranslation": "spreken",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je parle",
+            "tu parles",
+            "il parle",
+            "elle parle",
+            "on parle",
+            "nous parlons",
+            "vous parlez",
+            "ils parlent",
+            "elles parlent"
+          ],
+          "dutch": [
+            "ik spreek",
+            "jij spreekt",
+            "hij spreekt",
+            "zij spreekt",
+            "men spreekt",
+            "wij spreken",
+            "jullie spreken/u spreekt",
+            "zij (m) spreken",
+            "zij (v) spreken"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai parlé",
+            "tu as parlé",
+            "il a parlé",
+            "elle a parlé",
+            "on a parlé",
+            "nous avons parlé",
+            "vous avez parlé",
+            "ils ont parlé",
+            "elles ont parlé"
+          ],
+          "dutch": [
+            "ik heb gesproken",
+            "jij hebt gesproken",
+            "hij heeft gesproken",
+            "zij heeft gesproken",
+            "men heeft gesproken",
+            "wij hebben gesproken",
+            "jullie hebben/u heeft gesproken",
+            "zij (m) hebben gesproken",
+            "zij (v) hebben gesproken"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je parlais",
+            "tu parlais",
+            "il parlait",
+            "elle parlait",
+            "on parlait",
+            "nous parlions",
+            "vous parliez",
+            "ils parlaient",
+            "elles parlaient"
+          ],
+          "dutch": [
+            "ik sprak",
+            "jij sprak",
+            "hij sprak",
+            "zij sprak",
+            "men sprak",
+            "wij spraken",
+            "jullie spraken/u sprak",
+            "zij (m) spraken",
+            "zij (v) spraken"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je parlerai",
+            "tu parleras",
+            "il parlera",
+            "elle parlera",
+            "on parlera",
+            "nous parlerons",
+            "vous parlerez",
+            "ils parleront",
+            "elles parleront"
+          ],
+          "dutch": [
+            "ik zal spreken",
+            "jij zal spreken",
+            "hij zal spreken",
+            "zij zal spreken",
+            "men zal spreken",
+            "wij zullen spreken",
+            "jullie zullen/u zult spreken",
+            "zij (m) zullen spreken",
+            "zij (v) zullen spreken"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je parlerais",
+            "tu parlerais",
+            "il parlerait",
+            "elle parlerait",
+            "on parlerait",
+            "nous parlerions",
+            "vous parleriez",
+            "ils parleraient",
+            "elles parleraient"
+          ],
+          "dutch": [
+            "ik zou spreken",
+            "jij zou spreken",
+            "hij zou spreken",
+            "zij zou spreken",
+            "men zou spreken",
+            "wij zouden spreken",
+            "jullie zouden/u zou spreken",
+            "zij (m) zouden spreken",
+            "zij (v) zouden spreken"
+          ]
+        }
+      }
+    },
+    {
+      "id": "porter",
+      "infinitive": "porter",
+      "translation": "dragen",
+      "infinitiveTranslation": "dragen",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je porte",
+            "tu portes",
+            "il porte",
+            "elle porte",
+            "on porte",
+            "nous portons",
+            "vous portez",
+            "ils portent",
+            "elles portent"
+          ],
+          "dutch": [
+            "ik draag",
+            "jij draagt",
+            "hij draagt",
+            "zij draagt",
+            "men draagt",
+            "wij dragen",
+            "jullie dragen/u draagt",
+            "zij (m) dragen",
+            "zij (v) dragen"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai porté",
+            "tu as porté",
+            "il a porté",
+            "elle a porté",
+            "on a porté",
+            "nous avons porté",
+            "vous avez porté",
+            "ils ont porté",
+            "elles ont porté"
+          ],
+          "dutch": [
+            "ik heb gedragen",
+            "jij hebt gedragen",
+            "hij heeft gedragen",
+            "zij heeft gedragen",
+            "men heeft gedragen",
+            "wij hebben gedragen",
+            "jullie hebben/u heeft gedragen",
+            "zij (m) hebben gedragen",
+            "zij (v) hebben gedragen"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je portais",
+            "tu portais",
+            "il portait",
+            "elle portait",
+            "on portait",
+            "nous portions",
+            "vous portiez",
+            "ils portaient",
+            "elles portaient"
+          ],
+          "dutch": [
+            "ik droeg",
+            "jij droeg",
+            "hij droeg",
+            "zij droeg",
+            "men droeg",
+            "wij droegen",
+            "jullie droegen/u droeg",
+            "zij (m) droegen",
+            "zij (v) droegen"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je porterai",
+            "tu porteras",
+            "il portera",
+            "elle portera",
+            "on portera",
+            "nous porterons",
+            "vous porterez",
+            "ils porteront",
+            "elles porteront"
+          ],
+          "dutch": [
+            "ik zal dragen",
+            "jij zal dragen",
+            "hij zal dragen",
+            "zij zal dragen",
+            "men zal dragen",
+            "wij zullen dragen",
+            "jullie zullen/u zult dragen",
+            "zij (m) zullen dragen",
+            "zij (v) zullen dragen"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je porterais",
+            "tu porterais",
+            "il porterait",
+            "elle porterait",
+            "on porterait",
+            "nous porterions",
+            "vous porteriez",
+            "ils porteraient",
+            "elles porteraient"
+          ],
+          "dutch": [
+            "ik zou dragen",
+            "jij zou dragen",
+            "hij zou dragen",
+            "zij zou dragen",
+            "men zou dragen",
+            "wij zouden dragen",
+            "jullie zouden/u zou dragen",
+            "zij (m) zouden dragen",
+            "zij (v) zouden dragen"
+          ]
+        }
+      }
+    },
+    {
+      "id": "quitter",
+      "infinitive": "quitter",
+      "translation": "verlaten",
+      "infinitiveTranslation": "verlaten",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je quitte",
+            "tu quittes",
+            "il quitte",
+            "elle quitte",
+            "on quitte",
+            "nous quittons",
+            "vous quittez",
+            "ils quittent",
+            "elles quittent"
+          ],
+          "dutch": [
+            "ik verlaat",
+            "jij verlaat",
+            "hij verlaat",
+            "zij verlaat",
+            "men verlaat",
+            "wij verlaten",
+            "jullie verlaten/u verlaat",
+            "zij (m) verlaten",
+            "zij (v) verlaten"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai quitté",
+            "tu as quitté",
+            "il a quitté",
+            "elle a quitté",
+            "on a quitté",
+            "nous avons quitté",
+            "vous avez quitté",
+            "ils ont quitté",
+            "elles ont quitté"
+          ],
+          "dutch": [
+            "ik heb verlaten",
+            "jij hebt verlaten",
+            "hij heeft verlaten",
+            "zij heeft verlaten",
+            "men heeft verlaten",
+            "wij hebben verlaten",
+            "jullie hebben/u heeft verlaten",
+            "zij (m) hebben verlaten",
+            "zij (v) hebben verlaten"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je quittais",
+            "tu quittais",
+            "il quittait",
+            "elle quittait",
+            "on quittait",
+            "nous quittions",
+            "vous quittiez",
+            "ils quittaient",
+            "elles quittaient"
+          ],
+          "dutch": [
+            "ik verliet",
+            "jij verliet",
+            "hij verliet",
+            "zij verliet",
+            "men verliet",
+            "wij verlieten",
+            "jullie verlieten/u verliet",
+            "zij (m) verlieten",
+            "zij (v) verlieten"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je quitterai",
+            "tu quitteras",
+            "il quittera",
+            "elle quittera",
+            "on quittera",
+            "nous quitterons",
+            "vous quitterez",
+            "ils quitteront",
+            "elles quitteront"
+          ],
+          "dutch": [
+            "ik zal verlaten",
+            "jij zal verlaten",
+            "hij zal verlaten",
+            "zij zal verlaten",
+            "men zal verlaten",
+            "wij zullen verlaten",
+            "jullie zullen/u zult verlaten",
+            "zij (m) zullen verlaten",
+            "zij (v) zullen verlaten"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je quitterais",
+            "tu quitterais",
+            "il quitterait",
+            "elle quitterait",
+            "on quitterait",
+            "nous quitterions",
+            "vous quitteriez",
+            "ils quitteraient",
+            "elles quitteraient"
+          ],
+          "dutch": [
+            "ik zou verlaten",
+            "jij zou verlaten",
+            "hij zou verlaten",
+            "zij zou verlaten",
+            "men zou verlaten",
+            "wij zouden verlaten",
+            "jullie zouden/u zou verlaten",
+            "zij (m) zouden verlaten",
+            "zij (v) zouden verlaten"
+          ]
+        }
+      }
+    },
+    {
+      "id": "raconter",
+      "infinitive": "raconter",
+      "translation": "vertellen",
+      "infinitiveTranslation": "vertellen",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je raconte",
+            "tu racontes",
+            "il raconte",
+            "elle raconte",
+            "on raconte",
+            "nous racontons",
+            "vous racontez",
+            "ils racontent",
+            "elles racontent"
+          ],
+          "dutch": [
+            "ik vertel",
+            "jij vertelt",
+            "hij vertelt",
+            "zij vertelt",
+            "men vertelt",
+            "wij vertellen",
+            "jullie vertellen/u vertelt",
+            "zij (m) vertellen",
+            "zij (v) vertellen"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai raconté",
+            "tu as raconté",
+            "il a raconté",
+            "elle a raconté",
+            "on a raconté",
+            "nous avons raconté",
+            "vous avez raconté",
+            "ils ont raconté",
+            "elles ont raconté"
+          ],
+          "dutch": [
+            "ik heb verteld",
+            "jij hebt verteld",
+            "hij heeft verteld",
+            "zij heeft verteld",
+            "men heeft verteld",
+            "wij hebben verteld",
+            "jullie hebben/u heeft verteld",
+            "zij (m) hebben verteld",
+            "zij (v) hebben verteld"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je racontais",
+            "tu racontais",
+            "il racontait",
+            "elle racontait",
+            "on racontait",
+            "nous racontions",
+            "vous racontiez",
+            "ils racontaient",
+            "elles racontaient"
+          ],
+          "dutch": [
+            "ik vertelde",
+            "jij vertelde",
+            "hij vertelde",
+            "zij vertelde",
+            "men vertelde",
+            "wij vertelden",
+            "jullie vertelden/u vertelde",
+            "zij (m) vertelden",
+            "zij (v) vertelden"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je raconterai",
+            "tu raconteras",
+            "il racontera",
+            "elle racontera",
+            "on racontera",
+            "nous raconterons",
+            "vous raconterez",
+            "ils raconteront",
+            "elles raconteront"
+          ],
+          "dutch": [
+            "ik zal vertellen",
+            "jij zal vertellen",
+            "hij zal vertellen",
+            "zij zal vertellen",
+            "men zal vertellen",
+            "wij zullen vertellen",
+            "jullie zullen/u zult vertellen",
+            "zij (m) zullen vertellen",
+            "zij (v) zullen vertellen"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je raconterais",
+            "tu raconterais",
+            "il raconterait",
+            "elle raconterait",
+            "on raconterait",
+            "nous raconterions",
+            "vous raconteriez",
+            "ils raconteraient",
+            "elles raconteraient"
+          ],
+          "dutch": [
+            "ik zou vertellen",
+            "jij zou vertellen",
+            "hij zou vertellen",
+            "zij zou vertellen",
+            "men zou vertellen",
+            "wij zouden vertellen",
+            "jullie zouden/u zou vertellen",
+            "zij (m) zouden vertellen",
+            "zij (v) zouden vertellen"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regarder",
+      "infinitive": "regarder",
+      "translation": "kijken",
+      "infinitiveTranslation": "kijken",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je regarde",
+            "tu regardes",
+            "il regarde",
+            "elle regarde",
+            "on regarde",
+            "nous regardons",
+            "vous regardez",
+            "ils regardent",
+            "elles regardent"
+          ],
+          "dutch": [
+            "ik kijk",
+            "jij kijkt",
+            "hij kijkt",
+            "zij kijkt",
+            "men kijkt",
+            "wij kijken",
+            "jullie kijken/u kijkt",
+            "zij (m) kijken",
+            "zij (v) kijken"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai regardé",
+            "tu as regardé",
+            "il a regardé",
+            "elle a regardé",
+            "on a regardé",
+            "nous avons regardé",
+            "vous avez regardé",
+            "ils ont regardé",
+            "elles ont regardé"
+          ],
+          "dutch": [
+            "ik heb gekeken",
+            "jij hebt gekeken",
+            "hij heeft gekeken",
+            "zij heeft gekeken",
+            "men heeft gekeken",
+            "wij hebben gekeken",
+            "jullie hebben/u heeft gekeken",
+            "zij (m) hebben gekeken",
+            "zij (v) hebben gekeken"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je regardais",
+            "tu regardais",
+            "il regardait",
+            "elle regardait",
+            "on regardait",
+            "nous regardions",
+            "vous regardiez",
+            "ils regardaient",
+            "elles regardaient"
+          ],
+          "dutch": [
+            "ik keek",
+            "jij keek",
+            "hij keek",
+            "zij keek",
+            "men keek",
+            "wij keken",
+            "jullie keken/u keek",
+            "zij (m) keken",
+            "zij (v) keken"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je regarderai",
+            "tu regarderas",
+            "il regardera",
+            "elle regardera",
+            "on regardera",
+            "nous regarderons",
+            "vous regarderez",
+            "ils regarderont",
+            "elles regarderont"
+          ],
+          "dutch": [
+            "ik zal kijken",
+            "jij zal kijken",
+            "hij zal kijken",
+            "zij zal kijken",
+            "men zal kijken",
+            "wij zullen kijken",
+            "jullie zullen/u zult kijken",
+            "zij (m) zullen kijken",
+            "zij (v) zullen kijken"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je regarderais",
+            "tu regarderais",
+            "il regarderait",
+            "elle regarderait",
+            "on regarderait",
+            "nous regarderions",
+            "vous regarderiez",
+            "ils regarderaient",
+            "elles regarderaient"
+          ],
+          "dutch": [
+            "ik zou kijken",
+            "jij zou kijken",
+            "hij zou kijken",
+            "zij zou kijken",
+            "men zou kijken",
+            "wij zouden kijken",
+            "jullie zouden/u zou kijken",
+            "zij (m) zouden kijken",
+            "zij (v) zouden kijken"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rencontrer",
+      "infinitive": "rencontrer",
+      "translation": "ontmoeten",
+      "infinitiveTranslation": "ontmoeten",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je rencontre",
+            "tu rencontres",
+            "il rencontre",
+            "elle rencontre",
+            "on rencontre",
+            "nous rencontrons",
+            "vous rencontrez",
+            "ils rencontrent",
+            "elles rencontrent"
+          ],
+          "dutch": [
+            "ik ontmoet",
+            "jij ontmoet",
+            "hij ontmoet",
+            "zij ontmoet",
+            "men ontmoet",
+            "wij ontmoeten",
+            "jullie ontmoeten/u ontmoet",
+            "zij (m) ontmoeten",
+            "zij (v) ontmoeten"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai rencontré",
+            "tu as rencontré",
+            "il a rencontré",
+            "elle a rencontré",
+            "on a rencontré",
+            "nous avons rencontré",
+            "vous avez rencontré",
+            "ils ont rencontré",
+            "elles ont rencontré"
+          ],
+          "dutch": [
+            "ik heb ontmoet",
+            "jij hebt ontmoet",
+            "hij heeft ontmoet",
+            "zij heeft ontmoet",
+            "men heeft ontmoet",
+            "wij hebben ontmoet",
+            "jullie hebben/u heeft ontmoet",
+            "zij (m) hebben ontmoet",
+            "zij (v) hebben ontmoet"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je rencontrais",
+            "tu rencontrais",
+            "il rencontrait",
+            "elle rencontrait",
+            "on rencontrait",
+            "nous rencontrions",
+            "vous rencontriez",
+            "ils rencontraient",
+            "elles rencontraient"
+          ],
+          "dutch": [
+            "ik ontmoette",
+            "jij ontmoette",
+            "hij ontmoette",
+            "zij ontmoette",
+            "men ontmoette",
+            "wij ontmoetten",
+            "jullie ontmoetten/u ontmoette",
+            "zij (m) ontmoetten",
+            "zij (v) ontmoetten"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je rencontrerai",
+            "tu rencontreras",
+            "il rencontrera",
+            "elle rencontrera",
+            "on rencontrera",
+            "nous rencontrerons",
+            "vous rencontrerez",
+            "ils rencontreront",
+            "elles rencontreront"
+          ],
+          "dutch": [
+            "ik zal ontmoeten",
+            "jij zal ontmoeten",
+            "hij zal ontmoeten",
+            "zij zal ontmoeten",
+            "men zal ontmoeten",
+            "wij zullen ontmoeten",
+            "jullie zullen/u zult ontmoeten",
+            "zij (m) zullen ontmoeten",
+            "zij (v) zullen ontmoeten"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je rencontrerais",
+            "tu rencontrerais",
+            "il rencontrerait",
+            "elle rencontrerait",
+            "on rencontrerait",
+            "nous rencontrerions",
+            "vous rencontreriez",
+            "ils rencontreraient",
+            "elles rencontreraient"
+          ],
+          "dutch": [
+            "ik zou ontmoeten",
+            "jij zou ontmoeten",
+            "hij zou ontmoeten",
+            "zij zou ontmoeten",
+            "men zou ontmoeten",
+            "wij zouden ontmoeten",
+            "jullie zouden/u zou ontmoeten",
+            "zij (m) zouden ontmoeten",
+            "zij (v) zouden ontmoeten"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rester",
+      "infinitive": "rester",
+      "translation": "blijven",
+      "infinitiveTranslation": "blijven",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je reste",
+            "tu restes",
+            "il reste",
+            "elle reste",
+            "on reste",
+            "nous restons",
+            "vous restez",
+            "ils restent",
+            "elles restent"
+          ],
+          "dutch": [
+            "ik blijf",
+            "jij blijft",
+            "hij blijft",
+            "zij blijft",
+            "men blijft",
+            "wij blijven",
+            "jullie blijven/u blijft",
+            "zij (m) blijven",
+            "zij (v) blijven"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "je suis resté",
+            "tu es resté",
+            "il est resté",
+            "elle est resté",
+            "on est resté",
+            "nous sommes resté",
+            "vous êtes resté",
+            "ils sont resté",
+            "elles sont resté"
+          ],
+          "dutch": [
+            "ik ben gebleven",
+            "jij bent gebleven",
+            "hij is gebleven",
+            "zij is gebleven",
+            "men is gebleven",
+            "wij zijn gebleven",
+            "jullie zijn/u bent gebleven",
+            "zij (m) zijn gebleven",
+            "zij (v) zijn gebleven"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je restais",
+            "tu restais",
+            "il restait",
+            "elle restait",
+            "on restait",
+            "nous restions",
+            "vous restiez",
+            "ils restaient",
+            "elles restaient"
+          ],
+          "dutch": [
+            "ik bleef",
+            "jij bleef",
+            "hij bleef",
+            "zij bleef",
+            "men bleef",
+            "wij bleven",
+            "jullie bleven/u bleef",
+            "zij (m) bleven",
+            "zij (v) bleven"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je resterai",
+            "tu resteras",
+            "il restera",
+            "elle restera",
+            "on restera",
+            "nous resterons",
+            "vous resterez",
+            "ils resteront",
+            "elles resteront"
+          ],
+          "dutch": [
+            "ik zal blijven",
+            "jij zal blijven",
+            "hij zal blijven",
+            "zij zal blijven",
+            "men zal blijven",
+            "wij zullen blijven",
+            "jullie zullen/u zult blijven",
+            "zij (m) zullen blijven",
+            "zij (v) zullen blijven"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je resterais",
+            "tu resterais",
+            "il resterait",
+            "elle resterait",
+            "on resterait",
+            "nous resterions",
+            "vous resteriez",
+            "ils resteraient",
+            "elles resteraient"
+          ],
+          "dutch": [
+            "ik zou blijven",
+            "jij zou blijven",
+            "hij zou blijven",
+            "zij zou blijven",
+            "men zou blijven",
+            "wij zouden blijven",
+            "jullie zouden/u zou blijven",
+            "zij (m) zouden blijven",
+            "zij (v) zouden blijven"
+          ]
+        }
+      }
+    },
+    {
+      "id": "tomber",
+      "infinitive": "tomber",
+      "translation": "vallen",
+      "infinitiveTranslation": "vallen",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je tombe",
+            "tu tombes",
+            "il tombe",
+            "elle tombe",
+            "on tombe",
+            "nous tombons",
+            "vous tombez",
+            "ils tombent",
+            "elles tombent"
+          ],
+          "dutch": [
+            "ik val",
+            "jij valt",
+            "hij valt",
+            "zij valt",
+            "men valt",
+            "wij vallen",
+            "jullie vallen/u valt",
+            "zij (m) vallen",
+            "zij (v) vallen"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "je suis tombé",
+            "tu es tombé",
+            "il est tombé",
+            "elle est tombé",
+            "on est tombé",
+            "nous sommes tombé",
+            "vous êtes tombé",
+            "ils sont tombé",
+            "elles sont tombé"
+          ],
+          "dutch": [
+            "ik ben gevallen",
+            "jij bent gevallen",
+            "hij is gevallen",
+            "zij is gevallen",
+            "men is gevallen",
+            "wij zijn gevallen",
+            "jullie zijn/u bent gevallen",
+            "zij (m) zijn gevallen",
+            "zij (v) zijn gevallen"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je tombais",
+            "tu tombais",
+            "il tombait",
+            "elle tombait",
+            "on tombait",
+            "nous tombions",
+            "vous tombiez",
+            "ils tombaient",
+            "elles tombaient"
+          ],
+          "dutch": [
+            "ik viel",
+            "jij viel",
+            "hij viel",
+            "zij viel",
+            "men viel",
+            "wij vielen",
+            "jullie vielen/u viel",
+            "zij (m) vielen",
+            "zij (v) vielen"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je tomberai",
+            "tu tomberas",
+            "il tombera",
+            "elle tombera",
+            "on tombera",
+            "nous tomberons",
+            "vous tomberez",
+            "ils tomberont",
+            "elles tomberont"
+          ],
+          "dutch": [
+            "ik zal vallen",
+            "jij zal vallen",
+            "hij zal vallen",
+            "zij zal vallen",
+            "men zal vallen",
+            "wij zullen vallen",
+            "jullie zullen/u zult vallen",
+            "zij (m) zullen vallen",
+            "zij (v) zullen vallen"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je tomberais",
+            "tu tomberais",
+            "il tomberait",
+            "elle tomberait",
+            "on tomberait",
+            "nous tomberions",
+            "vous tomberiez",
+            "ils tomberaient",
+            "elles tomberaient"
+          ],
+          "dutch": [
+            "ik zou vallen",
+            "jij zou vallen",
+            "hij zou vallen",
+            "zij zou vallen",
+            "men zou vallen",
+            "wij zouden vallen",
+            "jullie zouden/u zou vallen",
+            "zij (m) zouden vallen",
+            "zij (v) zouden vallen"
+          ]
+        }
+      }
+    },
+    {
+      "id": "travailler",
+      "infinitive": "travailler",
+      "translation": "werken",
+      "infinitiveTranslation": "werken",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je travaille",
+            "tu travailles",
+            "il travaille",
+            "elle travaille",
+            "on travaille",
+            "nous travaillons",
+            "vous travaillez",
+            "ils travaillent",
+            "elles travaillent"
+          ],
+          "dutch": [
+            "ik werk",
+            "jij werkt",
+            "hij werkt",
+            "zij werkt",
+            "men werkt",
+            "wij werken",
+            "jullie werken/u werkt",
+            "zij (m) werken",
+            "zij (v) werken"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai travaillé",
+            "tu as travaillé",
+            "il a travaillé",
+            "elle a travaillé",
+            "on a travaillé",
+            "nous avons travaillé",
+            "vous avez travaillé",
+            "ils ont travaillé",
+            "elles ont travaillé"
+          ],
+          "dutch": [
+            "ik heb gewerkt",
+            "jij hebt gewerkt",
+            "hij heeft gewerkt",
+            "zij heeft gewerkt",
+            "men heeft gewerkt",
+            "wij hebben gewerkt",
+            "jullie hebben/u heeft gewerkt",
+            "zij (m) hebben gewerkt",
+            "zij (v) hebben gewerkt"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je travaillais",
+            "tu travaillais",
+            "il travaillait",
+            "elle travaillait",
+            "on travaillait",
+            "nous travaillions",
+            "vous travailliez",
+            "ils travaillaient",
+            "elles travaillaient"
+          ],
+          "dutch": [
+            "ik werkte",
+            "jij werkte",
+            "hij werkte",
+            "zij werkte",
+            "men werkte",
+            "wij werkten",
+            "jullie werkten/u werkte",
+            "zij (m) werkten",
+            "zij (v) werkten"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je travaillerai",
+            "tu travailleras",
+            "il travaillera",
+            "elle travaillera",
+            "on travaillera",
+            "nous travaillerons",
+            "vous travaillerez",
+            "ils travailleront",
+            "elles travailleront"
+          ],
+          "dutch": [
+            "ik zal werken",
+            "jij zal werken",
+            "hij zal werken",
+            "zij zal werken",
+            "men zal werken",
+            "wij zullen werken",
+            "jullie zullen/u zult werken",
+            "zij (m) zullen werken",
+            "zij (v) zullen werken"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je travaillerais",
+            "tu travaillerais",
+            "il travaillerait",
+            "elle travaillerait",
+            "on travaillerait",
+            "nous travaillerions",
+            "vous travailleriez",
+            "ils travailleraient",
+            "elles travailleraient"
+          ],
+          "dutch": [
+            "ik zou werken",
+            "jij zou werken",
+            "hij zou werken",
+            "zij zou werken",
+            "men zou werken",
+            "wij zouden werken",
+            "jullie zouden/u zou werken",
+            "zij (m) zouden werken",
+            "zij (v) zouden werken"
+          ]
+        }
+      }
+    },
+    {
+      "id": "traverser",
+      "infinitive": "traverser",
+      "translation": "oversteken",
+      "infinitiveTranslation": "oversteken",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je traverse",
+            "tu traverses",
+            "il traverse",
+            "elle traverse",
+            "on traverse",
+            "nous traversons",
+            "vous traversez",
+            "ils traversent",
+            "elles traversent"
+          ],
+          "dutch": [
+            "ik steek over",
+            "jij steekt over",
+            "hij steekt over",
+            "zij steekt over",
+            "men steekt over",
+            "wij steken over",
+            "jullie steken over/u steekt over",
+            "zij (m) steken over",
+            "zij (v) steken over"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai traversé",
+            "tu as traversé",
+            "il a traversé",
+            "elle a traversé",
+            "on a traversé",
+            "nous avons traversé",
+            "vous avez traversé",
+            "ils ont traversé",
+            "elles ont traversé"
+          ],
+          "dutch": [
+            "ik heb overgestoken",
+            "jij hebt overgestoken",
+            "hij heeft overgestoken",
+            "zij heeft overgestoken",
+            "men heeft overgestoken",
+            "wij hebben overgestoken",
+            "jullie hebben/u heeft overgestoken",
+            "zij (m) hebben overgestoken",
+            "zij (v) hebben overgestoken"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je traversais",
+            "tu traversais",
+            "il traversait",
+            "elle traversait",
+            "on traversait",
+            "nous traversions",
+            "vous traversiez",
+            "ils traversaient",
+            "elles traversaient"
+          ],
+          "dutch": [
+            "ik stak over",
+            "jij stak over",
+            "hij stak over",
+            "zij stak over",
+            "men stak over",
+            "wij staken over",
+            "jullie staken over/u stak over",
+            "zij (m) staken over",
+            "zij (v) staken over"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je traverserai",
+            "tu traverseras",
+            "il traversera",
+            "elle traversera",
+            "on traversera",
+            "nous traverserons",
+            "vous traverserez",
+            "ils traverseront",
+            "elles traverseront"
+          ],
+          "dutch": [
+            "ik zal oversteken",
+            "jij zal oversteken",
+            "hij zal oversteken",
+            "zij zal oversteken",
+            "men zal oversteken",
+            "wij zullen oversteken",
+            "jullie zullen/u zult oversteken",
+            "zij (m) zullen oversteken",
+            "zij (v) zullen oversteken"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je traverserais",
+            "tu traverserais",
+            "il traverserait",
+            "elle traverserait",
+            "on traverserait",
+            "nous traverserions",
+            "vous traverseriez",
+            "ils traverseraient",
+            "elles traverseraient"
+          ],
+          "dutch": [
+            "ik zou oversteken",
+            "jij zou oversteken",
+            "hij zou oversteken",
+            "zij zou oversteken",
+            "men zou oversteken",
+            "wij zouden oversteken",
+            "jullie zouden/u zou oversteken",
+            "zij (m) zouden oversteken",
+            "zij (v) zouden oversteken"
+          ]
+        }
+      }
+    },
+    {
+      "id": "trouver",
+      "infinitive": "trouver",
+      "translation": "vinden",
+      "infinitiveTranslation": "vinden",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je trouve",
+            "tu trouves",
+            "il trouve",
+            "elle trouve",
+            "on trouve",
+            "nous trouvons",
+            "vous trouvez",
+            "ils trouvent",
+            "elles trouvent"
+          ],
+          "dutch": [
+            "ik vind",
+            "jij vindt",
+            "hij vindt",
+            "zij vindt",
+            "men vindt",
+            "wij vinden",
+            "jullie vinden/u vindt",
+            "zij (m) vinden",
+            "zij (v) vinden"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai trouvé",
+            "tu as trouvé",
+            "il a trouvé",
+            "elle a trouvé",
+            "on a trouvé",
+            "nous avons trouvé",
+            "vous avez trouvé",
+            "ils ont trouvé",
+            "elles ont trouvé"
+          ],
+          "dutch": [
+            "ik heb gevonden",
+            "jij hebt gevonden",
+            "hij heeft gevonden",
+            "zij heeft gevonden",
+            "men heeft gevonden",
+            "wij hebben gevonden",
+            "jullie hebben/u heeft gevonden",
+            "zij (m) hebben gevonden",
+            "zij (v) hebben gevonden"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je trouvais",
+            "tu trouvais",
+            "il trouvait",
+            "elle trouvait",
+            "on trouvait",
+            "nous trouvions",
+            "vous trouviez",
+            "ils trouvaient",
+            "elles trouvaient"
+          ],
+          "dutch": [
+            "ik vond",
+            "jij vond",
+            "hij vond",
+            "zij vond",
+            "men vond",
+            "wij vonden",
+            "jullie vonden/u vond",
+            "zij (m) vonden",
+            "zij (v) vonden"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je trouverai",
+            "tu trouveras",
+            "il trouvera",
+            "elle trouvera",
+            "on trouvera",
+            "nous trouverons",
+            "vous trouverez",
+            "ils trouveront",
+            "elles trouveront"
+          ],
+          "dutch": [
+            "ik zal vinden",
+            "jij zal vinden",
+            "hij zal vinden",
+            "zij zal vinden",
+            "men zal vinden",
+            "wij zullen vinden",
+            "jullie zullen/u zult vinden",
+            "zij (m) zullen vinden",
+            "zij (v) zullen vinden"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je trouverais",
+            "tu trouverais",
+            "il trouverait",
+            "elle trouverait",
+            "on trouverait",
+            "nous trouverions",
+            "vous trouveriez",
+            "ils trouveraient",
+            "elles trouveraient"
+          ],
+          "dutch": [
+            "ik zou vinden",
+            "jij zou vinden",
+            "hij zou vinden",
+            "zij zou vinden",
+            "men zou vinden",
+            "wij zouden vinden",
+            "jullie zouden/u zou vinden",
+            "zij (m) zouden vinden",
+            "zij (v) zouden vinden"
+          ]
+        }
+      }
+    },
+    {
+      "id": "visiter",
+      "infinitive": "visiter",
+      "translation": "bezoeken",
+      "infinitiveTranslation": "bezoeken",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je visite",
+            "tu visites",
+            "il visite",
+            "elle visite",
+            "on visite",
+            "nous visitons",
+            "vous visitez",
+            "ils visitent",
+            "elles visitent"
+          ],
+          "dutch": [
+            "ik bezoek",
+            "jij bezoekt",
+            "hij bezoekt",
+            "zij bezoekt",
+            "men bezoekt",
+            "wij bezoeken",
+            "jullie bezoeken/u bezoekt",
+            "zij (m) bezoeken",
+            "zij (v) bezoeken"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai visité",
+            "tu as visité",
+            "il a visité",
+            "elle a visité",
+            "on a visité",
+            "nous avons visité",
+            "vous avez visité",
+            "ils ont visité",
+            "elles ont visité"
+          ],
+          "dutch": [
+            "ik heb bezocht",
+            "jij hebt bezocht",
+            "hij heeft bezocht",
+            "zij heeft bezocht",
+            "men heeft bezocht",
+            "wij hebben bezocht",
+            "jullie hebben/u heeft bezocht",
+            "zij (m) hebben bezocht",
+            "zij (v) hebben bezocht"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je visitais",
+            "tu visitais",
+            "il visitait",
+            "elle visitait",
+            "on visitait",
+            "nous visitions",
+            "vous visitiez",
+            "ils visitaient",
+            "elles visitaient"
+          ],
+          "dutch": [
+            "ik bezocht",
+            "jij bezocht",
+            "hij bezocht",
+            "zij bezocht",
+            "men bezocht",
+            "wij bezochten",
+            "jullie bezochten/u bezocht",
+            "zij (m) bezochten",
+            "zij (v) bezochten"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je visiterai",
+            "tu visiteras",
+            "il visitera",
+            "elle visitera",
+            "on visitera",
+            "nous visiterons",
+            "vous visiterez",
+            "ils visiteront",
+            "elles visiteront"
+          ],
+          "dutch": [
+            "ik zal bezoeken",
+            "jij zal bezoeken",
+            "hij zal bezoeken",
+            "zij zal bezoeken",
+            "men zal bezoeken",
+            "wij zullen bezoeken",
+            "jullie zullen/u zult bezoeken",
+            "zij (m) zullen bezoeken",
+            "zij (v) zullen bezoeken"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je visiterais",
+            "tu visiterais",
+            "il visiterait",
+            "elle visiterait",
+            "on visiterait",
+            "nous visiterions",
+            "vous visiteriez",
+            "ils visiteraient",
+            "elles visiteraient"
+          ],
+          "dutch": [
+            "ik zou bezoeken",
+            "jij zou bezoeken",
+            "hij zou bezoeken",
+            "zij zou bezoeken",
+            "men zou bezoeken",
+            "wij zouden bezoeken",
+            "jullie zouden/u zou bezoeken",
+            "zij (m) zouden bezoeken",
+            "zij (v) zouden bezoeken"
+          ]
+        }
+      }
+    },
+    {
+      "id": "voyager",
+      "infinitive": "voyager",
+      "translation": "reizen",
+      "infinitiveTranslation": "reizen",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je voyage",
+            "tu voyages",
+            "il voyage",
+            "elle voyage",
+            "on voyage",
+            "nous voyageons",
+            "vous voyagez",
+            "ils voyagent",
+            "elles voyagent"
+          ],
+          "dutch": [
+            "ik reis",
+            "jij reist",
+            "hij reist",
+            "zij reist",
+            "men reist",
+            "wij reizen",
+            "jullie reizen/u reist",
+            "zij (m) reizen",
+            "zij (v) reizen"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai voyagé",
+            "tu as voyagé",
+            "il a voyagé",
+            "elle a voyagé",
+            "on a voyagé",
+            "nous avons voyagé",
+            "vous avez voyagé",
+            "ils ont voyagé",
+            "elles ont voyagé"
+          ],
+          "dutch": [
+            "ik heb gereisd",
+            "jij hebt gereisd",
+            "hij heeft gereisd",
+            "zij heeft gereisd",
+            "men heeft gereisd",
+            "wij hebben gereisd",
+            "jullie hebben/u heeft gereisd",
+            "zij (m) hebben gereisd",
+            "zij (v) hebben gereisd"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je voyageais",
+            "tu voyageais",
+            "il voyageait",
+            "elle voyageait",
+            "on voyageait",
+            "nous voyagions",
+            "vous voyagiez",
+            "ils voyageaient",
+            "elles voyageaient"
+          ],
+          "dutch": [
+            "ik reisde",
+            "jij reisde",
+            "hij reisde",
+            "zij reisde",
+            "men reisde",
+            "wij reisden",
+            "jullie reisden/u reisde",
+            "zij (m) reisden",
+            "zij (v) reisden"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je voyagerai",
+            "tu voyageras",
+            "il voyagera",
+            "elle voyagera",
+            "on voyagera",
+            "nous voyagerons",
+            "vous voyagerez",
+            "ils voyageront",
+            "elles voyageront"
+          ],
+          "dutch": [
+            "ik zal reizen",
+            "jij zal reizen",
+            "hij zal reizen",
+            "zij zal reizen",
+            "men zal reizen",
+            "wij zullen reizen",
+            "jullie zullen/u zult reizen",
+            "zij (m) zullen reizen",
+            "zij (v) zullen reizen"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je voyagerais",
+            "tu voyagerais",
+            "il voyagerait",
+            "elle voyagerait",
+            "on voyagerait",
+            "nous voyagerions",
+            "vous voyageriez",
+            "ils voyageraient",
+            "elles voyageraient"
+          ],
+          "dutch": [
+            "ik zou reizen",
+            "jij zou reizen",
+            "hij zou reizen",
+            "zij zou reizen",
+            "men zou reizen",
+            "wij zouden reizen",
+            "jullie zouden/u zou reizen",
+            "zij (m) zouden reizen",
+            "zij (v) zouden reizen"
+          ]
+        }
+      }
+    },
+    {
+      "id": "acheter",
+      "infinitive": "acheter",
+      "translation": "kopen",
+      "infinitiveTranslation": "kopen",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "j'achète",
+            "tu achètes",
+            "il achète",
+            "elle achète",
+            "on achète",
+            "nous achetons",
+            "vous achetez",
+            "ils achètent",
+            "elles achètent"
+          ],
+          "dutch": [
+            "ik koop",
+            "jij koopt",
+            "hij koopt",
+            "zij koopt",
+            "men koopt",
+            "wij kopen",
+            "jullie kopen/u koopt",
+            "zij (m) kopen",
+            "zij (v) kopen"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai acheté",
+            "tu as acheté",
+            "il a acheté",
+            "elle a acheté",
+            "on a acheté",
+            "nous avons acheté",
+            "vous avez acheté",
+            "ils ont acheté",
+            "elles ont acheté"
+          ],
+          "dutch": [
+            "ik heb gekocht",
+            "jij hebt gekocht",
+            "hij heeft gekocht",
+            "zij heeft gekocht",
+            "men heeft gekocht",
+            "wij hebben gekocht",
+            "jullie hebben/u heeft gekocht",
+            "zij (m) hebben gekocht",
+            "zij (v) hebben gekocht"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "j'achetais",
+            "tu achetais",
+            "il achetait",
+            "elle achetait",
+            "on achetait",
+            "nous achetions",
+            "vous achetiez",
+            "ils achetaient",
+            "elles achetaient"
+          ],
+          "dutch": [
+            "ik kocht",
+            "jij kocht",
+            "hij kocht",
+            "zij kocht",
+            "men kocht",
+            "wij kochten",
+            "jullie kochten/u kocht",
+            "zij (m) kochten",
+            "zij (v) kochten"
+          ]
+        },
+        "futur": {
+          "french": [
+            "j'achèterai",
+            "tu achèteras",
+            "il achètera",
+            "elle achètera",
+            "on achètera",
+            "nous achèterons",
+            "vous achèterez",
+            "ils achèteront",
+            "elles achèteront"
+          ],
+          "dutch": [
+            "ik zal kopen",
+            "jij zal kopen",
+            "hij zal kopen",
+            "zij zal kopen",
+            "men zal kopen",
+            "wij zullen kopen",
+            "jullie zullen/u zult kopen",
+            "zij (m) zullen kopen",
+            "zij (v) zullen kopen"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "j'achèterais",
+            "tu achèterais",
+            "il achèterait",
+            "elle achèterait",
+            "on achèterait",
+            "nous achèterions",
+            "vous achèteriez",
+            "ils achèteraient",
+            "elles achèteraient"
+          ],
+          "dutch": [
+            "ik zou kopen",
+            "jij zou kopen",
+            "hij zou kopen",
+            "zij zou kopen",
+            "men zou kopen",
+            "wij zouden kopen",
+            "jullie zouden/u zou kopen",
+            "zij (m) zouden kopen",
+            "zij (v) zouden kopen"
+          ]
+        }
+      }
+    },
+    {
+      "id": "appeler",
+      "infinitive": "appeler",
+      "translation": "bellen",
+      "infinitiveTranslation": "bellen",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "j'appelle",
+            "tu appelles",
+            "il appelle",
+            "elle appelle",
+            "on appelle",
+            "nous appelons",
+            "vous appelez",
+            "ils appellent",
+            "elles appellent"
+          ],
+          "dutch": [
+            "ik bel",
+            "jij belt",
+            "hij belt",
+            "zij belt",
+            "men belt",
+            "wij bellen",
+            "jullie bellen/u belt",
+            "zij (m) bellen",
+            "zij (v) bellen"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai appelé",
+            "tu as appelé",
+            "il a appelé",
+            "elle a appelé",
+            "on a appelé",
+            "nous avons appelé",
+            "vous avez appelé",
+            "ils ont appelé",
+            "elles ont appelé"
+          ],
+          "dutch": [
+            "ik heb gebeld",
+            "jij hebt gebeld",
+            "hij heeft gebeld",
+            "zij heeft gebeld",
+            "men heeft gebeld",
+            "wij hebben gebeld",
+            "jullie hebben/u heeft gebeld",
+            "zij (m) hebben gebeld",
+            "zij (v) hebben gebeld"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "j'appelais",
+            "tu appelais",
+            "il appelait",
+            "elle appelait",
+            "on appelait",
+            "nous appelions",
+            "vous appeliez",
+            "ils appelaient",
+            "elles appelaient"
+          ],
+          "dutch": [
+            "ik belde",
+            "jij belde",
+            "hij belde",
+            "zij belde",
+            "men belde",
+            "wij belden",
+            "jullie belden/u belde",
+            "zij (m) belden",
+            "zij (v) belden"
+          ]
+        },
+        "futur": {
+          "french": [
+            "j'appellerai",
+            "tu appelleras",
+            "il appellera",
+            "elle appellera",
+            "on appellera",
+            "nous appellerons",
+            "vous appellerez",
+            "ils appelleront",
+            "elles appelleront"
+          ],
+          "dutch": [
+            "ik zal bellen",
+            "jij zal bellen",
+            "hij zal bellen",
+            "zij zal bellen",
+            "men zal bellen",
+            "wij zullen bellen",
+            "jullie zullen/u zult bellen",
+            "zij (m) zullen bellen",
+            "zij (v) zullen bellen"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "j'appellerais",
+            "tu appellerais",
+            "il appellerait",
+            "elle appellerait",
+            "on appellerait",
+            "nous appellerions",
+            "vous appelleriez",
+            "ils appelleraient",
+            "elles appelleraient"
+          ],
+          "dutch": [
+            "ik zou bellen",
+            "jij zou bellen",
+            "hij zou bellen",
+            "zij zou bellen",
+            "men zou bellen",
+            "wij zouden bellen",
+            "jullie zouden/u zou bellen",
+            "zij (m) zouden bellen",
+            "zij (v) zouden bellen"
+          ]
+        }
+      }
+    },
+    {
+      "id": "essayer",
+      "infinitive": "essayer",
+      "translation": "proberen",
+      "infinitiveTranslation": "proberen",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "j'essaie",
+            "tu essaies",
+            "il essaie",
+            "elle essaie",
+            "on essaie",
+            "nous essayons",
+            "vous essayez",
+            "ils essaient",
+            "elles essaient"
+          ],
+          "dutch": [
+            "ik probeer",
+            "jij probeert",
+            "hij probeert",
+            "zij probeert",
+            "men probeert",
+            "wij proberen",
+            "jullie proberen/u probeert",
+            "zij (m) proberen",
+            "zij (v) proberen"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai essayé",
+            "tu as essayé",
+            "il a essayé",
+            "elle a essayé",
+            "on a essayé",
+            "nous avons essayé",
+            "vous avez essayé",
+            "ils ont essayé",
+            "elles ont essayé"
+          ],
+          "dutch": [
+            "ik heb geprobeerd",
+            "jij hebt geprobeerd",
+            "hij heeft geprobeerd",
+            "zij heeft geprobeerd",
+            "men heeft geprobeerd",
+            "wij hebben geprobeerd",
+            "jullie hebben/u heeft geprobeerd",
+            "zij (m) hebben geprobeerd",
+            "zij (v) hebben geprobeerd"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "j'essayais",
+            "tu essayais",
+            "il essayait",
+            "elle essayait",
+            "on essayait",
+            "nous essayions",
+            "vous essayiez",
+            "ils essayaient",
+            "elles essayaient"
+          ],
+          "dutch": [
+            "ik probeerde",
+            "jij probeerde",
+            "hij probeerde",
+            "zij probeerde",
+            "men probeerde",
+            "wij probeerden",
+            "jullie probeerden/u probeerde",
+            "zij (m) probeerden",
+            "zij (v) probeerden"
+          ]
+        },
+        "futur": {
+          "french": [
+            "j'essaierai",
+            "tu essaieras",
+            "il essaiera",
+            "elle essaiera",
+            "on essaiera",
+            "nous essaierons",
+            "vous essaierez",
+            "ils essaieront",
+            "elles essaieront"
+          ],
+          "dutch": [
+            "ik zal proberen",
+            "jij zal proberen",
+            "hij zal proberen",
+            "zij zal proberen",
+            "men zal proberen",
+            "wij zullen proberen",
+            "jullie zullen/u zult proberen",
+            "zij (m) zullen proberen",
+            "zij (v) zullen proberen"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "j'essaierais",
+            "tu essaierais",
+            "il essaierait",
+            "elle essaierait",
+            "on essaierait",
+            "nous essaierions",
+            "vous essaieriez",
+            "ils essaieraient",
+            "elles essaieraient"
+          ],
+          "dutch": [
+            "ik zou proberen",
+            "jij zou proberen",
+            "hij zou proberen",
+            "zij zou proberen",
+            "men zou proberen",
+            "wij zouden proberen",
+            "jullie zouden/u zou proberen",
+            "zij (m) zouden proberen",
+            "zij (v) zouden proberen"
+          ]
+        }
+      }
+    },
+    {
+      "id": "manger",
+      "infinitive": "manger",
+      "translation": "eten",
+      "infinitiveTranslation": "eten",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je mange",
+            "tu manges",
+            "il mange",
+            "elle mange",
+            "on mange",
+            "nous mangeons",
+            "vous mangez",
+            "ils mangent",
+            "elles mangent"
+          ],
+          "dutch": [
+            "ik eet",
+            "jij eet",
+            "hij eet",
+            "zij eet",
+            "men eet",
+            "wij eten",
+            "jullie eten/u eet",
+            "zij (m) eten",
+            "zij (v) eten"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai mangé",
+            "tu as mangé",
+            "il a mangé",
+            "elle a mangé",
+            "on a mangé",
+            "nous avons mangé",
+            "vous avez mangé",
+            "ils ont mangé",
+            "elles ont mangé"
+          ],
+          "dutch": [
+            "ik heb gegeten",
+            "jij hebt gegeten",
+            "hij heeft gegeten",
+            "zij heeft gegeten",
+            "men heeft gegeten",
+            "wij hebben gegeten",
+            "jullie hebben/u heeft gegeten",
+            "zij (m) hebben gegeten",
+            "zij (v) hebben gegeten"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je mangeais",
+            "tu mangeais",
+            "il mangeait",
+            "elle mangeait",
+            "on mangeait",
+            "nous mangions",
+            "vous mangiez",
+            "ils mangeaient",
+            "elles mangeaient"
+          ],
+          "dutch": [
+            "ik at",
+            "jij at",
+            "hij at",
+            "zij at",
+            "men at",
+            "wij aten",
+            "jullie aten/u at",
+            "zij (m) aten",
+            "zij (v) aten"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je mangerai",
+            "tu mangeras",
+            "il mangera",
+            "elle mangera",
+            "on mangera",
+            "nous mangerons",
+            "vous mangerez",
+            "ils mangeront",
+            "elles mangeront"
+          ],
+          "dutch": [
+            "ik zal eten",
+            "jij zal eten",
+            "hij zal eten",
+            "zij zal eten",
+            "men zal eten",
+            "wij zullen eten",
+            "jullie zullen/u zult eten",
+            "zij (m) zullen eten",
+            "zij (v) zullen eten"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je mangerais",
+            "tu mangerais",
+            "il mangerait",
+            "elle mangerait",
+            "on mangerait",
+            "nous mangerions",
+            "vous mangeriez",
+            "ils mangeraient",
+            "elles mangeraient"
+          ],
+          "dutch": [
+            "ik zou eten",
+            "jij zou eten",
+            "hij zou eten",
+            "zij zou eten",
+            "men zou eten",
+            "wij zouden eten",
+            "jullie zouden/u zou eten",
+            "zij (m) zouden eten",
+            "zij (v) zouden eten"
+          ]
+        }
+      }
+    },
+    {
+      "id": "payer",
+      "infinitive": "payer",
+      "translation": "betalen",
+      "infinitiveTranslation": "betalen",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je paie",
+            "tu paies",
+            "il paie",
+            "elle paie",
+            "on paie",
+            "nous payons",
+            "vous payez",
+            "ils paient",
+            "elles paient"
+          ],
+          "dutch": [
+            "ik betaal",
+            "jij betaalt",
+            "hij betaalt",
+            "zij betaalt",
+            "men betaalt",
+            "wij betalen",
+            "jullie betalen/u betaalt",
+            "zij (m) betalen",
+            "zij (v) betalen"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai payé",
+            "tu as payé",
+            "il a payé",
+            "elle a payé",
+            "on a payé",
+            "nous avons payé",
+            "vous avez payé",
+            "ils ont payé",
+            "elles ont payé"
+          ],
+          "dutch": [
+            "ik heb betaald",
+            "jij hebt betaald",
+            "hij heeft betaald",
+            "zij heeft betaald",
+            "men heeft betaald",
+            "wij hebben betaald",
+            "jullie hebben/u heeft betaald",
+            "zij (m) hebben betaald",
+            "zij (v) hebben betaald"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je payais",
+            "tu payais",
+            "il payait",
+            "elle payait",
+            "on payait",
+            "nous payions",
+            "vous payiez",
+            "ils payaient",
+            "elles payaient"
+          ],
+          "dutch": [
+            "ik betaalde",
+            "jij betaalde",
+            "hij betaalde",
+            "zij betaalde",
+            "men betaalde",
+            "wij betaalden",
+            "jullie betaalden/u betaalde",
+            "zij (m) betaalden",
+            "zij (v) betaalden"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je paierai",
+            "tu paieras",
+            "il paiera",
+            "elle paiera",
+            "on paiera",
+            "nous paierons",
+            "vous paierez",
+            "ils paieront",
+            "elles paieront"
+          ],
+          "dutch": [
+            "ik zal betalen",
+            "jij zal betalen",
+            "hij zal betalen",
+            "zij zal betalen",
+            "men zal betalen",
+            "wij zullen betalen",
+            "jullie zullen/u zult betalen",
+            "zij (m) zullen betalen",
+            "zij (v) zullen betalen"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je paierais",
+            "tu paierais",
+            "il paierait",
+            "elle paierait",
+            "on paierait",
+            "nous paierions",
+            "vous paieriez",
+            "ils paieraient",
+            "elles paieraient"
+          ],
+          "dutch": [
+            "ik zou betalen",
+            "jij zou betalen",
+            "hij zou betalen",
+            "zij zou betalen",
+            "men zou betalen",
+            "wij zouden betalen",
+            "jullie zouden/u zou betalen",
+            "zij (m) zouden betalen",
+            "zij (v) zouden betalen"
+          ]
+        }
+      }
+    },
+    {
+      "id": "préférer",
+      "infinitive": "préférer",
+      "translation": "liever hebben",
+      "infinitiveTranslation": "liever hebben",
+      "group": "er",
+      "categoryId": "reg-er",
+      "conjugations": {
+        "présent": {
+          "french": [
+            "je préfère",
+            "tu préfères",
+            "il préfère",
+            "elle préfère",
+            "on préfère",
+            "nous préférons",
+            "vous préférez",
+            "ils préfèrent",
+            "elles préfèrent"
+          ],
+          "dutch": [
+            "ik heb liever",
+            "jij hebt liever",
+            "hij heeft liever",
+            "zij heeft liever",
+            "men heeft liever",
+            "wij hebben liever",
+            "jullie hebben liever/u heeft liever",
+            "zij (m) hebben liever",
+            "zij (v) hebben liever"
+          ]
+        },
+        "passé composé": {
+          "french": [
+            "j'ai préféré",
+            "tu as préféré",
+            "il a préféré",
+            "elle a préféré",
+            "on a préféré",
+            "nous avons préféré",
+            "vous avez préféré",
+            "ils ont préféré",
+            "elles ont préféré"
+          ],
+          "dutch": [
+            "ik heb liever gehad",
+            "jij hebt liever gehad",
+            "hij heeft liever gehad",
+            "zij heeft liever gehad",
+            "men heeft liever gehad",
+            "wij hebben liever gehad",
+            "jullie hebben/u heeft liever gehad",
+            "zij (m) hebben liever gehad",
+            "zij (v) hebben liever gehad"
+          ]
+        },
+        "imparfait": {
+          "french": [
+            "je préférais",
+            "tu préférais",
+            "il préférait",
+            "elle préférait",
+            "on préférait",
+            "nous préférions",
+            "vous préfériez",
+            "ils préféraient",
+            "elles préféraient"
+          ],
+          "dutch": [
+            "ik had liever",
+            "jij had liever",
+            "hij had liever",
+            "zij had liever",
+            "men had liever",
+            "wij hadden liever",
+            "jullie hadden liever/u had liever",
+            "zij (m) hadden liever",
+            "zij (v) hadden liever"
+          ]
+        },
+        "futur": {
+          "french": [
+            "je préférerai",
+            "tu préféreras",
+            "il préférera",
+            "elle préférera",
+            "on préférera",
+            "nous préférerons",
+            "vous préférerez",
+            "ils préféreront",
+            "elles préféreront"
+          ],
+          "dutch": [
+            "ik zal liever hebben",
+            "jij zal liever hebben",
+            "hij zal liever hebben",
+            "zij zal liever hebben",
+            "men zal liever hebben",
+            "wij zullen liever hebben",
+            "jullie zullen/u zult liever hebben",
+            "zij (m) zullen liever hebben",
+            "zij (v) zullen liever hebben"
+          ]
+        },
+        "futur du passé": {
+          "french": [
+            "je préférerais",
+            "tu préférerais",
+            "il préférerait",
+            "elle préférerait",
+            "on préférerait",
+            "nous préférerions",
+            "vous préféreriez",
+            "ils préféreraient",
+            "elles préféreraient"
+          ],
+          "dutch": [
+            "ik zou liever hebben",
+            "jij zou liever hebben",
+            "hij zou liever hebben",
+            "zij zou liever hebben",
+            "men zou liever hebben",
+            "wij zouden liever hebben",
+            "jullie zouden/u zou liever hebben",
+            "zij (m) zouden liever hebben",
+            "zij (v) zouden liever hebben"
           ]
         }
       }
@@ -1550,12 +5710,12 @@
             "je suis descendu",
             "tu es descendu",
             "il est descendu",
-            "elle est descendue",
+            "elle est descendu",
             "on est descendu",
-            "nous sommes descendus",
-            "vous êtes descendus",
-            "ils sont descendus",
-            "elles sont descendues"
+            "nous sommes descendu",
+            "vous êtes descendu",
+            "ils sont descendu",
+            "elles sont descendu"
           ],
           "dutch": [
             "ik ben afgedaald",
@@ -2849,12 +7009,12 @@
             "je me suis lavé",
             "tu t'es lavé",
             "il s'est lavé",
-            "elle s'est lavée",
+            "elle s'est lavé",
             "on s'est lavé",
-            "nous nous sommes lavés",
-            "vous vous êtes lavés",
-            "ils se sont lavés",
-            "elles se sont lavées"
+            "nous nous sommes lavé",
+            "vous vous êtes lavé",
+            "ils se sont lavé",
+            "elles se sont lavé"
           ],
           "dutch": [
             "ik heb me gewassen",
@@ -2980,10 +7140,10 @@
             "il s'est couché",
             "elle s'est couché",
             "on s'est couché",
-            "nous nous sommes couchés",
-            "vous vous êtes couchés",
-            "ils se sont couchés",
-            "elles se sont couchées"
+            "nous nous sommes couché",
+            "vous vous êtes couché",
+            "ils se sont couché",
+            "elles se sont couché"
           ],
           "dutch": [
             "ik ben gaan slapen",
@@ -3107,12 +7267,12 @@
             "je me suis levé",
             "tu t'es levé",
             "il s'est levé",
-            "elle s'est levée",
+            "elle s'est levé",
             "on s'est levé",
-            "nous nous sommes levés",
-            "vous vous êtes levés",
-            "ils se sont levés",
-            "elles se sont levées"
+            "nous nous sommes levé",
+            "vous vous êtes levé",
+            "ils se sont levé",
+            "elles se sont levé"
           ],
           "dutch": [
             "ik ben opgestaan",
@@ -3236,12 +7396,12 @@
             "je me suis douché",
             "tu t'es douché",
             "il s'est douché",
-            "elle s'est douchée",
+            "elle s'est douché",
             "on s'est douché",
-            "nous nous sommes douchés",
-            "vous vous êtes douchés",
-            "ils se sont douchés",
-            "elles se sont douchées"
+            "nous nous sommes douché",
+            "vous vous êtes douché",
+            "ils se sont douché",
+            "elles se sont douché"
           ],
           "dutch": [
             "ik heb gedoucht",
@@ -3365,12 +7525,12 @@
             "je me suis appelé",
             "tu t'es appelé",
             "il s'est appelé",
-            "elle s'est appelée",
+            "elle s'est appelé",
             "on s'est appelé",
-            "nous nous sommes appelés",
-            "vous vous êtes appelés",
-            "ils se sont appelés",
-            "elles se sont appelées"
+            "nous nous sommes appelé",
+            "vous vous êtes appelé",
+            "ils se sont appelé",
+            "elles se sont appelé"
           ],
           "dutch": [
             "ik heb geheten",
@@ -3494,12 +7654,12 @@
             "je me suis amusé",
             "tu t'es amusé",
             "il s'est amusé",
-            "elle s'est amusée",
+            "elle s'est amusé",
             "on s'est amusé",
-            "nous nous sommes amusés",
-            "vous vous êtes amusés",
-            "ils se sont amusés",
-            "elles se sont amusées"
+            "nous nous sommes amusé",
+            "vous vous êtes amusé",
+            "ils se sont amusé",
+            "elles se sont amusé"
           ],
           "dutch": [
             "ik heb me vermaakt",
@@ -3625,10 +7785,10 @@
             "il s'est promené",
             "elle s'est promené",
             "on s'est promené",
-            "nous nous sommes promenés",
-            "vous vous êtes promenés",
-            "ils se sont promenés",
-            "elles se sont promenées"
+            "nous nous sommes promené",
+            "vous vous êtes promené",
+            "ils se sont promené",
+            "elles se sont promené"
           ],
           "dutch": [
             "ik heb gewandeld",
@@ -3752,12 +7912,12 @@
             "je me suis brulé",
             "tu t'es brulé",
             "il s'est brulé",
-            "elle s'est brulée",
+            "elle s'est brulé",
             "on s'est brulé",
-            "nous nous sommes brulés",
-            "vous vous êtes brulés",
-            "ils se sont brulés",
-            "elles se sont brulées"
+            "nous nous sommes brulé",
+            "vous vous êtes brulé",
+            "ils se sont brulé",
+            "elles se sont brulé"
           ],
           "dutch": [
             "ik heb me gebrand",
@@ -3881,12 +8041,12 @@
             "je me suis trompé",
             "tu t'es trompé",
             "il s'est trompé",
-            "elle s'est trompée",
+            "elle s'est trompé",
             "on s'est trompé",
-            "nous nous sommes trompés",
-            "vous vous êtes trompés",
-            "ils se sont trompés",
-            "elles se sont trompées"
+            "nous nous sommes trompé",
+            "vous vous êtes trompé",
+            "ils se sont trompé",
+            "elles se sont trompé"
           ],
           "dutch": [
             "ik heb me vergist",
@@ -4010,12 +8170,12 @@
             "je me suis concentré",
             "tu t'es concentré",
             "il s'est concentré",
-            "elle s'est concentrée",
+            "elle s'est concentré",
             "on s'est concentré",
-            "nous nous sommes concentrés",
-            "vous vous êtes concentrés",
-            "ils se sont concentrés",
-            "elles se sont concentrées"
+            "nous nous sommes concentré",
+            "vous vous êtes concentré",
+            "ils se sont concentré",
+            "elles se sont concentré"
           ],
           "dutch": [
             "ik heb me geconcentreerd",
@@ -4139,12 +8299,12 @@
             "je me suis dépêché",
             "tu t'es dépêché",
             "il s'est dépêché",
-            "elle s'est dépêchée",
+            "elle s'est dépêché",
             "on s'est dépêché",
-            "nous nous sommes dépêchés",
-            "vous vous êtes dépêchés",
-            "ils se sont dépêchés",
-            "elles se sont dépêchées"
+            "nous nous sommes dépêché",
+            "vous vous êtes dépêché",
+            "ils se sont dépêché",
+            "elles se sont dépêché"
           ],
           "dutch": [
             "ik heb me gehaast",
@@ -4268,12 +8428,12 @@
             "je me suis présenté",
             "tu t'es présenté",
             "il s'est présenté",
-            "elle s'est présentée",
+            "elle s'est présenté",
             "on s'est présenté",
-            "nous nous sommes présentés",
-            "vous vous êtes présentés",
-            "ils se sont présentés",
-            "elles se sont présentées"
+            "nous nous sommes présenté",
+            "vous vous êtes présenté",
+            "ils se sont présenté",
+            "elles se sont présenté"
           ],
           "dutch": [
             "ik heb me voorgesteld",
@@ -4397,12 +8557,12 @@
             "je me suis maquillé",
             "tu t'es maquillé",
             "il s'est maquillé",
-            "elle s'est maquillée",
+            "elle s'est maquillé",
             "on s'est maquillé",
-            "nous nous sommes maquillés",
-            "vous vous êtes maquillés",
-            "ils se sont maquillés",
-            "elles se sont maquillées"
+            "nous nous sommes maquillé",
+            "vous vous êtes maquillé",
+            "ils se sont maquillé",
+            "elles se sont maquillé"
           ],
           "dutch": [
             "ik heb me opgemaakt",
@@ -4526,12 +8686,12 @@
             "je me suis habillé",
             "tu t'es habillé",
             "il s'est habillé",
-            "elle s'est habillée",
+            "elle s'est habillé",
             "on s'est habillé",
-            "nous nous sommes habillés",
-            "vous vous êtes habillés",
-            "ils se sont habillés",
-            "elles se sont habillées"
+            "nous nous sommes habillé",
+            "vous vous êtes habillé",
+            "ils se sont habillé",
+            "elles se sont habillé"
           ],
           "dutch": [
             "ik heb me aangekleed",
@@ -4654,13 +8814,13 @@
           "french": [
             "je me suis entrainé",
             "tu t'es entrainé",
-            "il s'est entrainée",
+            "il s'est entrainé",
             "elle s'est entrainé",
             "on s'est entrainé",
-            "nous nous sommes entrainés",
-            "vous vous êtes entrainés",
-            "ils se sont entrainés",
-            "elles se sont entrainées"
+            "nous nous sommes entrainé",
+            "vous vous êtes entrainé",
+            "ils se sont entrainé",
+            "elles se sont entrainé"
           ],
           "dutch": [
             "ik heb getraind",
@@ -4784,12 +8944,12 @@
             "je me suis arrêté",
             "tu t'es arrêté",
             "il s'est arrêté",
-            "elle s'est arrêtée",
+            "elle s'est arrêté",
             "on s'est arrêté",
-            "nous nous sommes arrêtés",
-            "vous vous êtes arrêtés",
-            "ils se sont arrêtés",
-            "elles se sont arrêtées"
+            "nous nous sommes arrêté",
+            "vous vous êtes arrêté",
+            "ils se sont arrêté",
+            "elles se sont arrêté"
           ],
           "dutch": [
             "ik ben gestopt",
@@ -4913,12 +9073,12 @@
             "je me suis moqué de",
             "tu t'es moqué de",
             "il s'est moqué de",
-            "elle s'est moquée de",
+            "elle s'est moqué de",
             "on s'est moqué de",
-            "nous nous sommes moqués de",
-            "vous vous êtes moqués de",
-            "ils se sont moqués de",
-            "elles se sont moquées de"
+            "nous nous sommes moqué de",
+            "vous vous êtes moqué de",
+            "ils se sont moqué de",
+            "elles se sont moquées moqué de"
           ],
           "dutch": [
             "ik heb iemand uitgelachen",
@@ -5042,12 +9202,12 @@
             "je me suis senti",
             "tu t'es senti",
             "il s'est senti",
-            "elle s'est sentie",
+            "elle s'est senti",
             "on s'est senti",
-            "nous nous sommes sentis",
-            "vous vous êtes sentis",
-            "ils se sont sentis",
-            "elles se sont senties"
+            "nous nous sommes senti",
+            "vous vous êtes senti",
+            "ils se sont senti",
+            "elles se sont senti"
           ],
           "dutch": [
             "ik heb me gevoeld",
@@ -5301,12 +9461,12 @@
             "je suis allé",
             "tu es allé",
             "il est allé",
-            "elle est allée",
+            "elle est allé",
             "on est allé",
-            "nous sommes allés",
-            "vous êtes allés",
-            "ils sont allés",
-            "elles sont allées"
+            "nous sommes allé",
+            "vous êtes allé",
+            "ils sont allé",
+            "elles sont allé"
           ],
           "dutch": [
             "ik ben gegaan",
@@ -6333,7 +10493,7 @@
             "je me suis inscrit",
             "tu t'es inscrit",
             "il s'est inscrit",
-            "elle s'et inscrit",
+            "elle s'est inscrit",
             "on s'est inscrit",
             "nous nous sommes inscrit",
             "vous vous êtes inscrit",
@@ -6850,12 +11010,12 @@
             "je suis parti",
             "tu es parti",
             "il est parti",
-            "elle est partie",
+            "elle est parti",
             "on est parti",
-            "nous sommes partis",
-            "vous êtes partis",
-            "ils sont partis",
-            "elles sont parties"
+            "nous sommes parti",
+            "vous êtes parti",
+            "ils sont parti",
+            "elles sont parti"
           ],
           "dutch": [
             "ik ben vertrokken",
@@ -7754,12 +11914,12 @@
             "je suis sorti",
             "tu es sorti",
             "il est sorti",
-            "elle est sortie",
+            "elle est sorti",
             "on est sorti",
-            "nous sommes sortis",
-            "vous êtes sortis",
-            "ils sont sortis",
-            "elles sont sorties"
+            "nous sommes sorti",
+            "vous êtes sorti",
+            "ils sont sorti",
+            "elles sont sorti"
           ],
           "dutch": [
             "ik ben uitgegaan",
@@ -7884,12 +12044,12 @@
             "je suis venu",
             "tu es venu",
             "il est venu",
-            "elle est venue",
+            "elle est venu",
             "on est venu",
-            "nous sommes venus",
-            "vous êtes venus",
-            "ils sont venus",
-            "elles sont venues"
+            "nous sommes venu",
+            "vous êtes venu",
+            "ils sont venu",
+            "elles sont venu"
           ],
           "dutch": [
             "ik ben gekomen",
