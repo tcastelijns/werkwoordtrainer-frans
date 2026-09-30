@@ -6,13 +6,11 @@
 import React, { useState, useEffect, useRef, useMemo, useId } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
-  XCircle, RefreshCcw, Trophy, ChevronDown, ChevronRight, Check,
-  ArrowLeft, Flame, Star, Sparkles, Award, BookOpen, 
-  Info, Lock, Search, Sun, Moon
+  XCircle, RefreshCcw, ChevronDown, ChevronRight, Check,
+  ArrowLeft, BookOpen, Info, Search, Sun, Moon
 } from 'lucide-react';
 
 import verbData from './data/verbs.json';
-import { BADGES } from './data/badges';
 
 // --- Data & Logic ---
 
@@ -121,29 +119,11 @@ export default function App() {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [initialQuestionCount, setInitialQuestionCount] = useState(0);
-  const [sessionXp, setSessionXp] = useState(0);
-  const [levelAtStart, setLevelAtStart] = useState(1);
   const [userAnswer, setUserAnswer] = useState('');
   const [feedback, setFeedback] = useState<{ isCorrect: boolean; message: string; canTryAgain?: boolean } | null>(null);
   const [score, setScore] = useState(0);
   const [missedVerbIds, setMissedVerbIds] = useState<string[]>([]);
   const [attempts, setAttempts] = useState(0);
-  const [allFirstTry, setAllFirstTry] = useState(true);
-  const [streak, setStreak] = useState<{ count: number; lastDate: string | null }>({ count: 0, lastDate: null });
-  const [totalXp, setTotalXp] = useState(0);
-  const [xpPopups, setXpPopups] = useState<{ id: number; amount: number }[]>([]);
-  const [unlockedBadges, setUnlockedBadges] = useState<string[]>([]);
-  const [stats, setStats] = useState({
-    totalCorrect: 0,
-    totalErCorrect: 0,
-    totalIrregularCorrect: 0,
-    maxCorrectStreak: 0,
-    currentCorrectStreak: 0,
-    quizzesCompleted: 0
-  });
-  const [sessionStartTime, setSessionStartTime] = useState<number | null>(null);
-  const [newBadge, setNewBadge] = useState<typeof BADGES[0] | null>(null);
-  const [showBadgeWall, setShowBadgeWall] = useState(false);
   const [showReference, setShowReference] = useState(false);
   const [referenceSearch, setReferenceSearch] = useState('');
   const [selectedVerbId, setSelectedVerbId] = useState<string | null>(null);
@@ -164,114 +144,12 @@ export default function App() {
     }
   }, [isDarkMode]);
 
-  const getLevelInfo = (xp: number) => {
-    let level = 1;
-    let xpInLevel = xp;
-    let nextLevelXp = 100;
-
-    while (xpInLevel >= nextLevelXp) {
-      xpInLevel -= nextLevelXp;
-      level++;
-      nextLevelXp += 100;
-    }
-
-    let title = "Débutant";
-    if (level >= 36) title = "Maître des Verbes";
-    else if (level >= 21) title = "Expert";
-    else if (level >= 11) title = "Connaisseur";
-    else if (level >= 6) title = "Apprenti";
-
-    return { level, xpInLevel, nextLevelXp, title, progress: (xpInLevel / nextLevelXp) * 100 };
-  };
-
-  const levelInfo = useMemo(() => getLevelInfo(totalXp), [totalXp]);
   const missedVerbs = useMemo(
     () => missedVerbIds
       .map(id => VERBS_LIST.find(v => v.id === id))
       .filter((verb): verb is Verb => Boolean(verb)),
     [missedVerbIds]
   );
-
-  useEffect(() => {
-    const savedStreak = localStorage.getItem('french_verb_streak');
-    if (savedStreak) {
-      const data = JSON.parse(savedStreak);
-      const today = new Date().toISOString().split('T')[0];
-      const last = new Date(data.lastDate);
-      const current = new Date(today);
-      const diffTime = Math.abs(current.getTime() - last.getTime());
-      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-
-      if (diffDays > 1) {
-        setStreak({ count: 0, lastDate: data.lastDate });
-      } else {
-        setStreak(data);
-      }
-    }
-
-    const savedXp = localStorage.getItem('french_verb_xp');
-    if (savedXp) {
-      setTotalXp(parseInt(savedXp, 10));
-    }
-
-    const savedBadges = localStorage.getItem('french_verb_badges');
-    if (savedBadges) {
-      setUnlockedBadges(JSON.parse(savedBadges));
-    }
-
-    const savedStats = localStorage.getItem('french_verb_stats');
-    if (savedStats) {
-      setStats(JSON.parse(savedStats));
-    }
-  }, []);
-
-  const unlockBadge = (badgeId: string) => {
-    if (unlockedBadges.includes(badgeId)) return;
-    
-    const badge = BADGES.find(b => b.id === badgeId);
-    if (badge) {
-      setNewBadge(badge);
-      const updated = [...unlockedBadges, badgeId];
-      setUnlockedBadges(updated);
-      localStorage.setItem('french_verb_badges', JSON.stringify(updated));
-    }
-  };
-
-  const addXp = (amount: number) => {
-    const newXp = totalXp + amount;
-    setTotalXp(newXp);
-    setSessionXp(prev => prev + amount);
-    localStorage.setItem('french_verb_xp', newXp.toString());
-    
-    const id = Date.now();
-    setXpPopups(prev => [...prev, { id, amount }]);
-    setTimeout(() => {
-      setXpPopups(prev => prev.filter(p => p.id !== id));
-    }, 1000);
-  };
-
-  const updateStreak = () => {
-    const today = new Date().toISOString().split('T')[0];
-    const lastDate = streak.lastDate;
-
-    if (lastDate === today) return;
-
-    let newCount = 1;
-    if (lastDate) {
-      const last = new Date(lastDate);
-      const current = new Date(today);
-      const diffTime = Math.abs(current.getTime() - last.getTime());
-      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-
-      if (diffDays === 1) {
-        newCount = streak.count + 1;
-      }
-    }
-
-    const newData = { count: newCount, lastDate: today };
-    setStreak(newData);
-    localStorage.setItem('french_verb_streak', JSON.stringify(newData));
-  };
 
   const toggleRegular = (id: string) => {
     setSelectedRegularIds(prev => prev.includes(id) ? prev.filter(v => v !== id) : [...prev, id]);
@@ -327,13 +205,9 @@ export default function App() {
     setScore(0);
     setMissedVerbIds([]);
     setAttempts(0);
-    setAllFirstTry(true);
-    setSessionXp(0);
-    setLevelAtStart(levelInfo.level);
     setGameState('playing');
     setFeedback(null);
     setUserAnswer('');
-    setSessionStartTime(Date.now());
   };
 
   const generateMistakeQuiz = () => {
@@ -368,13 +242,9 @@ export default function App() {
     setScore(0);
     setMissedVerbIds([]);
     setAttempts(0);
-    setAllFirstTry(true);
-    setSessionXp(0);
-    setLevelAtStart(levelInfo.level);
     setGameState('playing');
     setFeedback(null);
     setUserAnswer('');
-    setSessionStartTime(Date.now());
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -419,48 +289,8 @@ export default function App() {
     if (isCorrect) {
       setScore((s) => s + 1);
       setFeedback({ isCorrect: true, message: 'Bien !' });
-      
-      // XP logic: 10 for first try, 5 for hint 1, 2 for hint 2
-      // Actually, since hints cost XP upfront now, we just give a standard 10 XP for correct
-      let xpAmount = 10;
-      addXp(xpAmount);
-
-      // Update stats
-      setStats(prev => {
-        const newCurrentStreak = prev.currentCorrectStreak + 1;
-        const newStats = {
-          ...prev,
-          totalCorrect: prev.totalCorrect + 1,
-          totalErCorrect: currentQuestion.verb.categoryId === 'reg-er' ? prev.totalErCorrect + 1 : prev.totalErCorrect,
-          totalIrregularCorrect: currentQuestion.verb.categoryId === 'irregular' ? prev.totalIrregularCorrect + 1 : prev.totalIrregularCorrect,
-          currentCorrectStreak: newCurrentStreak,
-          maxCorrectStreak: Math.max(prev.maxCorrectStreak, newCurrentStreak)
-        };
-        localStorage.setItem('french_verb_stats', JSON.stringify(newStats));
-        
-        // Check for "Invincible" badge (50 in a row)
-        if (newStats.maxCorrectStreak >= 50) {
-          setTimeout(() => unlockBadge('invincible'), 500);
-        }
-        // Check for "Verbe-ivore" (100 total)
-        if (newStats.totalCorrect >= 100) {
-          setTimeout(() => unlockBadge('verbe_ivore'), 500);
-        }
-        // Check for "Maître d'ER" (50 total)
-        if (newStats.totalErCorrect >= 50) {
-          setTimeout(() => unlockBadge('maitre_er'), 500);
-        }
-        // Check for "Dompteur de Dragons" (50 total)
-        if (newStats.totalIrregularCorrect >= 50) {
-          setTimeout(() => unlockBadge('dompteur_dragons'), 500);
-        }
-
-        return newStats;
-      });
     } else {
-      setAllFirstTry(false);
       setMissedVerbIds(prev => prev.includes(currentQuestion.verb.id) ? prev : [...prev, currentQuestion.verb.id]);
-      setStats(prev => ({ ...prev, currentCorrectStreak: 0 }));
       const newAttempts = attempts + 1;
       setAttempts(newAttempts);
       
@@ -486,38 +316,6 @@ export default function App() {
       setFeedback(null);
       setAttempts(0);
     } else {
-      updateStreak();
-      // Bonus XP for finishing
-      let bonus = 20;
-      if (allFirstTry && score === initialQuestionCount) bonus += 50;
-      addXp(bonus);
-
-      // Badge checks at end of session
-      const duration = (Date.now() - (sessionStartTime || Date.now())) / 1000;
-      
-      // Premiers Pas
-      unlockBadge('premiers_pas');
-      
-      // Perfectionniste (min 15 questions)
-      if (allFirstTry && score === initialQuestionCount && initialQuestionCount >= 15) {
-        unlockBadge('perfectionniste');
-      }
-      
-      // L'Éclair (10 questions in < 60s)
-      if (initialQuestionCount >= 10 && duration < 60 && score / initialQuestionCount >= 0.8) {
-        unlockBadge('leclair');
-      }
-
-      // Streak badges
-      if (streak.count >= 7) unlockBadge('serie_7');
-      if (streak.count >= 30) unlockBadge('fidele');
-
-      setStats(prev => {
-        const newStats = { ...prev, quizzesCompleted: prev.quizzesCompleted + 1 };
-        localStorage.setItem('french_verb_stats', JSON.stringify(newStats));
-        return newStats;
-      });
-
       setGameState('result');
     }
   };
@@ -565,72 +363,18 @@ export default function App() {
                   </motion.div>
                 </div>
 
-                <div className="flex flex-col items-center gap-4">
-                  <div className="w-full max-w-xs space-y-2">
-                    <div className="flex justify-between items-end">
-                      <div className="text-left">
-                        <span className="text-xs font-bold text-brand-500 uppercase tracking-wider">Niveau {levelInfo.level}</span>
-                        <h3 className="text-lg font-serif font-bold text-theme-text leading-tight">{levelInfo.title}</h3>
-                      </div>
-                      <span className="text-xs font-medium text-theme-text-muted">{levelInfo.xpInLevel} / {levelInfo.nextLevelXp} XP</span>
-                    </div>
-                    <div className="h-2 w-full bg-theme-subtle rounded-full overflow-hidden border border-theme-border-strong/50">
-                      <motion.div 
-                        initial={{ width: 0 }}
-                        animate={{ width: `${levelInfo.progress}%` }}
-                        className="h-full bg-gradient-to-r from-brand-500 to-brand-400"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="flex justify-center gap-4">
-                    {streak.count > 0 && (
-                      <motion.div 
-                        initial={{ scale: 0, rotate: -10 }}
-                        animate={{ scale: 1, rotate: 0 }}
-                        className="flex items-center gap-2 bg-accent-50 px-4 py-2 rounded-full border border-accent-100 shadow-sm"
-                      >
-                        <Flame className="w-5 h-5 text-accent-500 fill-accent-500" />
-                        <span className="text-sm font-bold text-accent-700">{streak.count} {streak.count === 1 ? 'JOUR' : 'JOURS'}</span>
-                      </motion.div>
-                    )}
-                    <motion.div 
-                      initial={{ scale: 0, rotate: 10 }}
-                      animate={{ scale: 1, rotate: 0 }}
-                      className="flex items-center gap-2 bg-brand-50 px-4 py-2 rounded-full border border-brand-100 shadow-sm"
-                    >
-                      <Star className="w-5 h-5 text-brand-500 fill-brand-500" />
-                      <span className="text-sm font-bold text-brand-700">{totalXp} XP</span>
-                    </motion.div>
-                    <motion.button 
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      onClick={() => setShowBadgeWall(true)}
-                      className="flex items-center gap-2 bg-theme-surface px-4 py-2 rounded-full border border-theme-border shadow-sm hover:border-brand-400 hover:text-brand-500 transition-all group"
-                    >
-                      <Award className="w-5 h-5 text-brand-500 group-hover:scale-110 transition-transform" />
-                      <span className="text-sm font-bold text-theme-text-secondary group-hover:text-theme-text transition-colors">Mes Insignes</span>
-                      <div className="bg-brand-500 text-white text-[10px] px-2 py-0.5 rounded-full shadow-sm">
-                        {unlockedBadges.length}
-                      </div>
-                    </motion.button>
-
-                    <motion.button 
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      onClick={() => {
-                        setShowReference(true);
-                        if (!selectedVerbId && VERBS_LIST.length > 0) {
-                          setSelectedVerbId(VERBS_LIST[0].id);
-                        }
-                      }}
-                      className="flex items-center gap-2 bg-theme-surface px-4 py-2 rounded-full border border-theme-border shadow-sm hover:border-brand-400 hover:text-brand-500 transition-all group"
-                    >
-                      <BookOpen className="w-5 h-5 text-brand-500 group-hover:scale-110 transition-transform" />
-                      <span className="text-sm font-bold text-theme-text-secondary group-hover:text-theme-text transition-colors">Naslagwerk</span>
-                    </motion.button>
-                  </div>
-                </div>
+                <button
+                  onClick={() => {
+                    setShowReference(true);
+                    if (!selectedVerbId && VERBS_LIST.length > 0) {
+                      setSelectedVerbId(VERBS_LIST[0].id);
+                    }
+                  }}
+                  className="inline-flex items-center gap-2 bg-theme-surface px-4 py-2 rounded-full border border-theme-border shadow-sm hover:border-brand-400 hover:text-brand-500 transition-all group"
+                >
+                  <BookOpen className="w-5 h-5 text-brand-500" />
+                  <span className="text-sm font-bold text-theme-text-secondary group-hover:text-theme-text transition-colors">Naslagwerk</span>
+                </button>
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -894,20 +638,6 @@ export default function App() {
                       className="w-full px-8 py-6 bg-theme-subtle/50 border-2 border-theme-border rounded-[2rem] focus:bg-theme-surface focus:border-brand-500 focus:outline-none transition-all text-2xl font-medium text-center placeholder:text-theme-text-muted read-only:opacity-60 text-theme-text"
                     />
                     
-                    <AnimatePresence>
-                      {xpPopups.map(popup => (
-                        <motion.div
-                          key={popup.id}
-                          initial={{ opacity: 0, y: 0, x: 20 }}
-                          animate={{ opacity: 1, y: -40, x: 40 }}
-                          exit={{ opacity: 0 }}
-                          className={`absolute right-0 top-0 font-bold text-xl pointer-events-none ${popup.amount > 0 ? 'text-brand-600' : 'text-accent-500'}`}
-                        >
-                          {popup.amount > 0 ? `+${popup.amount}` : popup.amount} XP
-                        </motion.div>
-                      ))}
-                    </AnimatePresence>
-
                     {feedback && !feedback.canTryAgain && (
                       <div className="absolute right-6 top-1/2 -translate-y-1/2">
                         {feedback.isCorrect ? (
@@ -971,54 +701,15 @@ export default function App() {
               className="max-w-4xl mx-auto text-center space-y-12 py-8"
             >
               <div className="space-y-6">
-                <div className="relative inline-block">
-                  <div className="absolute -inset-8 bg-brand-200 rounded-full blur-3xl opacity-30 animate-pulse" />
-                  <div className="w-32 h-32 bg-theme-surface rounded-[2.5rem] shadow-2xl flex items-center justify-center relative border border-theme-border">
-                    <Trophy className="w-16 h-16 text-brand-500" />
-                  </div>
-                </div>
-                
                 <div className="space-y-3">
-                  <h2 className="text-5xl font-serif font-semibold text-theme-text">Félicitations !</h2>
-                  <p className="text-theme-text-muted font-medium uppercase tracking-widest text-xs">Quiz terminé avec succès</p>
+                  <h2 className="text-5xl font-serif font-semibold text-theme-text">Resultaten</h2>
+                  <p className="text-theme-text-muted font-medium uppercase tracking-widest text-xs">Overzicht van deze oefenronde</p>
                 </div>
 
                 <div className="inline-flex items-baseline gap-4 bg-theme-surface px-10 py-6 rounded-[2rem] shadow-sm border border-theme-border">
                   <span className="text-7xl font-serif font-bold text-accent-600">{score}</span>
                   <span className="text-2xl text-theme-text-muted font-medium">/ {initialQuestionCount}</span>
                 </div>
-
-                <div className="flex flex-col items-center gap-2">
-                  <div className="text-accent-600 font-bold text-xl">+{sessionXp} XP</div>
-                  {levelInfo.level > levelAtStart && (
-                    <motion.div
-                      initial={{ scale: 0.5, opacity: 0 }}
-                      animate={{ scale: 1, opacity: 1 }}
-                      className="bg-brand-100 text-brand-700 px-6 py-2 rounded-full font-bold text-sm border border-brand-200 flex items-center gap-2"
-                    >
-                      <Sparkles className="w-4 h-4" />
-                      LEVEL UP ! Vous êtes maintenant {levelInfo.title}
-                    </motion.div>
-                  )}
-                </div>
-
-                {streak.count > 0 && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 }}
-                    className="flex items-center justify-center gap-4"
-                  >
-                    <div className="flex items-center gap-2 text-accent-600 font-bold">
-                      <Flame className="w-6 h-6 fill-accent-500" />
-                      <span>Streak de {streak.count} {streak.count === 1 ? 'jour' : 'jours'} !</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-brand-600 font-bold">
-                      <Sparkles className="w-6 h-6 fill-brand-500" />
-                      <span>Niveau {levelInfo.level} : {levelInfo.title}</span>
-                    </div>
-                  </motion.div>
-                )}
               </div>
 
               {missedVerbs.length > 0 && (
@@ -1108,127 +799,6 @@ export default function App() {
       <footer className="mt-auto py-12 text-[10px] text-accent-400 font-bold tracking-[0.3em] uppercase">
         Werkwoordtrainer Frans - contact: cst@clz.nl
       </footer>
-
-      {/* Badge Notification */}
-      <AnimatePresence>
-        {newBadge && (
-          <motion.div
-            initial={{ opacity: 0, y: 50, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 w-full max-w-sm px-4"
-          >
-            <div className="bg-theme-surface text-theme-text p-6 rounded-3xl shadow-2xl border border-theme-border flex items-center gap-6">
-              <div className={`w-16 h-16 ${newBadge.bg} rounded-2xl flex items-center justify-center shrink-0`}>
-                <newBadge.icon className={`w-10 h-10 ${newBadge.color}`} />
-              </div>
-              <div className="flex-1">
-                <div className="text-[10px] font-bold text-brand-400 uppercase tracking-widest mb-1">Insigne Débloqué !</div>
-                <h4 className="text-xl font-serif font-bold mb-1">{newBadge.label}</h4>
-                <p className="text-theme-text-muted text-xs">{newBadge.description}</p>
-              </div>
-              <button 
-                onClick={() => setNewBadge(null)}
-                className="text-theme-text-muted hover:text-theme-text transition-colors"
-              >
-                <XCircle className="w-6 h-6" />
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Badge Wall Modal */}
-      <AnimatePresence>
-        {showBadgeWall && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-theme-bg/60 backdrop-blur-sm"
-          >
-            <motion.div
-              initial={{ scale: 0.9, y: 20 }}
-              animate={{ scale: 1, y: 0 }}
-              exit={{ scale: 0.9, y: 20 }}
-              className="bg-theme-surface w-full max-w-2xl rounded-[3rem] overflow-hidden shadow-2xl flex flex-col max-h-[90vh]"
-            >
-              <div className="p-8 bg-theme-bg/80 backdrop-blur-md text-theme-text flex justify-between items-center border-b border-theme-border">
-                <div>
-                  <h3 className="text-3xl font-serif font-bold">Mes Insignes</h3>
-                  <p className="text-theme-text-muted text-xs uppercase tracking-widest mt-1">
-                    {unlockedBadges.length} sur {BADGES.length} débloqués
-                  </p>
-                </div>
-                <button 
-                  onClick={() => setShowBadgeWall(false)}
-                  className="w-12 h-12 rounded-full bg-theme-subtle flex items-center justify-center hover:bg-theme-subtle/80 transition-colors"
-                >
-                  <XCircle className="w-6 h-6" />
-                </button>
-              </div>
-              
-              <div className="p-8 overflow-y-auto custom-scrollbar grid grid-cols-2 md:grid-cols-3 gap-6">
-                {BADGES.map(badge => {
-                  const isUnlocked = unlockedBadges.includes(badge.id);
-                  return (
-                    <div 
-                      key={badge.id}
-                      className={`relative p-6 rounded-3xl border transition-all flex flex-col items-center text-center gap-4 ${
-                        isUnlocked 
-                          ? 'bg-theme-surface border-theme-border shadow-sm' 
-                          : 'bg-theme-subtle border-transparent opacity-60 grayscale'
-                      }`}
-                    >
-                      <div className={`w-16 h-16 rounded-2xl flex items-center justify-center ${isUnlocked ? badge.bg : 'bg-theme-subtle'}`}>
-                        {isUnlocked ? (
-                          <badge.icon className={`w-10 h-10 ${badge.color}`} />
-                        ) : (
-                          <Lock className="w-8 h-8 text-theme-text-muted" />
-                        )}
-                      </div>
-                      <div>
-                        <h5 className={`font-bold text-sm mb-1 ${isUnlocked ? 'text-theme-text' : 'text-theme-text-muted'}`}>
-                          {badge.label}
-                        </h5>
-                        <p className="text-[10px] text-theme-text-muted leading-tight">
-                          {badge.description}
-                        </p>
-                      </div>
-                      {!isUnlocked && (
-                        <div className="absolute inset-0 flex items-center justify-center bg-theme-subtle/20 backdrop-blur-[1px] rounded-3xl" />
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-              
-              <div className="p-8 bg-theme-subtle/50 border-t border-theme-border flex justify-between items-center">
-                <div className="flex gap-4">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-theme-text">{stats.totalCorrect}</div>
-                    <div className="text-[8px] text-theme-text-muted uppercase tracking-widest">Corrects</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-theme-text">{stats.maxCorrectStreak}</div>
-                    <div className="text-[8px] text-theme-text-muted uppercase tracking-widest">Max Streak</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-theme-text">{stats.quizzesCompleted}</div>
-                    <div className="text-[8px] text-theme-text-muted uppercase tracking-widest">Quiz</div>
-                  </div>
-                </div>
-                <button 
-                  onClick={() => setShowBadgeWall(false)}
-                  className="px-8 py-3 bg-accent-600 text-white rounded-full font-bold text-sm shadow-lg shadow-accent-200"
-                >
-                  Fermer
-                </button>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       {/* Reference Modal */}
       <AnimatePresence>
