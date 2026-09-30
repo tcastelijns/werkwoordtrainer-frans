@@ -7,10 +7,11 @@ import React, { useState, useEffect, useRef, useMemo, useId } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   XCircle, RefreshCcw, ChevronDown, ChevronRight, Check,
-  ArrowLeft, BookOpen, Info, Search, Sun, Moon
+  ArrowLeft, BookOpen, Info, Search, Sun, Moon, Target, Trash2
 } from 'lucide-react';
 
 import verbData from './data/verbs.json';
+import { createMistakeId, localPracticeStorage, type MistakeRecord } from './practiceStorage';
 
 // --- Data & Logic ---
 
@@ -24,11 +25,13 @@ const {
 // --- Components ---
 
 type GameState = 'start' | 'playing' | 'result';
+type PracticeMode = 'free' | 'difficult';
 type Verb = typeof VERBS_LIST[0];
 const REGULAR_CATEGORY_IDS = new Set(['reg-er', 'reg-ir', 'reg-re']);
 
 interface Question {
   id: string;
+  learningKey: string;
   verb: Verb;
   subject: typeof SUBJECTS[0];
   tense: typeof TENSES[0];
@@ -57,6 +60,7 @@ function createQuestions(verbs: Verb[], tenseIds: string[], count: number): Ques
       const tense = TENSES.find(item => item.id === tenseId)!;
       return SUBJECTS.map((subject, subjectIndex) => ({
         id: `${verb.id}-${tenseId}-${subject.id}`,
+        learningKey: createMistakeId(verb.id, tenseId, subject.id),
         verb,
         subject,
         tense,
@@ -72,6 +76,36 @@ function createQuestions(verbs: Verb[], tenseIds: string[], count: number): Ques
   while (questions.length < count) {
     const cycle = shuffle(combinations);
     for (const combination of cycle) {
+      if (questions.length >= count) break;
+      questions.push({ ...combination, id: `${combination.id}-${questions.length}` });
+    }
+  }
+  return questions;
+}
+
+function createDifficultQuestions(records: MistakeRecord[], count: number): Question[] {
+  const combinations = records.flatMap(record => {
+    const verb = VERBS_LIST.find(item => item.id === record.verbId);
+    const tense = TENSES.find(item => item.id === record.tenseId);
+    const subjectIndex = SUBJECTS.findIndex(item => item.id === record.subjectId);
+    if (!verb || !tense || subjectIndex < 0) return [];
+
+    return [{
+      id: record.id,
+      learningKey: record.id,
+      verb,
+      subject: SUBJECTS[subjectIndex],
+      tense,
+      correctAnswer: (verb as any).conjugations[tense.id].french[subjectIndex],
+      dutchQuestion: (verb as any).conjugations[tense.id].dutch[subjectIndex],
+      attempts: [],
+      wasIncorrect: false,
+    }];
+  });
+
+  const questions: Question[] = [];
+  while (combinations.length > 0 && questions.length < count) {
+    for (const combination of shuffle(combinations)) {
       if (questions.length >= count) break;
       questions.push({ ...combination, id: `${combination.id}-${questions.length}` });
     }
@@ -151,6 +185,8 @@ function InfinitiveInfoButton({ infinitive }: { infinitive: string }) {
 
 export default function App() {
   const [gameState, setGameState] = useState<GameState>('start');
+  const [practiceMode, setPracticeMode] = useState<PracticeMode>('free');
+  const [mistakeRecords, setMistakeRecords] = useState<MistakeRecord[]>([]);
   const [selectedRegularIds, setSelectedRegularIds] = useState<string[]>([]);
   const [selectedIrregularIds, setSelectedIrregularIds] = useState<string[]>([]);
   const [selectedTenses, setSelectedTenses] = useState<string[]>([]);
@@ -174,6 +210,16 @@ export default function App() {
     return saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
   });
   const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    void localPracticeStorage.getMistakes().then(setMistakeRecords);
+  }, []);
+
+  useEffect(() => {
+    if (gameState === 'start' && practiceMode === 'difficult' && mistakeRecords.length === 0) {
+      setPracticeMode('free');
+    }
+  }, [gameState, practiceMode, mistakeRecords.length]);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -212,6 +258,22 @@ export default function App() {
   const deselectAllTenses = () => setSelectedTenses([]);
 
   const generateQuiz = () => {
+    if (practiceMode === 'difficult') {
+      const difficultQuestionCount = Math.min(15, Math.max(5, mistakeRecords.length * 3));
+      const newQuestions = createDifficultQuestions(mistakeRecords, difficultQuestionCount);
+      if (newQuestions.length === 0) return;
+
+      setQuestions(newQuestions);
+      setInitialQuestionCount(newQuestions.length);
+      setCurrentIndex(0);
+      setScore(0);
+      setMissedVerbIds([]);
+      setGameState('playing');
+      setFeedback(null);
+      setUserAnswer('');
+      return;
+    }
+
     if ((selectedRegularIds.length === 0 && selectedIrregularIds.length === 0) || selectedTenses.length === 0) return;
 
     const availableVerbs = [
@@ -233,21 +295,15 @@ export default function App() {
   };
 
   const generateMistakeQuiz = () => {
-    if (missedVerbIds.length === 0 || selectedTenses.length === 0) return;
+    setPracticeMode('difficult');
+    setGameState('start');
+  };
 
-    const availableVerbs = VERBS_LIST.filter(v => missedVerbIds.includes(v.id));
-    if (availableVerbs.length === 0) return;
-
-    const newQuestions = createQuestions(availableVerbs, selectedTenses, questionCount);
-
-    setQuestions(newQuestions);
-    setInitialQuestionCount(newQuestions.length);
-    setCurrentIndex(0);
-    setScore(0);
-    setMissedVerbIds([]);
-    setGameState('playing');
-    setFeedback(null);
-    setUserAnswer('');
+  const clearMistakes = async () => {
+    if (!window.confirm('Alle opgeslagen moeilijke werkwoordsvormen wissen?')) return;
+    await localPracticeStorage.clearMistakes();
+    setMistakeRecords([]);
+    setPracticeMode('free');
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -271,6 +327,16 @@ export default function App() {
       && newAttempts.length >= 2
       && !currentQuestion.isReview
       && !currentQuestion.reviewQueued;
+
+    if (!isCorrect && newAttempts.length === 1) {
+      void localPracticeStorage.markIncorrect({
+        verbId: currentQuestion.verb.id,
+        tenseId: currentQuestion.tense.id,
+        subjectId: currentQuestion.subject.id,
+      }).then(setMistakeRecords);
+    } else if (isCorrect && newAttempts.length === 1 && practiceMode === 'difficult') {
+      void localPracticeStorage.markCorrect(currentQuestion.learningKey).then(setMistakeRecords);
+    }
 
     setQuestions(prev => {
       const updated = [...prev];
@@ -389,6 +455,31 @@ export default function App() {
                 </button>
               </div>
 
+              <div className="mx-auto flex w-full max-w-xl rounded-2xl border border-theme-border bg-theme-surface p-1.5 shadow-sm" aria-label="Oefenstand">
+                <button
+                  type="button"
+                  onClick={() => setPracticeMode('free')}
+                  className={`flex min-h-12 flex-1 items-center justify-center gap-2 rounded-xl px-4 text-sm font-bold transition-colors ${practiceMode === 'free' ? 'bg-brand-500 text-white' : 'text-theme-text-secondary hover:bg-theme-subtle'}`}
+                >
+                  Vrij oefenen
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setPracticeMode('difficult')}
+                  disabled={mistakeRecords.length === 0}
+                  className={`flex min-h-12 flex-1 items-center justify-center gap-2 rounded-xl px-4 text-sm font-bold transition-colors disabled:cursor-not-allowed disabled:opacity-40 ${practiceMode === 'difficult' ? 'bg-accent-600 text-white' : 'text-theme-text-secondary hover:bg-theme-subtle'}`}
+                >
+                  <Target className="h-4 w-4" />
+                  Moeilijke werkwoorden
+                  {mistakeRecords.length > 0 && (
+                    <span className={`rounded-full px-2 py-0.5 text-xs ${practiceMode === 'difficult' ? 'bg-white/20' : 'bg-theme-subtle'}`}>
+                      {mistakeRecords.length}
+                    </span>
+                  )}
+                </button>
+              </div>
+
+              {practiceMode === 'free' ? (
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {/* Regular Verbs Column */}
                 <div className="glass-card p-8 rounded-[2.5rem] space-y-8 lg:col-span-2">
@@ -559,8 +650,35 @@ export default function App() {
                   </div>
                 </div>
               </div>
+              ) : (
+                <div className="glass-card mx-auto max-w-2xl rounded-[2rem] p-8 md:p-10">
+                  <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3">
+                        <Target className="h-6 w-6 text-accent-600" />
+                        <h2 className="font-serif text-2xl font-medium text-theme-text">Moeilijke werkwoorden</h2>
+                      </div>
+                      <p className="max-w-xl text-sm leading-6 text-theme-text-secondary">
+                        Je oefent precies de vormen die eerder fout gingen. Een vorm verdwijnt nadat je die drie keer direct goed hebt beantwoord.
+                      </p>
+                      <p className="text-sm font-bold text-theme-text">
+                        {mistakeRecords.length} {mistakeRecords.length === 1 ? 'vorm staat' : 'vormen staan'} klaar om te oefenen.
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={clearMistakes}
+                      className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl border border-theme-border px-4 py-3 text-sm font-bold text-theme-text-muted transition-colors hover:border-accent-300 hover:text-accent-600"
+                    >
+                      <Trash2 className="h-4 w-4" />
+                      Wis oefengegevens
+                    </button>
+                  </div>
+                </div>
+              )}
 
               <div className="flex flex-col items-center gap-12">
+                {practiceMode === 'free' ? (
                 <div className="w-full max-md glass-card p-8 rounded-3xl space-y-6">
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-bold uppercase tracking-widest text-theme-text-muted">Nombre de questions</span>
@@ -576,17 +694,24 @@ export default function App() {
                     className="w-full h-1.5 bg-theme-subtle rounded-lg appearance-none cursor-pointer accent-brand-500"
                   />
                 </div>
+                ) : (
+                  <div className="text-center text-sm font-medium text-theme-text-muted">
+                    Deze ronde bevat {Math.min(15, Math.max(5, mistakeRecords.length * 3))} gerichte vragen.
+                  </div>
+                )}
 
                 <div className="flex flex-col items-center gap-6">
                   <button
                     onClick={generateQuiz}
-                    disabled={(selectedRegularIds.length === 0 && selectedIrregularIds.length === 0) || selectedTenses.length === 0}
+                    disabled={practiceMode === 'difficult'
+                      ? mistakeRecords.length === 0
+                      : (selectedRegularIds.length === 0 && selectedIrregularIds.length === 0) || selectedTenses.length === 0}
                     className="neo-button group relative inline-flex items-center gap-4 px-16 py-6 bg-accent-600 text-white rounded-full font-bold text-lg shadow-2xl shadow-accent-200 hover:bg-accent-700 disabled:opacity-30 disabled:grayscale disabled:cursor-not-allowed"
                   >
-                    Commencer le quiz
+                    {practiceMode === 'difficult' ? 'Start moeilijke werkwoorden' : 'Commencer le quiz'}
                     <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                   </button>
-                  {((selectedRegularIds.length === 0 && selectedIrregularIds.length === 0) || selectedTenses.length === 0) && (
+                  {practiceMode === 'free' && ((selectedRegularIds.length === 0 && selectedIrregularIds.length === 0) || selectedTenses.length === 0) && (
                     <p className="text-xs text-brand-700 font-bold uppercase tracking-tighter bg-brand-100 px-4 py-2 rounded-full">Kies minimaal één werkwoord en één tijd.</p>
                   )}
                 </div>
@@ -734,7 +859,7 @@ export default function App() {
                     <div>
                       <h3 className="font-serif text-2xl font-medium text-theme-text">Nog even oefenen</h3>
                       <p className="text-sm text-theme-text-muted font-medium mt-1">
-                        Deze werkwoorden gingen fout tijdens deze ronde.
+                        De fout beantwoorde vormen zijn opgeslagen bij je moeilijke werkwoorden.
                       </p>
                     </div>
                     <button
@@ -742,7 +867,7 @@ export default function App() {
                       className="neo-button inline-flex items-center justify-center gap-3 px-8 py-4 bg-accent-600 text-white rounded-full font-bold shadow-xl shadow-accent-200 hover:bg-accent-700 active:scale-95 transition-all"
                     >
                       <RefreshCcw className="w-4 h-4" />
-                      Oefen deze opnieuw
+                      Naar moeilijke werkwoorden
                     </button>
                   </div>
                   <div className="flex flex-wrap gap-3">
