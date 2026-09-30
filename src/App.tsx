@@ -28,13 +28,55 @@ type Verb = typeof VERBS_LIST[0];
 const REGULAR_CATEGORY_IDS = new Set(['reg-er', 'reg-ir', 'reg-re']);
 
 interface Question {
+  id: string;
   verb: Verb;
   subject: typeof SUBJECTS[0];
   tense: typeof TENSES[0];
   correctAnswer: string;
   dutchQuestion: string;
+  attempts: string[];
+  wasIncorrect: boolean;
+  isReview?: boolean;
+  reviewQueued?: boolean;
   userAnswer?: string;
   isCorrect?: boolean;
+}
+
+function shuffle<T>(items: T[]) {
+  const shuffled = [...items];
+  for (let index = shuffled.length - 1; index > 0; index--) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+  }
+  return shuffled;
+}
+
+function createQuestions(verbs: Verb[], tenseIds: string[], count: number): Question[] {
+  const combinations = verbs.flatMap(verb =>
+    tenseIds.flatMap(tenseId => {
+      const tense = TENSES.find(item => item.id === tenseId)!;
+      return SUBJECTS.map((subject, subjectIndex) => ({
+        id: `${verb.id}-${tenseId}-${subject.id}`,
+        verb,
+        subject,
+        tense,
+        correctAnswer: (verb as any).conjugations[tenseId].french[subjectIndex],
+        dutchQuestion: (verb as any).conjugations[tenseId].dutch[subjectIndex],
+        attempts: [],
+        wasIncorrect: false,
+      }));
+    })
+  );
+
+  const questions: Question[] = [];
+  while (questions.length < count) {
+    const cycle = shuffle(combinations);
+    for (const combination of cycle) {
+      if (questions.length >= count) break;
+      questions.push({ ...combination, id: `${combination.id}-${questions.length}` });
+    }
+  }
+  return questions;
 }
 
 function getRegularInfinitiveTranslation(verb: Verb) {
@@ -123,7 +165,6 @@ export default function App() {
   const [feedback, setFeedback] = useState<{ isCorrect: boolean; message: string; canTryAgain?: boolean } | null>(null);
   const [score, setScore] = useState(0);
   const [missedVerbIds, setMissedVerbIds] = useState<string[]>([]);
-  const [attempts, setAttempts] = useState(0);
   const [showReference, setShowReference] = useState(false);
   const [referenceSearch, setReferenceSearch] = useState('');
   const [selectedVerbId, setSelectedVerbId] = useState<string | null>(null);
@@ -180,31 +221,12 @@ export default function App() {
     
     if (availableVerbs.length === 0) return;
 
-    const newQuestions: Question[] = [];
-    for (let i = 0; i < questionCount; i++) {
-      const verb = availableVerbs[Math.floor(Math.random() * availableVerbs.length)];
-      const tenseId = selectedTenses[Math.floor(Math.random() * selectedTenses.length)];
-      const subject = SUBJECTS[Math.floor(Math.random() * SUBJECTS.length)];
-
-      const tense = TENSES.find(t => t.id === tenseId)!;
-      const subIdx = SUBJECTS.findIndex(s => s.id === subject.id);
-      const correctAnswer = (verb as any).conjugations[tenseId].french[subIdx];
-      const dutchQuestion = (verb as any).conjugations[tenseId].dutch[subIdx];
-
-      newQuestions.push({
-        verb,
-        subject,
-        tense,
-        correctAnswer,
-        dutchQuestion,
-      });
-    }
+    const newQuestions = createQuestions(availableVerbs, selectedTenses, questionCount);
     setQuestions(newQuestions);
     setInitialQuestionCount(newQuestions.length);
     setCurrentIndex(0);
     setScore(0);
     setMissedVerbIds([]);
-    setAttempts(0);
     setGameState('playing');
     setFeedback(null);
     setUserAnswer('');
@@ -216,32 +238,13 @@ export default function App() {
     const availableVerbs = VERBS_LIST.filter(v => missedVerbIds.includes(v.id));
     if (availableVerbs.length === 0) return;
 
-    const newQuestions: Question[] = [];
-    for (let i = 0; i < questionCount; i++) {
-      const verb = availableVerbs[Math.floor(Math.random() * availableVerbs.length)];
-      const tenseId = selectedTenses[Math.floor(Math.random() * selectedTenses.length)];
-      const subject = SUBJECTS[Math.floor(Math.random() * SUBJECTS.length)];
-
-      const tense = TENSES.find(t => t.id === tenseId)!;
-      const subIdx = SUBJECTS.findIndex(s => s.id === subject.id);
-      const correctAnswer = (verb as any).conjugations[tenseId].french[subIdx];
-      const dutchQuestion = (verb as any).conjugations[tenseId].dutch[subIdx];
-
-      newQuestions.push({
-        verb,
-        subject,
-        tense,
-        correctAnswer,
-        dutchQuestion,
-      });
-    }
+    const newQuestions = createQuestions(availableVerbs, selectedTenses, questionCount);
 
     setQuestions(newQuestions);
     setInitialQuestionCount(newQuestions.length);
     setCurrentIndex(0);
     setScore(0);
     setMissedVerbIds([]);
-    setAttempts(0);
     setGameState('playing');
     setFeedback(null);
     setUserAnswer('');
@@ -262,39 +265,49 @@ export default function App() {
     const currentQuestion = questions[currentIndex];
     const normalizedUser = userAnswer.trim().toLowerCase().replace(/[’']/g, "'");
     const normalizedCorrect = currentQuestion.correctAnswer.toLowerCase().replace(/[’']/g, "'");
-    
     const isCorrect = normalizedUser === normalizedCorrect;
+    const newAttempts = [...currentQuestion.attempts, normalizedUser];
+    const shouldQueueReview = !isCorrect
+      && newAttempts.length >= 2
+      && !currentQuestion.isReview
+      && !currentQuestion.reviewQueued;
 
-    // Update the question with the user's answer and result
     setQuestions(prev => {
       const updated = [...prev];
       updated[currentIndex] = {
         ...updated[currentIndex],
         userAnswer: normalizedUser,
-        isCorrect: isCorrect
+        isCorrect,
+        attempts: newAttempts,
+        wasIncorrect: currentQuestion.wasIncorrect || !isCorrect,
+        reviewQueued: currentQuestion.reviewQueued || shouldQueueReview,
       };
 
-      // If incorrect after 2 attempts, add to the end of the queue
-      if (!isCorrect && attempts + 1 >= 2) {
+      if (shouldQueueReview) {
         updated.push({
           ...currentQuestion,
+          id: `${currentQuestion.id}-review`,
+          attempts: [],
+          wasIncorrect: false,
+          isReview: true,
+          reviewQueued: true,
           userAnswer: undefined,
-          isCorrect: undefined
+          isCorrect: undefined,
         });
       }
-      
+
       return updated;
     });
 
     if (isCorrect) {
-      setScore((s) => s + 1);
+      if (!currentQuestion.isReview) {
+        setScore((currentScore) => currentScore + 1);
+      }
       setFeedback({ isCorrect: true, message: 'Bien !' });
     } else {
       setMissedVerbIds(prev => prev.includes(currentQuestion.verb.id) ? prev : [...prev, currentQuestion.verb.id]);
-      const newAttempts = attempts + 1;
-      setAttempts(newAttempts);
-      
-      if (newAttempts < 2) {
+
+      if (newAttempts.length < 2) {
         setFeedback({ 
           isCorrect: false, 
           message: 'Pas tout à fait correct, réessayez !',
@@ -314,7 +327,6 @@ export default function App() {
       setCurrentIndex((i) => i + 1);
       setUserAnswer('');
       setFeedback(null);
-      setAttempts(0);
     } else {
       setGameState('result');
     }
@@ -357,7 +369,7 @@ export default function App() {
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
                   >
-                    <h1 className="text-7xl md:text-8xl font-serif font-semibold tracking-tight text-accent-600 drop-shadow-sm">
+                    <h1 className="text-4xl sm:text-6xl md:text-8xl font-serif font-semibold tracking-tight text-accent-600 drop-shadow-sm">
                       Werkwoordtrainer Frans
                     </h1>
                   </motion.div>
@@ -605,12 +617,16 @@ export default function App() {
                   <motion.div 
                     className="h-full bg-brand-500"
                     initial={{ width: 0 }}
-                    animate={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
+                    animate={{ width: `${Math.min(((currentIndex + 1) / initialQuestionCount) * 100, 100)}%` }}
                   />
                 </div>
 
                 <div className="flex justify-between items-center text-[10px] font-bold text-theme-text-muted uppercase tracking-[0.2em]">
-                  <span className="bg-theme-subtle px-3 py-1 rounded-full">Question {currentIndex + 1} sur {questions.length}</span>
+                  <span className="bg-theme-subtle px-3 py-1 rounded-full">
+                    {questions[currentIndex].isReview
+                      ? `Extra oefenvraag ${currentIndex - initialQuestionCount + 1} van ${questions.length - initialQuestionCount}`
+                      : `Vraag ${currentIndex + 1} van ${initialQuestionCount}`}
+                  </span>
                   <span className="text-accent-600 bg-accent-50 px-3 py-1 rounded-full">Score: {score}</span>
                 </div>
 
@@ -745,16 +761,16 @@ export default function App() {
 
               <div className="glass-card rounded-[2.5rem] overflow-hidden">
                 <div className="bg-theme-bg/80 backdrop-blur-md px-8 py-6 text-left flex justify-between items-center border-b border-theme-border">
-                  <h3 className="font-serif text-2xl font-medium text-theme-text">Récapitulatif</h3>
-                  <div className="text-[10px] font-bold text-theme-text-muted uppercase tracking-widest">Détails des réponses</div>
+                  <h3 className="font-serif text-2xl font-medium text-theme-text">Overzicht</h3>
+                  <div className="text-[10px] font-bold text-theme-text-muted uppercase tracking-widest">Alle antwoorden</div>
                 </div>
-                <div className="max-h-[500px] overflow-y-auto custom-scrollbar bg-theme-surface/30">
+                <div className="max-h-[500px] overflow-auto custom-scrollbar bg-theme-surface/30">
                   <table className="w-full text-left border-collapse">
                     <thead className="sticky top-0 bg-theme-surface/90 backdrop-blur-md z-10">
                       <tr className="text-theme-text-muted font-bold uppercase tracking-[0.15em] text-[10px] border-b border-theme-border">
-                        <th className="px-8 py-5">Question</th>
-                        <th className="px-8 py-5">Votre réponse</th>
-                        <th className="px-8 py-5">Réponse correcte</th>
+                        <th className="px-8 py-5">Vraag</th>
+                        <th className="px-8 py-5">Uw pogingen</th>
+                        <th className="px-8 py-5">Correct antwoord</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-theme-border">
@@ -763,11 +779,27 @@ export default function App() {
                           <td className="px-8 py-6">
                             <div className="font-serif text-lg font-medium text-theme-text">{q.dutchQuestion}</div>
                             <div className="text-[10px] font-bold text-brand-500 uppercase tracking-widest mt-1">{q.tense.label}</div>
+                            {q.isReview && (
+                              <div className="mt-1 text-[10px] font-bold uppercase tracking-widest text-theme-text-muted">Extra oefening</div>
+                            )}
                           </td>
                           <td className="px-8 py-6">
-                            <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold ${q.isCorrect ? 'bg-green-500/10 text-green-500' : 'bg-accent-500/10 text-accent-500'}`}>
-                              {q.isCorrect ? <Check className="w-3 h-3" /> : <XCircle className="w-3 h-3" />}
-                              {q.userAnswer || '-'}
+                            <div className="flex min-w-48 flex-col items-start gap-2">
+                              <div className="flex flex-wrap gap-2">
+                                {q.attempts.length > 0 ? q.attempts.map((attempt, attemptIndex) => (
+                                  <span key={`${q.id}-attempt-${attemptIndex}`} className="rounded-lg bg-theme-subtle px-3 py-1.5 text-sm font-bold text-theme-text">
+                                    {attempt}
+                                  </span>
+                                )) : '-'}
+                              </div>
+                              <span className={`inline-flex items-center gap-1 text-xs font-bold ${
+                                q.isCorrect
+                                  ? q.wasIncorrect ? 'text-amber-600' : 'text-green-600'
+                                  : 'text-accent-600'
+                              }`}>
+                                {q.isCorrect ? <Check className="h-3 w-3" /> : <XCircle className="h-3 w-3" />}
+                                {q.isCorrect ? q.wasIncorrect ? 'Goed na herkansing' : 'Direct goed' : 'Nog niet goed'}
+                              </span>
                             </div>
                           </td>
                           <td className="px-8 py-6">
