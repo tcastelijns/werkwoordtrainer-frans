@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 
 import verbData from './data/verbs.json';
+import { analyzeAnswer } from './answerFeedback';
 import { createMistakeId, localPracticeStorage, type MistakeRecord } from './practiceStorage';
 
 // --- Data & Logic ---
@@ -376,7 +377,14 @@ export default function App() {
       if (newAttempts.length < 2) {
         setFeedback({ 
           isCorrect: false, 
-          message: 'Pas tout à fait correct, réessayez !',
+          message: analyzeAnswer({
+            userAnswer: normalizedUser,
+            correctAnswer: normalizedCorrect,
+            categoryId: currentQuestion.verb.categoryId,
+            tenseId: currentQuestion.tense.id,
+            subjectId: currentQuestion.subject.id,
+            subjectIndex: SUBJECTS.findIndex(subject => subject.id === currentQuestion.subject.id),
+          }),
           canTryAgain: true 
         });
       } else {
